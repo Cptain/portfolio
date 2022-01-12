@@ -1,0 +1,83 @@
+@use "../utils" as *;
+
+.hero {
+  position: relative;
+  background-image: linear-gradient(
+    145deg,
+    var(--blue-900) 45%,
+    var(--blue-800) 75%
+  );
+  background-color: var(--blue-900);
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: rem(575);
+  padding: 0 rem(30);
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-image: url(../../../img/bg-stars.png);
+    background-repeat: repeat-y;
+    background-size: contain;
+    opacity: 0.1;
+
+    @include breakpoint-up(sm) {
+      background-size: cover;
+    }
+  }
+
+  &__text-container {
+    padding-top: rem(90);
+  }
+
+  &__heading-container {
+    margin: rem(6) 0;
+  }
+
+  &__heading {
+    margin: 0;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: rem(42);
+    line-height: 0.9;
+    clip-path: inset(0 0 0 0);
+    display: inline-flex;
+  }
+
+  .clip-container {
+    clip-path: inset(0 0 0 0);
+  }
+
+  &__body {
+    color: var(--blue-300);
+    display: inline-block;
+  }
+
+  &__image-container {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    bottom: 0;
+    transform-origin: right top;
+    transform: scale(1.5) translateY(rem(-90));
+    transition: transform 200ms ease-in;
+
+    @include breakpoint-down(sm) {
+      transform: scale(1.3) translateY(rem(-30));
+    }
+
+    @include breakpoint-down(xsm) {
+      transform: scale(0.8) translateY(0);
+    }
+  }
+
+  &__image {
+    width: 100%;
+  }
+}

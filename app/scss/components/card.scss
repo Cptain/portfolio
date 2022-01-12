@@ -1,6 +1,69 @@
 @use "../utils" as *;
 
-.card {
-  background-color: lightcoral;
-  padding: rem(20);
+/* === ABOUT CARD === */
+
+.about {
+  position: relative;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  gap: rem(20);
+  padding: rem(30);
+  max-width: 41ch;
+  margin: rem(-60) auto 0;
+  background: linear-gradient(180deg, var(--blue-300) 0%, var(--blue-400) 100%);
+  box-shadow: 0px 12px 24px rgba(0, 19, 36, 0.25);
+  border-radius: rem(10);
+
+  @include breakpoint-down(xsm) {
+    margin: rem(-60) rem(30) 0;
+  }
+
+  &__heading {
+    font-size: rem(18);
+    color: var(--blue-900);
+    margin-bottom: rem(-5);
+  }
+
+  &__subheading {
+    font-size: rem(9);
+    color: var(--blue-500);
+    text-transform: uppercase;
+    letter-spacing: rem(1);
+  }
+
+  &__body {
+    font-size: rem(14);
+    color: var(--blue-900);
+    line-height: 1.4;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    gap: rem(16);
+    margin-top: 0;
+  }
+
+  &__list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(8);
+    list-style-type: none;
+    text-align: center;
+    line-height: 1.2;
+
+    @include breakpoint-down(xxsm) {
+      font-size: rem(12);
+    }
+  }
+
+  &__list-item img {
+    height: rem(64);
+
+    @include breakpoint-down(xxsm) {
+      height: rem(32);
+    }
+  }
 }

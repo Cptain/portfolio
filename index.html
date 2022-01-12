@@ -6,14 +6,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-yellow.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon.png">
 
   <title>Portfolio of Nicholas Panayotakos | Captain Design</title>
 
   <link rel="stylesheet" href="https://use.typekit.net/exg0zlw.css">
 
   <link rel="stylesheet" href="dist/style.css">
+
   <script defer src="dist/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+
 </head>
 
 <body>
@@ -30,23 +34,67 @@
     </a>
   </nav>
 
-  <!-- Navigation Bar -->
+  <!-- Hero Section -->
 
   <header class="hero">
     <div class="hero__text-container">
-      <p class="hero__body">Hello, I am Nicholas Panayotakos</p>
-      <h1 class="hero__heading">
-        Designer &<br>
-        Front-end<br>
-        Developer</h1>
-      <p class="hero__body">
-        Passionate about pixel perfect<br>
-        design, intuitive web<br>
-        experiences, and<br>
-        gamification.
-      </p>
+      <div class="clip-container">
+        <p class="hero__body stagger">Hello!</p>
+        <p class="hero__body stagger">I am Nicholas Panayotakos</p>
+      </div>
+      <div class="hero__heading-container">
+        <div class="clip-container">
+          <h1 class="hero__heading stagger">Designer</h1>
+          <h1 class="hero__heading stagger">&</h1>
+        </div>
+        <div class="clip-container">
+          <h1 class="hero__heading stagger"> Developer</h1>
+        </div>
+      </div>
+      <p class="hero__body stagger">with a love for the web.</p>
+    </div>
+    <div class="hero__image-container">
+      <img class="hero__image" src="img/bg-planet.svg" alt="Planet Graphic">
     </div>
   </header>
+
+  <!-- About Card -->
+
+  <div class="about">
+    <div>
+      <h4 class="about__heading">About Me</h4>
+      <span class="about__subheading">A Creative Night Owl</span>
+    </div>
+    <p class="about__body">
+      I am a Toronto-based web developer with a graphic design background.
+    </p>
+    <p class="about__body">
+      When I first discovered the web, I was intrigued to learn how it worked. Quickly, I fell in love with it. My time went into
+      creating websites and playing flash games.</p>
+    <p class="about__body">
+      After a decade of calling it a hobby, I took the
+      opportunity to turn it into a profession.
+    </p>
+    <p class="about__body">
+      Today, as a graphic design graduate, I have a deeper understanding of layout, color, animation, and typography;
+      further pushing my boundaries as a developer.
+    </p>
+    <div class="about__body">
+      <span class="--bold">Currently interested in positions with the role of:</span>
+      <ul class="about__list">
+        <li class="about__list-item"><img src="img/icons/icon-web-design.svg" alt="Web Design Icon">Web Designer</li>
+        <li class="about__list-item"><img src="img/icons/icon-web-dev.svg" alt="Web Development Icon">Web Developer</li>
+        <li class="about__list-item"><img src="img/icons/icon-ui-ux.svg" alt="UI/UX Icon">UI/UX Designer</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Main Section -->
+
+  <main class="main">
+
+
+  </main>
 
 </body>
 
