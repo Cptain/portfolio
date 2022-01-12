@@ -1,0 +1,33 @@
+@use "../utils" as *;
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 99999;
+  background-color: var(--blue-900);
+  padding: rem(15);
+
+  &__logo-container {
+    display: inline-flex;
+  }
+
+  &__logo {
+    @include breakpoint-down(sm) {
+      max-width: 150px;
+    }
+
+    @include breakpoint-down(xxsm) {
+      display: none;
+    }
+  }
+
+  &__logo--mobile {
+    display: none;
+
+    @include breakpoint-down(xxsm) {
+      display: block;
+    }
+  }
+}
