@@ -6,8 +6,10 @@
   position: sticky;
   top: 0;
   z-index: 99999;
-  background-color: var(--blue-900);
+  background-color: var(--blue-800);
   padding: rem(15) rem(30);
+  box-shadow: 0 -2px 12px rgb(0 0 0 / 20%);
+  z-index: 99999;
 
   &__logo-container {
     display: inline-flex;

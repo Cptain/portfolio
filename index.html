@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="dist/style.css">
 
   <script defer src="dist/script.js"></script>
+  <script defer src="dist/"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
 
@@ -29,14 +30,21 @@
       <img class="navbar__logo" src="img/logo-captain.svg" alt="Captain Design Logo">
       <img class="navbar__logo--mobile" src="img/symbol-captain.svg" alt="Captain Design Symbol">
     </a>
-    <a class="button button--primary" href="mailto:nicholaspanayotakos@gmail.com">Contact Me
+    <a class="button button--primary" target="_blank" href="mailto:nicholaspanayotakos@gmail.com">Contact Me
       <img class="button--external" src="img/icons/icon-external.svg" alt="Icon for External Links">
     </a>
   </nav>
 
+
+  <!-- 
+  A big thank you to Slawomir Chodnicki for his guide in understanding how to build this mesmerizing starry background.
+  https://betterprogramming.pub/fun-with-html-canvas-lets-create-a-star-field-a46b0fed5002
+  -->
+
   <!-- Hero Section -->
 
   <header class="hero">
+    <canvas id="canvas"></canvas>
     <div class="hero__text-container">
       <div class="clip-container">
         <p class="hero__body stagger">Hello!</p>
@@ -44,21 +52,20 @@
       </div>
       <div class="hero__heading-container">
         <div class="clip-container">
-          <h1 class="hero__heading stagger">Designer</h1>
-          <h1 class="hero__heading stagger">&</h1>
+          <h1 class="hero__heading stagger">Designer &</h1>
         </div>
         <div class="clip-container">
-          <h1 class="hero__heading stagger"> Developer</h1>
+          <h1 class="hero__heading stagger">Developer</h1>
         </div>
       </div>
-      <p class="hero__body stagger">with a love for the web.</p>
+      <p class="hero__body stagger">with a tremendous love for the web.</p>
     </div>
     <div class="hero__image-container">
       <img class="hero__image" src="img/bg-planet.svg" alt="Planet Graphic">
     </div>
   </header>
 
-  <!-- About Card -->
+  <!-- About Section -->
 
   <div class="about">
     <div>
@@ -69,32 +76,285 @@
       I am a Toronto-based web developer with a graphic design background.
     </p>
     <p class="about__body">
-      When I first discovered the web, I was intrigued to learn how it worked. Quickly, I fell in love with it. My time went into
+      When I first discovered the web, I was intrigued to learn how it worked. Quickly, I fell in love with it. My time
+      went into
       creating websites and playing flash games.</p>
     <p class="about__body">
       After a decade of calling it a hobby, I took the
       opportunity to turn it into a profession.
     </p>
     <p class="about__body">
-      Today, as a graphic design graduate, I have a deeper understanding of layout, color, animation, and typography;
-      further pushing my boundaries as a developer.
+      Now, as a graphic design graduate, I have a deeper understanding of layout, color, animation, and typography,
+      further pushing my skills as a developer.
     </p>
-    <div class="about__body">
-      <span class="--bold">Currently interested in positions with the role of:</span>
+    <span class="about__list-title">Looking for positions as:</span>
+    <div class="about__job">
       <ul class="about__list">
         <li class="about__list-item"><img src="img/icons/icon-web-design.svg" alt="Web Design Icon">Web Designer</li>
         <li class="about__list-item"><img src="img/icons/icon-web-dev.svg" alt="Web Development Icon">Web Developer</li>
         <li class="about__list-item"><img src="img/icons/icon-ui-ux.svg" alt="UI/UX Icon">UI/UX Designer</li>
       </ul>
     </div>
+    <a class="button button--primary" target="_blank" href="mailto:nicholaspanayotakos@gmail.com">Contact Me
+      <img class="button--external"src="img/icons/icon-external.svg" alt="Icon for External Links">
+    </a>
   </div>
 
-  <!-- Main Section -->
+  <div class="divider__container">
+    <img class="divider" src="img/divider-vertical.svg" alt="Vertical Divider Graphic">
+  </div>
 
-  <main class="main">
+  <!-- Section Projects -->
 
+  <section class="project__container">
 
-  </main>
+    <h2 class="project__heading">Projects</h2>
+
+    <div class="project">
+      <div class="project__header">
+        <div class="header__tag header__tag--left">Full-time</div>
+        <div class="header__logo">
+          <img src="img/symbol-vervendo.svg" alt="Vervendo Symbol">
+        </div>
+        <div class="header__tag header__tag--right">Remote</div>
+      </div>
+      <div class="project__info">
+        <h3 class="project__name">Vervendo</h3>
+        <span class="project__date">Aug 2020 - Currently</span>
+        <p class="project__body">A startup company building an innovative online booking platform to personalize and
+          enhance travelling experiences.</p>
+      </div>
+      <div class="project__roles">
+        <h4 class="project__subheading">What I do</h4>
+        <ul class="tag__list">
+          <li class="tag tag__role">UI / UX</li>
+          <li class="tag tag__role">Front-end</li>
+          <li class="tag tag__role">Design</li>
+          <li class="tag tag__role">Animation</li>
+          <li class="tag tag__role">Branding</li>
+          <li class="tag tag__role">Advertisement</li>
+        </ul>
+        <p class="project__body">
+          Responsible for building UI components, graphics, animations, presentations, and advertising campaigns.
+        </p>
+      </div>
+      <div class="project__skills">
+        <h4 class="project__subheading">Technologies Used</h4>
+        <ul class="tag__list">
+          <li data-tag="html" class="tag tag__skill">HTML</li>
+          <li data-tag="css" class="tag tag__skill">CSS</li>
+          <li data-tag="scss" class="tag tag__skill">SCSS</li>
+          <li data-tag="ts" class="tag tag__skill">TypeScript</li>
+          <li data-tag="ng" class="tag tag__skill">Angular</li>
+          <li data-tag="gsap" class="tag tag__skill">GreenSock</li>
+        </ul>
+      </div>
+      <div class="project__skills">
+        <h4 class="project__subheading">Software Used</h4>
+        <ul class="tag__list">
+          <li data-tag="ps" class="tag tag__skill">Photoshop</li>
+          <li data-tag="ai" class="tag tag__skill">Illustrator</li>
+          <li data-tag="ae" class="tag tag__skill">After Effects</li>
+          <li data-tag="pr" class="tag tag__skill">Premiere Pro</li>
+          <li data-tag="vscode" class="tag tag__skill">VS Code</li>
+          <li data-tag="figma" class="tag tag__skill">Figma</li>
+        </ul>
+      </div>
+      <div class="project__links">
+        <a href="#" class="button button--secondary">View Details</a>
+        <a href="https://www.vervendo.com" class="button button--external button--primary" target="_blank">Visit Website <img src="img/icons/icon-external.svg"
+            alt="External Link Icon"></a>
+      </div>
+    </div>
+    
+    <div class="divider__container">
+      <img class="divider" src="img/divider-vertical.svg" alt="Vertical Divider Graphic">
+    </div>
+
+    <div class="project">
+      <div class="project__header">
+        <div class="header__tag header__tag--left">Full-time</div>
+        <div class="header__logo">
+          <img src="img/symbol-vervendo.svg" alt="Vervendo Symbol">
+        </div>
+        <div class="header__tag header__tag--right">Remote</div>
+      </div>
+      <div class="project__info">
+        <h3 class="project__name">Vervendo</h3>
+        <span class="project__date">Aug 2020 - Currently</span>
+        <p class="project__body">A startup company building an innovative online booking platform to personalize and
+          enhance travelling experiences.</p>
+      </div>
+      <div class="project__roles">
+        <h4 class="project__subheading">What I do</h4>
+        <ul class="tag__list">
+          <li class="tag tag__role">UI / UX</li>
+          <li class="tag tag__role">Front-end</li>
+          <li class="tag tag__role">Design</li>
+          <li class="tag tag__role">Animation</li>
+          <li class="tag tag__role">Branding</li>
+          <li class="tag tag__role">Advertisement</li>
+        </ul>
+        <p class="project__body">
+          Responsible for building UI components, graphics, animations, presentations, and advertising campaigns.
+        </p>
+      </div>
+      <div class="project__skills">
+        <h4 class="project__subheading">Technologies Used</h4>
+        <ul class="tag__list">
+          <li data-tag="html" class="tag tag__skill">HTML</li>
+          <li data-tag="css" class="tag tag__skill">CSS</li>
+          <li data-tag="scss" class="tag tag__skill">SCSS</li>
+          <li data-tag="ts" class="tag tag__skill">TypeScript</li>
+          <li data-tag="ng" class="tag tag__skill">Angular</li>
+          <li data-tag="gsap" class="tag tag__skill">GreenSock</li>
+        </ul>
+      </div>
+      <div class="project__skills">
+        <h4 class="project__subheading">Software Used</h4>
+        <ul class="tag__list">
+          <li data-tag="ps" class="tag tag__skill">Photoshop</li>
+          <li data-tag="ai" class="tag tag__skill">Illustrator</li>
+          <li data-tag="ae" class="tag tag__skill">After Effects</li>
+          <li data-tag="pr" class="tag tag__skill">Premiere Pro</li>
+          <li data-tag="vscode" class="tag tag__skill">VS Code</li>
+          <li data-tag="figma" class="tag tag__skill">Figma</li>
+        </ul>
+      </div>
+      <div class="project__links">
+        <a href="#" class="button button--secondary">View Details</a>
+        <a href="https://www.vervendo.com" class="button button--external button--primary" target="_blank">Visit Website <img src="img/icons/icon-external.svg"
+            alt="External Link Icon"></a>
+      </div>
+    </div>
+    
+    <div class="divider__container">
+      <img class="divider" src="img/divider-vertical.svg" alt="Vertical Divider Graphic">
+    </div>
+
+    <div class="project">
+      <div class="project__header">
+        <div class="header__tag header__tag--left">Full-time</div>
+        <div class="header__logo">
+          <img src="img/symbol-vervendo.svg" alt="Vervendo Symbol">
+        </div>
+        <div class="header__tag header__tag--right">Remote</div>
+      </div>
+      <div class="project__info">
+        <h3 class="project__name">Vervendo</h3>
+        <span class="project__date">Aug 2020 - Currently</span>
+        <p class="project__body">A startup company building an innovative online booking platform to personalize and
+          enhance travelling experiences.</p>
+      </div>
+      <div class="project__roles">
+        <h4 class="project__subheading">What I do</h4>
+        <ul class="tag__list">
+          <li class="tag tag__role">UI / UX</li>
+          <li class="tag tag__role">Front-end</li>
+          <li class="tag tag__role">Design</li>
+          <li class="tag tag__role">Animation</li>
+          <li class="tag tag__role">Branding</li>
+          <li class="tag tag__role">Advertisement</li>
+        </ul>
+        <p class="project__body">
+          Responsible for building UI components, graphics, animations, presentations, and advertising campaigns.
+        </p>
+      </div>
+      <div class="project__skills">
+        <h4 class="project__subheading">Technologies Used</h4>
+        <ul class="tag__list">
+          <li data-tag="html" class="tag tag__skill">HTML</li>
+          <li data-tag="css" class="tag tag__skill">CSS</li>
+          <li data-tag="scss" class="tag tag__skill">SCSS</li>
+          <li data-tag="ts" class="tag tag__skill">TypeScript</li>
+          <li data-tag="ng" class="tag tag__skill">Angular</li>
+          <li data-tag="gsap" class="tag tag__skill">GreenSock</li>
+        </ul>
+      </div>
+      <div class="project__skills">
+        <h4 class="project__subheading">Software Used</h4>
+        <ul class="tag__list">
+          <li data-tag="ps" class="tag tag__skill">Photoshop</li>
+          <li data-tag="ai" class="tag tag__skill">Illustrator</li>
+          <li data-tag="ae" class="tag tag__skill">After Effects</li>
+          <li data-tag="pr" class="tag tag__skill">Premiere Pro</li>
+          <li data-tag="vscode" class="tag tag__skill">VS Code</li>
+          <li data-tag="figma" class="tag tag__skill">Figma</li>
+        </ul>
+      </div>
+      <div class="project__links">
+        <a href="#" class="button button--secondary">View Details</a>
+        <a href="https://www.vervendo.com" class="button button--external button--primary" target="_blank">Visit Website <img src="img/icons/icon-external.svg"
+            alt="External Link Icon"></a>
+      </div>
+    </div>
+    
+    <div class="divider__container">
+      <img class="divider" src="img/divider-vertical.svg" alt="Vertical Divider Graphic">
+    </div>
+
+    <div class="project">
+      <div class="project__header">
+        <div class="header__tag header__tag--left">Full-time</div>
+        <div class="header__logo">
+          <img src="img/symbol-vervendo.svg" alt="Vervendo Symbol">
+        </div>
+        <div class="header__tag header__tag--right">Remote</div>
+      </div>
+      <div class="project__info">
+        <h3 class="project__name">Vervendo</h3>
+        <span class="project__date">Aug 2020 - Currently</span>
+        <p class="project__body">A startup company building an innovative online booking platform to personalize and
+          enhance travelling experiences.</p>
+      </div>
+      <div class="project__roles">
+        <h4 class="project__subheading">What I do</h4>
+        <ul class="tag__list">
+          <li class="tag tag__role">UI / UX</li>
+          <li class="tag tag__role">Front-end</li>
+          <li class="tag tag__role">Design</li>
+          <li class="tag tag__role">Animation</li>
+          <li class="tag tag__role">Branding</li>
+          <li class="tag tag__role">Advertisement</li>
+        </ul>
+        <p class="project__body">
+          Responsible for building UI components, graphics, animations, presentations, and advertising campaigns.
+        </p>
+      </div>
+      <div class="project__skills">
+        <h4 class="project__subheading">Technologies Used</h4>
+        <ul class="tag__list">
+          <li data-tag="html" class="tag tag__skill">HTML</li>
+          <li data-tag="css" class="tag tag__skill">CSS</li>
+          <li data-tag="scss" class="tag tag__skill">SCSS</li>
+          <li data-tag="ts" class="tag tag__skill">TypeScript</li>
+          <li data-tag="ng" class="tag tag__skill">Angular</li>
+          <li data-tag="gsap" class="tag tag__skill">GreenSock</li>
+        </ul>
+      </div>
+      <div class="project__skills">
+        <h4 class="project__subheading">Software Used</h4>
+        <ul class="tag__list">
+          <li data-tag="ps" class="tag tag__skill">Photoshop</li>
+          <li data-tag="ai" class="tag tag__skill">Illustrator</li>
+          <li data-tag="ae" class="tag tag__skill">After Effects</li>
+          <li data-tag="pr" class="tag tag__skill">Premiere Pro</li>
+          <li data-tag="vscode" class="tag tag__skill">VS Code</li>
+          <li data-tag="figma" class="tag tag__skill">Figma</li>
+        </ul>
+      </div>
+      <div class="project__links">
+        <a href="#" class="button button--secondary">View Details</a>
+        <a href="https://www.vervendo.com" class="button button--external button--primary" target="_blank">Visit Website <img src="img/icons/icon-external.svg"
+            alt="External Link Icon"></a>
+      </div>
+    </div>
+    
+    <div class="divider__container">
+      <img class="divider" src="img/divider-vertical.svg" alt="Vertical Divider Graphic">
+    </div>
+
+  </section>
 
 </body>
 
