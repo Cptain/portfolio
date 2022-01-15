@@ -1,16 +1,29 @@
 @use "../utils" as *;
 
-/* === ABOUT CARD === */
+/**-------------------**
+| SECTION STYLING
+**--------------------**/
+
+.section {
+  &__heading {
+    color: #fff;
+    text-align: center;
+    letter-spacing: rem(6);
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+}
+
+/**-------------------**
+| ABOUT CARD STYLING
+**--------------------**/
 
 .about {
   position: relative;
   z-index: 99;
-  display: flex;
-  flex-direction: column;
-  gap: rem(20);
   padding: rem(30);
-  max-width: 41ch;
-  margin: rem(-60) auto 0;
+  max-width: 52ch;
+  margin: rem(-60) rem(30) 0;
   background: linear-gradient(180deg, var(--blue-300) 0%, var(--blue-400) 100%);
   box-shadow: 0px 12px 24px rgba(0, 19, 36, 0.25);
   border-radius: rem(10);
@@ -86,7 +99,9 @@
   }
 }
 
-/* === PROJECT CARD === */
+/**-------------------**
+| PROJECT CARD STYLING
+**--------------------**/
 
 .project__container {
   display: flex;
@@ -100,22 +115,13 @@
   flex-direction: column;
   justify-content: center;
   gap: rem(40);
-  max-width: 41ch;
+  max-width: 52ch;
   padding: rem(60) rem(30) rem(30);
   margin: rem(60) rem(30) 0;
   color: var(--blue-100);
   border-radius: rem(15);
   background-color: var(--blue-800);
   box-shadow: 0px 12px 24px rgba(0, 19, 36, 0.25);
-
-  &__heading {
-    color: #fff;
-    text-align: center;
-    letter-spacing: rem(6);
-    text-transform: uppercase;
-    font-weight: 300;
-    margin-bottom: rem(60);
-  }
 
   &__header {
     align-items: center;
@@ -149,9 +155,6 @@
     letter-spacing: rem(0.3);
   }
 
-  &__info {
-  }
-
   &__name {
     display: inline-flex;
     margin-right: rem(5);
@@ -167,6 +170,7 @@
     border: 1px solid;
     color: var(--yellow-400);
     padding: rem(3) rem(10);
+    margin-bottom: rem(8);
     border-radius: 100vh;
   }
 
@@ -223,6 +227,12 @@
     }
   }
 
+  &__links-container {
+    display: flex;
+    flex-direction: column;
+    gap: rem(16);
+  }
+
   &__links {
     display: flex;
     justify-content: space-between;
@@ -234,6 +244,16 @@
   }
 }
 
+/* the first project needs spacing to not hide the heading */
+
+[data-project="vervendo"] {
+  margin-top: rem(120);
+}
+
+/**-------------------**
+| ADDS TAG ICONS
+**--------------------**/
+
 *[data-tag]::before {
   content: "";
   height: 14px;
@@ -243,50 +263,141 @@
   transform: translateX(-19px);
 }
 
-[data-tag="html"]::before {
-  background-image: url(../../../img/icons/icon-html.svg);
+[data-tag="html"] {
+  &::before {
+    background-image: url(../../../img/icons/icon-html.svg);
+  }
 }
 
-[data-tag="css"]::before {
-  background-image: url(../../../img/icons/icon-css.svg);
+[data-tag="css"] {
+  &::before {
+    background-image: url(../../../img/icons/icon-css.svg);
+  }
 }
 
-[data-tag="scss"]::before {
-  background-image: url(../../../img/icons/icon-scss.svg);
+[data-tag="scss"] {
+  &::before {
+    background-image: url(../../../img/icons/icon-scss.svg);
+  }
 }
 
-[data-tag="ng"]::before {
-  background-image: url(../../../img/icons/icon-ng.svg);
+[data-tag="ng"] {
+  &::before {
+    background-image: url(../../../img/icons/icon-ng.svg);
+  }
 }
 
-[data-tag="ts"]::before {
-  background-image: url(../../../img/icons/icon-ts.svg);
+[data-tag="ts"] {
+  &::before {
+    background-image: url(../../../img/icons/icon-ts.svg);
+  }
 }
 
-[data-tag="ps"]::before {
-  background-image: url(../../../img/icons/icon-ps.svg);
+[data-tag="ps"] {
+  &::before {
+    background-image: url(../../../img/icons/icon-ps.svg);
+  }
 }
 
-[data-tag="ae"]::before {
-  background-image: url(../../../img/icons/icon-ae.svg);
+[data-tag="ae"] {
+  &::before {
+    background-image: url(../../../img/icons/icon-ae.svg);
+  }
 }
 
-[data-tag="ai"]::before {
-  background-image: url(../../../img/icons/icon-ai.svg);
+[data-tag="ai"] {
+  &::before {
+    background-image: url(../../../img/icons/icon-ai.svg);
+  }
 }
 
-[data-tag="pr"]::before {
-  background-image: url(../../../img/icons/icon-pr.svg);
+[data-tag="pr"] {
+  &::before {
+    background-image: url(../../../img/icons/icon-pr.svg);
+  }
 }
 
-[data-tag="figma"]::before {
-  background-image: url(../../../img/icons/icon-figma.svg);
+[data-tag="id"] {
+  &::before {
+    background-image: url(../../../img/icons/icon-id.svg);
+  }
 }
 
-[data-tag="gsap"]::before {
-  background-image: url(../../../img/icons/icon-gsap.svg);
+[data-tag="figma"] {
+  &::before {
+    background-image: url(../../../img/icons/icon-figma.svg);
+  }
 }
 
-[data-tag="vscode"]::before {
-  background-image: url(../../../img/icons/icon-vscode.svg);
+[data-tag="gsap"] {
+  &::before {
+    background-image: url(../../../img/icons/icon-gsap.svg);
+  }
+}
+
+[data-tag="vscode"] {
+  &::before {
+    background-image: url(../../../img/icons/icon-vscode.svg);
+  }
+}
+
+[data-tag="joomla"] {
+  &::before {
+    background-image: url(../../../img/icons/icon-joomla.svg);
+  }
+}
+
+[data-tag="xd"] {
+  &::before {
+    background-image: url(../../../img/icons/icon-xd.svg);
+  }
+}
+
+[data-tag="js"] {
+  &::before {
+    background-image: url(../../../img/icons/icon-js.svg);
+  }
+}
+
+[data-tag="git"] {
+  &::before {
+    background-image: url(../../../img/icons/icon-git.svg);
+  }
+}
+
+[data-tag="github"] {
+  &::before {
+    background-image: url(../../../img/icons/icon-github.svg);
+  }
+}
+
+.contact {
+  padding: rem(16);
+  background-image: linear-gradient(
+    180deg,
+    var(--yellow-400) 0%,
+    var(--yellow-300) 100%
+  );
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: rem(40);
+  max-width: 52ch;
+  padding: rem(30);
+  margin: rem(60) rem(30) 0;
+  color: var(--blue-900);
+  border-radius: rem(15);
+  box-shadow: 0px 12px 24px rgba(0, 19, 36, 0.25);
+
+  &__name {
+    font-weight: 600;
+    font-size: rem(24);
+    text-align: center;
+  }
+  
+  &__body {
+    line-height: 1.4;
+    text-align: left;
+  }
 }

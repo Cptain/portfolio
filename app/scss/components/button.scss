@@ -11,10 +11,12 @@
   letter-spacing: rem(0.1);
 
   @include breakpoint-down(xsm) {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    padding: rem(7) 0;
+    letter-spacing: rem(0.3);
   }
 
-  &--primary {
+  &--yellow {
     background-color: var(--yellow-400);
     color: var(--blue-900);
     box-shadow: 0 2px 1px var(--yellow-700);
@@ -30,14 +32,30 @@
     }
   }
 
-  &--secondary {
+  &--transparent {
     background-color: transparent;
     color: var(--yellow-400);
     border: 1px solid;
-    font-weight: 300;
+    font-weight: 400;
 
     &:hover {
       background-color: var(--blue-700);
+    }
+  }
+
+  &--blue {
+    background-color: var(--blue-500);
+    color: var(--blue-100);
+    box-shadow: 0 2px 1px var(--blue-700);
+
+    &:hover,
+    &:active {
+      background-color: var(--blue-500);
+    }
+
+    &:active {
+      transform: translateY(1px);
+      box-shadow: none;
     }
   }
 }
