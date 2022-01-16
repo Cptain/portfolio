@@ -43,7 +43,7 @@ const makeStars = count => {
 };
 
 let stars = makeStars(10000);
-let myGradient = c.createLinearGradient(600, 600, 0, 0);
+let myGradient = c.createLinearGradient(0, 2000, 0, -600);
 myGradient.addColorStop(0, '#002547');
 myGradient.addColorStop(1, '#124982');
 
@@ -65,7 +65,7 @@ const moveStars = distance => {
     const s = stars[i];
     s.z -= distance;
     while (s.z <= 1) {
-      s.z += 1000;
+      s.z += 500;
     }
   }
 };

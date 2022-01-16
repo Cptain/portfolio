@@ -28,8 +28,8 @@
       <img class="navbar__logo" src="img/logo-captain.svg" alt="Captain Design Logo">
       <img class="navbar__logo--mobile" src="img/symbol-captain.svg" alt="Captain Design Symbol">
     </a>
-    <a class="button button--yellow" target="_blank" href="mailto:nicholaspanayotakos@gmail.com">Contact Me
-      <img class="button--external" src="img/icons/icon-external.svg" alt="Icon for External Links">
+    <a class="button button--yellow" target="_blank" href="mailto:nicholaspanayotakos@gmail.com">Email Me
+      <img class="button--external" src="img/icons/icon-send-email.svg" alt="Icon for Sending an Email">
     </a>
   </nav>
 
@@ -39,9 +39,9 @@
   https://betterprogramming.pub/fun-with-html-canvas-lets-create-a-star-field-a46b0fed5002
   -->
 
-  <!-- Hero Section -->
+  <!-- Hero -->
 
-  <header class="hero">
+  <header class="hero hero--homepage">
     <canvas id="canvas"></canvas>
     <div class="hero__text-container">
       <div class="clip-container">
@@ -63,10 +63,10 @@
     </div>
   </header>
 
-  <!-- About Section -->
+  <!-- About -->
 
   <div class="flex jc-c">
-    <div class="about flex flex-col gap-2">
+    <div class="about flex flex-col gap-15">
       <div class="flex flex-col gap-03">
         <h4 class="about__heading">About Me</h4>
         <span class="about__subheading">A Creative Night Owl</span>
@@ -76,41 +76,41 @@
           I am a Toronto-based web developer with a graphic design background.
         </p>
         <p class="about__body">
-          I invested a decade of my time using my experience in both fields as a side job before taking the opportunity to
-          turn them into a full-time profession. That was five years ago.
+          Both fields, design and development, started as side projects for me a long time ago. However, after a decade of treating them as such, I took the opportunity to turn them into a profession.
         </p>
         <p class="about__body">
-          Today, as a graphic design graduate, I have a deeper understanding of layout, color, animation, and typography,
-          further pushing my skills as a professional developer and designer.
+          Today, as a graphic design graduate, I have a deeper understanding of layout, color, animation, and
+          typography, skills that further complement my abilities as a developer.
         </p>
       </div>
       <div class="flex flex-col jc-sb gap-05">
         <span class="about__list-title">Looking for positions as:</span>
         <div class="about__job">
           <ul class="about__list">
-            <li class="about__list-item"><img src="img/icons/icon-web-design.svg" alt="Web Design Icon">Web Designer</li>
+            <li class="about__list-item"><img src="img/icons/icon-web-design.svg" alt="Web Design Icon">Web Designer
+            </li>
             <li class="about__list-item"><img src="img/icons/icon-web-dev.svg" alt="Web Development Icon">Web Developer
             </li>
             <li class="about__list-item"><img src="img/icons/icon-ui-ux.svg" alt="UI/UX Icon">UI/UX Designer</li>
           </ul>
         </div>
-        <a class="button button--yellow" target="_blank" href="mailto:nicholaspanayotakos@gmail.com">Contact Me
+        <a class="button button--yellow" target="_blank" href="mailto:nicholaspanayotakos@gmail.com">Email Me
           <img class="button--external" src="img/icons/icon-external.svg" alt="Icon for External Links">
         </a>
       </div>
     </div>
   </div>
 
-  <div class="divider__container">
-    <img class="divider" src="img/divider-vertical.svg" alt="Vertical Divider Graphic">
+  <div class="divider divider--medium">
+    <img src="img/divider-vertical.svg" alt="Vertical Divider Graphic">
   </div>
 
-  <!-- Section Projects -->
+  <!-- Experience -->
+
+  <h2 class="section__heading">Experience</h2>
 
   <section class="flex flex-col ai-c">
-
-    <h2 class="section__heading">Projects</h2>
-
+    
     <div data-project="vervendo" class="project">
       <div class="project__header">
         <div class="header__tag header__tag--left">Full-time</div>
@@ -160,9 +160,9 @@
           <li data-tag="figma" class="tag tag__skill">Figma</li>
         </ul>
       </div>
-      <div class="flex flex-col gap-05">
+      <div class="flex flex-col gap-1">
         <div class="project__links">
-          <a href="#" class="button button--transparent">View Details</a>
+          <a href="vervendo.html" class="button button--transparent">View Details</a>
           <a href="https://www.vervendo.com" class="button button--external button--transparent" target="_blank">Live
             Website
             <img src="img/icons/icon-external-yellow.svg" alt="External Link Icon"></a>
@@ -176,8 +176,8 @@
       </div>
     </div>
 
-    <div class="divider__container">
-      <img class="divider" src="img/divider-vertical.svg" alt="Vertical Divider Graphic">
+    <div class="divider--medium">
+      <img src="img/divider-vertical.svg" alt="Vertical Divider Graphic">
     </div>
 
     <div data-project="equal" class="project">
@@ -220,13 +220,12 @@
       <div class="project__links">
         <a href="#" class="button button--transparent">View Details</a>
         <a href="https://equal-play.netlify.app/" class="button button--external button--yellow" target="_blank">Demo
-          Website
           <img src="img/icons/icon-external.svg" alt="External Link Icon"></a>
       </div>
     </div>
 
-    <div class="divider__container">
-      <img class="divider" src="img/divider-vertical.svg" alt="Vertical Divider Graphic">
+    <div class="divider--medium">
+      <img src="img/divider-vertical.svg" alt="Vertical Divider Graphic">
     </div>
 
     <div data-project="koryfi" class="project">
@@ -280,8 +279,8 @@
       </div>
     </div>
 
-    <div class="divider__container">
-      <img class="divider" src="img/divider-vertical.svg" alt="Vertical Divider Graphic">
+    <div class="divider--medium">
+      <img src="img/divider-vertical.svg" alt="Vertical Divider Graphic">
     </div>
 
     <div data-project="vgl" class="project">
@@ -336,16 +335,18 @@
       <div class="project__links">
         <a href="#" class="button button--transparent">View Details</a>
         <a href="https://vgl-esports-intro.netlify.app/" class="button button--external button--yellow"
-          target="_blank">Demo Website
+          target="_blank">Demo
           <img src="img/icons/icon-external.svg" alt="External Link Icon"></a>
       </div>
     </div>
 
-    <div class="divider__container">
-      <img class="divider" src="img/divider-vertical.svg" alt="Vertical Divider Graphic">
+    <div class="divider--medium">
+      <img src="img/divider-vertical.svg" alt="Vertical Divider Graphic">
     </div>
 
   </section>
+
+  <!-- Contact -->
 
   <section class="flex flex-col ai-c">
     <h2 class="section__heading">Contact</h2>
@@ -361,21 +362,29 @@
     </div>
   </section>
 
+  <!-- Footer -->
+
   <footer class="footer">
     <div class="footer__social flex ai-c jc-c gap-2">
-      <img src="img/icons/icon-github.svg" alt="Github Icon">
-      <img src="img/icons/icon-linked.svg" alt="LinkedIn Icon">
-      <img src="img/icons/icon-twit.svg" alt="Twitter Icon">
-      <img src="img/icons/icon-insta.svg" alt="Instagram Icon">
+      <a href="https://github.com/Cptain" target="_blank">
+        <img src="img/icons/icon-github.svg" alt="Github Icon"></a>
+      <a href="https://www.linkedin.com/in/captaindesign/" target="_blank">
+        <img src="img/icons/icon-linked.svg" alt="LinkedIn Icon"></a>
+      <a href="https://twitter.com/imcaptain" target="_blank">
+        <img src="img/icons/icon-twit.svg" alt="Twitter Icon"></a>
+      <a href="https://www.instagram.com/captain__design/" target="_blank">
+        <img src="img/icons/icon-insta.svg" alt="Instagram Icon"></a>
     </div>
     <p class="footer__credit"><span class="--yellow-text">{</span> Designed and Developed by Nicholas Panayotakos <span
         class="--yellow-text">}</span></p>
     </div>
   </footer>
 
+  <!-- GreenSock CDNs -->
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+
 </body>
 
 </html>

@@ -7,12 +7,14 @@
   gap: rem(7);
   padding: rem(7) rem(14);
   border-radius: rem(5);
+  font-size: rem(13);
   font-weight: 600;
   letter-spacing: rem(0.1);
+  transition: all 100ms ease-out;
 
   @include breakpoint-down(xsm) {
     font-size: 0.8rem;
-    padding: rem(7) 0;
+    padding: rem(7) rem(7);
     letter-spacing: rem(0.3);
   }
 
@@ -50,7 +52,7 @@
 
     &:hover,
     &:active {
-      background-color: var(--blue-500);
+      background-color: var(--blue-400);
     }
 
     &:active {

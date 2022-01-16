@@ -1,0 +1,120 @@
+/**-------------------**
+| ADDS TAG ICONS
+**--------------------**/
+
+*[data-tag]::before {
+  content: "";
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  background-repeat: no-repeat;
+  transform: translateX(-19px);
+}
+
+[data-tag="html"] {
+  &::before {
+    background-image: url(../../../img/icons/icon-html.svg);
+  }
+}
+
+[data-tag="css"] {
+  &::before {
+    background-image: url(../../../img/icons/icon-css.svg);
+  }
+}
+
+[data-tag="scss"] {
+  &::before {
+    background-image: url(../../../img/icons/icon-scss.svg);
+  }
+}
+
+[data-tag="ng"] {
+  &::before {
+    background-image: url(../../../img/icons/icon-ng.svg);
+  }
+}
+
+[data-tag="ts"] {
+  &::before {
+    background-image: url(../../../img/icons/icon-ts.svg);
+  }
+}
+
+[data-tag="ps"] {
+  &::before {
+    background-image: url(../../../img/icons/icon-ps.svg);
+  }
+}
+
+[data-tag="ae"] {
+  &::before {
+    background-image: url(../../../img/icons/icon-ae.svg);
+  }
+}
+
+[data-tag="ai"] {
+  &::before {
+    background-image: url(../../../img/icons/icon-ai.svg);
+  }
+}
+
+[data-tag="pr"] {
+  &::before {
+    background-image: url(../../../img/icons/icon-pr.svg);
+  }
+}
+
+[data-tag="id"] {
+  &::before {
+    background-image: url(../../../img/icons/icon-id.svg);
+  }
+}
+
+[data-tag="figma"] {
+  &::before {
+    background-image: url(../../../img/icons/icon-figma.svg);
+  }
+}
+
+[data-tag="gsap"] {
+  &::before {
+    background-image: url(../../../img/icons/icon-gsap.svg);
+  }
+}
+
+[data-tag="vscode"] {
+  &::before {
+    background-image: url(../../../img/icons/icon-vscode.svg);
+  }
+}
+
+[data-tag="joomla"] {
+  &::before {
+    background-image: url(../../../img/icons/icon-joomla.svg);
+  }
+}
+
+[data-tag="xd"] {
+  &::before {
+    background-image: url(../../../img/icons/icon-xd.svg);
+  }
+}
+
+[data-tag="js"] {
+  &::before {
+    background-image: url(../../../img/icons/icon-js.svg);
+  }
+}
+
+[data-tag="git"] {
+  &::before {
+    background-image: url(../../../img/icons/icon-git.svg);
+  }
+}
+
+[data-tag="github"] {
+  &::before {
+    background-image: url(../../../img/icons/icon-github.svg);
+  }
+}

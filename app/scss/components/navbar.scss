@@ -5,11 +5,16 @@
   justify-content: space-between;
   position: sticky;
   top: 0;
+  height: rem(63);
   z-index: 99999;
-  background-color: var(--blue-800);
+  background-color: hsla(211, 87%, 21%, 0.95);
   padding: rem(15) rem(30);
   box-shadow: 0 -2px 12px rgb(0 0 0 / 20%);
   z-index: 99999;
+
+  @include breakpoint-down(xsm) {
+    padding: rem(15) rem(15);
+  }
 
   &__logo-container {
     display: inline-flex;

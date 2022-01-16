@@ -9,17 +9,45 @@
 
 .hero {
   position: relative;
-  background-image: linear-gradient(
-    145deg,
-    var(--blue-900) 45%,
-    var(--blue-800) 75%
-  );
-  background-color: var(--blue-900);
-  background-attachment: scroll;
-  background-repeat: no-repeat;
-  background-size: cover;
   height: rem(575);
-  padding: 0 rem(30);
+
+  &--homepage {
+    background-image: linear-gradient(
+      145deg,
+      var(--blue-900) 45%,
+      var(--blue-800) 75%
+    );
+    background-color: var(--blue-900);
+    padding: 0 rem(30);
+  }
+
+  &--vervendo {
+    background-image: url(../../../img/bg-vervendo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+
+  &__overlay {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+      360deg,
+      rgba(255, 255, 255, 0.8) 55%,
+      rgba(211, 225, 255, 0.8) 70%,
+      rgba(246, 250, 255, 0.064) 100%
+    );
+  }
+
+  &__logo {
+    position: relative;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
   &__text-container {
     padding-top: rem(120);

@@ -1,0 +1,17 @@
+@use "../utils" as *;
+
+.divider {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+  &--small {
+    height: 1px;
+    background-color: var(--blue-700);
+  }
+
+  &--medium {
+    padding: rem(60) 0;
+  }
+}
