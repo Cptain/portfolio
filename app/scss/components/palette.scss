@@ -15,13 +15,6 @@
     height: rem(32);
   }
 
-  &--small:not(:last-child)::after {
-    content: "+";
-    position: absolute;
-    right: rem(-15);
-    top: rem(6);
-  }
-
   &--big {
     width: rem(76);
     height: rem(76);
@@ -32,24 +25,34 @@
     margin-right: rem(-20);
   }
 
-  &--vervendo:nth-child(1) {
-    background-color: #2c6da9;
+  &--vervendo-white {
+    background-color: #ffffff;
     z-index: 5;
   }
 
-  &--vervendo:nth-child(2) {
-    background-color: #ffffff;
+  &--vervendo-blue {
+    background-color: #2c6da9;
     z-index: 4;
   }
 
-  &--vervendo:nth-child(3) {
+  &--vervendo-pink {
     background-color: #ff577f;
     z-index: 3;
   }
 
-  &--small + &--vervendo:nth-child(3)::after,
-  &--small + &--vervendo:nth-child(4)::after,
-  &--small + &--vervendo:nth-child(5)::after {
+  &--vervendo-yellow {
+    background-color: #ffca41;
+    z-index: 2;
+  }
+
+  &--vervendo-gold {
+    background-color: #c98f1d;
+    z-index: 1;
+  }
+
+  &--small + &--vervendo-pink::after,
+  &--small + &--vervendo-yellow::after,
+  &--small + &--vervendo-gold::after {
     content: "new";
     position: absolute;
     right: rem(-14);
@@ -62,21 +65,12 @@
     border-radius: 100vh;
     padding: rem(1) rem(4);
   }
-
-  &--vervendo:nth-child(4) {
-    background-color: #ffca41;
-    z-index: 2;
-  }
-
-  &--vervendo:nth-child(5) {
-    background-color: #c98f1d;
-    z-index: 1;
-  }
 }
 
 .color-value {
   color: #fff;
   padding: rem(30);
+  max-width: 52ch;
 
   &__line {
     width: rem(10);

@@ -1,0 +1,17 @@
+@use '../utils' as *;
+
+.mockup {
+  width: 52ch;
+
+  @include breakpoint-down(sm) {
+    width: 350px;
+  }
+
+  @include breakpoint-down(xsm) {
+    width: 300px;
+  }
+
+  &__mobile-offers {
+
+  }
+}
