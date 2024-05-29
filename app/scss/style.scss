@@ -1,3 +1,3 @@
-@use 'globals';
-@use 'components';
-@use 'utils';
+@forward "globals";
+@forward "components";
+@forward "utils";

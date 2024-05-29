@@ -1,4 +1,4 @@
-@use "../utils" as *;
+@use "../utils/" as *;
 
 .button {
   display: flex;
@@ -19,13 +19,13 @@
   }
 
   &--yellow {
-    background-color: var(--yellow-400);
+    background-color: var(--yellow-500);
     color: var(--blue-900);
     box-shadow: 0 2px 1px var(--yellow-700);
 
     &:hover,
     &:active {
-      background-color: var(--yellow-500);
+      background-color: var(--yellow-600);
     }
 
     &:active {

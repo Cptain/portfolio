@@ -1,4 +1,6 @@
-@use "../utils" as *;
+@use "../utils/functions" as *;
+@use "../utils/mixins" as *;
+@use "../utils/breakpoints" as *;
 
 .divider {
     display: flex;

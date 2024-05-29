@@ -1,4 +1,6 @@
-@use "../utils" as *;
+@use "../utils/functions" as *;
+@use "../utils/mixins" as *;
+@use "../utils/breakpoints" as *;
 
 /**-------------------**
 | SECTION STYLING
@@ -136,17 +138,17 @@
     height: 45px;
     padding: 0 rem(16);
     transform: translateX(-50%);
-    background-color: var(--yellow-400);
+    background-color: var(--yellow-500);
     border-radius: rem(10) rem(10) 0 0;
   }
 
   .header__logo {
     display: grid;
     place-items: center;
-    height: 80px;
-    width: 80px;
+    min-height: 80px;
+    min-width: 80px;
     background-color: var(--blue-900);
-    border: 5px solid var(--yellow-400);
+    border: 5px solid var(--yellow-500);
     border-radius: 100%;
   }
 
@@ -155,6 +157,7 @@
     font-size: rem(14);
     font-weight: 400;
     letter-spacing: rem(0.3);
+    white-space: nowrap;
   }
 
   &__name {
