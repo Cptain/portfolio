@@ -15,11 +15,16 @@
   <link rel="stylesheet" href="https://use.typekit.net/exg0zlw.css">
 
   <script defer src="dist/script.js"></script>
-  <script defer src="dist/"></script>
 
 </head>
 
 <body>
+
+  <!-- 
+  A big thank you to Slawomir Chodnicki for his guide in understanding how to build this mesmerizing starry background.
+  https://betterprogramming.pub/fun-with-html-canvas-lets-create-a-star-field-a46b0fed5002
+  -->
+  <canvas id="canvas"></canvas>
 
   <!-- Navigation Bar -->
 
@@ -28,339 +33,300 @@
       <img class="navbar__logo" src="img/logo-captain.svg" alt="Captain Design Logo">
       <img class="navbar__logo--mobile" src="img/symbol-captain.svg" alt="Captain Design Symbol">
     </a>
-    <a class="button button--yellow" target="_blank" href="mailto:nicholaspanayotakos@gmail.com">Email Me
+    <!-- <a class="button button--yellow" target="_blank" href="mailto:nicholaspanayotakos@gmail.com">Email Me
       <img class="button--external" src="img/icons/icon-send-email.svg" alt="Icon for Sending an Email">
-    </a>
+    </a> -->
   </nav>
 
+  <main class="main">
 
-  <!-- 
-  A big thank you to Slawomir Chodnicki for his guide in understanding how to build this mesmerizing starry background.
-  https://betterprogramming.pub/fun-with-html-canvas-lets-create-a-star-field-a46b0fed5002
-  -->
+    <section class="sidebar">
+      <!-- Hero -->
 
-  <!-- Hero -->
-
-  <header class="hero hero--homepage">
-    <canvas id="canvas"></canvas>
-    <div class="hero__text-container">
-      <div class="clip-container">
-        <p class="hero__body stagger">Hello!</p>
-        <p class="hero__body stagger">I am Nicholas Panayotakos</p>
-      </div>
-      <div class="hero__heading-container">
-        <div class="clip-container">
-          <h1 class="hero__heading stagger">Designer &</h1>
+      <header class="hero hero--homepage">
+        <div class="hero__text-container">
+          <div class="clip-container">
+            <p class="hero__body stagger">Hello!</p>
+            <p class="hero__body stagger">I am Nicholas Panayotakos</p>
+          </div>
+          <div class="hero__heading-container">
+            <div class="clip-container">
+              <h1 class="hero__heading stagger">Designer &</h1>
+            </div>
+            <div class="clip-container">
+              <h1 class="hero__heading stagger">Developer</h1>
+            </div>
+          </div>
+          <p class="hero__body stagger">with a passion for the web.</p>
         </div>
-        <div class="clip-container">
-          <h1 class="hero__heading stagger">Developer</h1>
+      </header>
+
+      <!-- About -->
+
+      <div class="about flex flex-col gap-15">
+        <div class="flex flex-col gap-05">
+          <h4 class="about__heading">About Me</h4>
+          <span class="about__subheading">A Creative Night Owl</span>
         </div>
-      </div>
-      <p class="hero__body stagger">with a infinite love for the web.</p>
-    </div>
-    <div class="hero__image-container">
-      <img class="hero__image" src="img/bg-planet.svg" alt="Planet Graphic">
-    </div>
-  </header>
-
-  <!-- About -->
-
-  <div class="flex jc-c">
-    <div class="about flex flex-col gap-15">
-      <div class="flex flex-col gap-03">
-        <h4 class="about__heading">About Me</h4>
-        <span class="about__subheading">A Creative Night Owl</span>
-      </div>
-      <div class="flex flex-col gap-06">
-        <p class="about__body">
-          I am a Toronto-based web developer with a graphic design background.
-        </p>
-        <p class="about__body">
-          Both fields, design and development, started as side projects for me a long time ago. However, after a decade of treating them as such, I took the opportunity to turn them into a profession.
-        </p>
-        <p class="about__body">
-          Today, as a graphic design graduate, I have a deeper understanding of layout, color, animation, and
-          typography, skills that further complement my abilities as a developer.
-        </p>
-      </div>
-      <div class="flex flex-col jc-sb gap-05">
-        <span class="about__list-title">Looking for positions as:</span>
-        <div class="about__job">
-          <ul class="about__list">
-            <li class="about__list-item"><img src="img/icons/icon-web-design.svg" alt="Web Design Icon">Web Designer
-            </li>
-            <li class="about__list-item"><img src="img/icons/icon-web-dev.svg" alt="Web Development Icon">Web Developer
-            </li>
-            <li class="about__list-item"><img src="img/icons/icon-ui-ux.svg" alt="UI/UX Icon">UI/UX Designer</li>
-          </ul>
+        <div class="flex flex-col gap-1">
+          <p class="about__body">
+            Specializing in creating clean, easy-to-use, engaging user interfaces.
+          </p>
         </div>
-        <a class="button button--yellow" target="_blank" href="mailto:nicholaspanayotakos@gmail.com">Email Me
-          <img class="button--external" src="img/icons/icon-external.svg" alt="Icon for External Links">
-        </a>
+        <ul class="about__list">
+          <li class="about__list-item"><img src="img/icons/icon-web-design.svg" alt="Web Design Icon">Web<br>Designer
+          </li>
+          <li class="about__list-item"><img src="img/icons/icon-web-dev.svg" alt="Web Development Icon">Web<br>Developer
+          </li>
+          <li class="about__list-item"><img src="img/icons/icon-ui-ux.svg" alt="UI/UX Icon">UI/UX<br>Designer</li>
+        </ul>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <div class="divider divider--medium">
-    <img src="img/divider-vertical.svg" alt="Vertical Divider Graphic">
-  </div>
+    <section class="content">
+      <!-- Experience -->
 
-  <!-- Experience -->
+      <h2 class="section__heading">Experience</h2>
 
-  <h2 class="section__heading">Experience</h2>
+      <section class="flex flex-col ai-c">
 
-  <section class="flex flex-col ai-c">
-    
-    <div data-project="vervendo" class="project">
-      <div class="project__header">
-        <div class="header__tag header__tag--left">Full-time</div>
-        <div class="header__logo">
-          <img src="img/symbol-vervendo.svg" alt="Vervendo Symbol">
+        <div data-project="vervendo" class="project">
+          <div class="project__header">
+            <div class="header__tag header__tag--left">Full-time</div>
+            <div class="header__logo">
+              <img src="img/symbol-vervendo.svg" alt="Vervendo Symbol">
+            </div>
+            <div class="header__tag header__tag--right">Remote</div>
+          </div>
+          <div class="project__info">
+            <h3 class="project__name">Vervendo</h3>
+            <span class="project__date">Aug 2020 - Currently</span>
+            <p class="project__body">A startup company building an innovative online booking platform to personalize and
+              enhance travelling experiences.</p>
+          </div>
+          <div class="project__roles">
+            <h4 class="project__subheading">My Roles</h4>
+            <ul class="tag__list">
+              <li class="tag tag__role">Front-end</li>
+              <li class="tag tag__role">UI / UX</li>
+              <li class="tag tag__role">Branding</li>
+              <li class="tag tag__role">Animation</li>
+              <li class="tag tag__role">Advertisement</li>
+            </ul>
+            <p class="project__body">
+              Responsible for building UI components, graphics, animations, presentations, and advertising campaigns.
+            </p>
+          </div>
+          <div class="project__skills">
+            <h4 class="project__subheading">Technologies Used</h4>
+            <ul class="tag__list">
+              <li data-tag="html" class="tag tag__skill">HTML</li>
+              <li data-tag="css" class="tag tag__skill">CSS</li>
+              <li data-tag="scss" class="tag tag__skill">SCSS</li>
+              <li data-tag="ts" class="tag tag__skill">TypeScript</li>
+              <li data-tag="ng" class="tag tag__skill">Angular</li>
+              <li data-tag="gsap" class="tag tag__skill">GreenSock</li>
+            </ul>
+          </div>
+          <div class="project__skills">
+            <h4 class="project__subheading">Software Used</h4>
+            <ul class="tag__list">
+              <li data-tag="ps" class="tag tag__skill">Photoshop</li>
+              <li data-tag="ai" class="tag tag__skill">Illustrator</li>
+              <li data-tag="ae" class="tag tag__skill">After Effects</li>
+              <li data-tag="pr" class="tag tag__skill">Premiere Pro</li>
+              <li data-tag="vscode" class="tag tag__skill">VS Code</li>
+              <li data-tag="figma" class="tag tag__skill">Figma</li>
+            </ul>
+          </div>
+          <div class="flex flex-col gap-1">
+            <div class="project__links">
+              <a href="vervendo.html" class="button button--transparent">View Details</a>
+              <a href="https://www.vervendo.com" class="button button--external button--transparent"
+                target="_blank">Live
+                Website
+                <img src="img/icons/icon-external-yellow.svg" alt="External Link Icon"></a>
+            </div>
+            <div class="project__links">
+              <a href="https://vvdo-fe-dev.vervendo.com/" class="button button--external button--yellow"
+                target="_blank">Latest Version of Website
+                <img src="img/icons/icon-external.svg" alt="External Link Icon">
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="header__tag header__tag--right">Remote</div>
-      </div>
-      <div class="project__info">
-        <h3 class="project__name">Vervendo</h3>
-        <span class="project__date">Aug 2020 - Currently</span>
-        <p class="project__body">A startup company building an innovative online booking platform to personalize and
-          enhance travelling experiences.</p>
-      </div>
-      <div class="project__roles">
-        <h4 class="project__subheading">My Roles</h4>
-        <ul class="tag__list">
-          <li class="tag tag__role">Front-end</li>
-          <li class="tag tag__role">UI / UX</li>
-          <li class="tag tag__role">Branding</li>
-          <li class="tag tag__role">Animation</li>
-          <li class="tag tag__role">Advertisement</li>
-        </ul>
-        <p class="project__body">
-          Responsible for building UI components, graphics, animations, presentations, and advertising campaigns.
-        </p>
-      </div>
-      <div class="project__skills">
-        <h4 class="project__subheading">Technologies Used</h4>
-        <ul class="tag__list">
-          <li data-tag="html" class="tag tag__skill">HTML</li>
-          <li data-tag="css" class="tag tag__skill">CSS</li>
-          <li data-tag="scss" class="tag tag__skill">SCSS</li>
-          <li data-tag="ts" class="tag tag__skill">TypeScript</li>
-          <li data-tag="ng" class="tag tag__skill">Angular</li>
-          <li data-tag="gsap" class="tag tag__skill">GreenSock</li>
-        </ul>
-      </div>
-      <div class="project__skills">
-        <h4 class="project__subheading">Software Used</h4>
-        <ul class="tag__list">
-          <li data-tag="ps" class="tag tag__skill">Photoshop</li>
-          <li data-tag="ai" class="tag tag__skill">Illustrator</li>
-          <li data-tag="ae" class="tag tag__skill">After Effects</li>
-          <li data-tag="pr" class="tag tag__skill">Premiere Pro</li>
-          <li data-tag="vscode" class="tag tag__skill">VS Code</li>
-          <li data-tag="figma" class="tag tag__skill">Figma</li>
-        </ul>
-      </div>
-      <div class="flex flex-col gap-1">
-        <div class="project__links">
-          <a href="vervendo.html" class="button button--transparent">View Details</a>
-          <a href="https://www.vervendo.com" class="button button--external button--transparent" target="_blank">Live
-            Website
-            <img src="img/icons/icon-external-yellow.svg" alt="External Link Icon"></a>
+
+        <div class="divider--medium">
+          <img src="img/divider-vertical.svg" alt="Vertical Divider Graphic">
         </div>
-        <div class="project__links">
-          <a href="https://vvdo-fe-dev.vervendo.com/" class="button button--external button--yellow"
-            target="_blank">Latest Version of Website
-            <img src="img/icons/icon-external.svg" alt="External Link Icon">
-          </a>
+
+        <div data-project="equal" class="project">
+          <div class="project__header">
+            <div class="header__tag header__tag--left">Full-time</div>
+            <div class="header__logo">
+              <img src="img/symbol-equal-play.svg" alt="Equal Play Symbol">
+            </div>
+            <div class="header__tag header__tag--right">Thesis</div>
+          </div>
+          <div class="project__info">
+            <h3 class="project__name">Equal Play</h3>
+            <span class="project__date">Sept 2020 - Apr 2021</span>
+            <p class="project__body">An online gaming hub highlighting the disproportion of gender in the video game
+              industry, as well as showcasing female and trans designers, developers, artists, and engineers of the
+              industry.</p>
+          </div>
+          <div class="project__roles">
+            <h4 class="project__subheading">My Roles</h4>
+            <ul class="tag__list">
+              <li class="tag tag__role">Branding</li>
+              <li class="tag tag__role">UI / UX</li>
+              <li class="tag tag__role">Advertisement</li>
+            </ul>
+            <p class="project__body">
+              Responsible for building the brand, including colors, type, icons, patterns, and the logo. As well as
+              designing the UI/UX prototype of the website.
+            </p>
+          </div>
+          <div class="project__skills">
+            <h4 class="project__subheading">Software Used</h4>
+            <ul class="tag__list">
+              <li data-tag="ps" class="tag tag__skill">Photoshop</li>
+              <li data-tag="ai" class="tag tag__skill">Illustrator</li>
+              <li data-tag="ae" class="tag tag__skill">After Effects</li>
+              <li data-tag="id" class="tag tag__skill">InDesign</li>
+              <li data-tag="figma" class="tag tag__skill">Figma</li>
+            </ul>
+          </div>
+          <div class="project__links">
+            <a href="#" class="button button--transparent">View Details</a>
+            <a href="https://equal-play.netlify.app/" class="button button--external button--yellow"
+              target="_blank">Demo
+              <img src="img/icons/icon-external.svg" alt="External Link Icon"></a>
+          </div>
         </div>
-      </div>
-    </div>
 
-    <div class="divider--medium">
-      <img src="img/divider-vertical.svg" alt="Vertical Divider Graphic">
-    </div>
-
-    <div data-project="equal" class="project">
-      <div class="project__header">
-        <div class="header__tag header__tag--left">Full-time</div>
-        <div class="header__logo">
-          <img src="img/symbol-equal-play.svg" alt="Equal Play Symbol">
+        <div class="divider--medium">
+          <img src="img/divider-vertical.svg" alt="Vertical Divider Graphic">
         </div>
-        <div class="header__tag header__tag--right">Thesis</div>
-      </div>
-      <div class="project__info">
-        <h3 class="project__name">Equal Play</h3>
-        <span class="project__date">Sept 2020 - Apr 2021</span>
-        <p class="project__body">An online gaming hub highlighting the disproportion of gender in the video game
-          industry, as well as showcasing female and trans designers, developers, artists, and engineers of the
-          industry.</p>
-      </div>
-      <div class="project__roles">
-        <h4 class="project__subheading">My Roles</h4>
-        <ul class="tag__list">
-          <li class="tag tag__role">Branding</li>
-          <li class="tag tag__role">UI / UX</li>
-          <li class="tag tag__role">Advertisement</li>
-        </ul>
-        <p class="project__body">
-          Responsible for building the brand, including colors, type, icons, patterns, and the logo. As well as
-          designing the UI/UX prototype of the website.
-        </p>
-      </div>
-      <div class="project__skills">
-        <h4 class="project__subheading">Software Used</h4>
-        <ul class="tag__list">
-          <li data-tag="ps" class="tag tag__skill">Photoshop</li>
-          <li data-tag="ai" class="tag tag__skill">Illustrator</li>
-          <li data-tag="ae" class="tag tag__skill">After Effects</li>
-          <li data-tag="id" class="tag tag__skill">InDesign</li>
-          <li data-tag="figma" class="tag tag__skill">Figma</li>
-        </ul>
-      </div>
-      <div class="project__links">
-        <a href="#" class="button button--transparent">View Details</a>
-        <a href="https://equal-play.netlify.app/" class="button button--external button--yellow" target="_blank">Demo
-          <img src="img/icons/icon-external.svg" alt="External Link Icon"></a>
-      </div>
-    </div>
 
-    <div class="divider--medium">
-      <img src="img/divider-vertical.svg" alt="Vertical Divider Graphic">
-    </div>
-
-    <div data-project="koryfi" class="project">
-      <div class="project__header">
-        <div class="header__tag header__tag--left">Contract</div>
-        <div class="header__logo">
-          <img src="img/symbol-koryfi.svg" alt="Koryfi Cleaning Symbol">
+        <div data-project="koryfi" class="project">
+          <div class="project__header">
+            <div class="header__tag header__tag--left">Contract</div>
+            <div class="header__logo">
+              <img src="img/symbol-koryfi.svg" alt="Koryfi Cleaning Symbol">
+            </div>
+            <div class="header__tag header__tag--right">Remote</div>
+          </div>
+          <div class="project__info">
+            <h3 class="project__name">Koryfi Cleaning</h3>
+            <span class="project__date">June 2020</span>
+            <p class="project__body">A greek-based company specializing in cleaning and maintaining corporate and
+              government
+              facilities while focusing on remaining eco-friendly by using high-quality ecological products.</p>
+          </div>
+          <div class="project__roles">
+            <h4 class="project__subheading">My Roles</h4>
+            <ul class="tag__list">
+              <li class="tag tag__role">Branding</li>
+              <li class="tag tag__role">UI / UX</li>
+            </ul>
+            <p class="project__body">
+              Rebranded the company with new color palette, icons, and logo. Also, designed the UI of their website.
+            </p>
+          </div>
+          <div class="project__skills">
+            <h4 class="project__subheading">Technologies Used</h4>
+            <ul class="tag__list">
+              <li data-tag="html" class="tag tag__skill">HTML</li>
+              <li data-tag="css" class="tag tag__skill">CSS</li>
+              <li data-tag="scss" class="tag tag__skill">SCSS</li>
+              <li data-tag="js" class="tag tag__skill">JavaScript</li>
+              <li data-tag="gsap" class="tag tag__skill">GreenSock</li>
+            </ul>
+          </div>
+          <div class="project__skills">
+            <h4 class="project__subheading">Software Used</h4>
+            <ul class="tag__list">
+              <li data-tag="ps" class="tag tag__skill">Photoshop</li>
+              <li data-tag="ai" class="tag tag__skill">Illustrator</li>
+              <li data-tag="vscode" class="tag tag__skill">VS Code</li>
+              <li data-tag="figma" class="tag tag__skill">Figma</li>
+            </ul>
+          </div>
+          <div class="project__links">
+            <a href="#" class="button button--transparent">View Details</a>
+            <a href="https://www.koryficleaning.com" class="button button--external button--yellow" target="_blank">Live
+              Website
+              <img src="img/icons/icon-external.svg" alt="External Link Icon"></a>
+          </div>
         </div>
-        <div class="header__tag header__tag--right">Remote</div>
-      </div>
-      <div class="project__info">
-        <h3 class="project__name">Koryfi Cleaning</h3>
-        <span class="project__date">June 2020</span>
-        <p class="project__body">A greek-based company specializing in cleaning and maintaining corporate and government
-          facilities while focusing on remaining eco-friendly by using high-quality ecological products.</p>
-      </div>
-      <div class="project__roles">
-        <h4 class="project__subheading">My Roles</h4>
-        <ul class="tag__list">
-          <li class="tag tag__role">Branding</li>
-          <li class="tag tag__role">UI / UX</li>
-        </ul>
-        <p class="project__body">
-          Rebranded the company with new color palette, icons, and logo. Also, designed the UI of their website.
-        </p>
-      </div>
-      <div class="project__skills">
-        <h4 class="project__subheading">Technologies Used</h4>
-        <ul class="tag__list">
-          <li data-tag="html" class="tag tag__skill">HTML</li>
-          <li data-tag="css" class="tag tag__skill">CSS</li>
-          <li data-tag="scss" class="tag tag__skill">SCSS</li>
-          <li data-tag="js" class="tag tag__skill">JavaScript</li>
-          <li data-tag="gsap" class="tag tag__skill">GreenSock</li>
-        </ul>
-      </div>
-      <div class="project__skills">
-        <h4 class="project__subheading">Software Used</h4>
-        <ul class="tag__list">
-          <li data-tag="ps" class="tag tag__skill">Photoshop</li>
-          <li data-tag="ai" class="tag tag__skill">Illustrator</li>
-          <li data-tag="vscode" class="tag tag__skill">VS Code</li>
-          <li data-tag="figma" class="tag tag__skill">Figma</li>
-        </ul>
-      </div>
-      <div class="project__links">
-        <a href="#" class="button button--transparent">View Details</a>
-        <a href="https://www.koryficleaning.com" class="button button--external button--yellow" target="_blank">Live
-          Website
-          <img src="img/icons/icon-external.svg" alt="External Link Icon"></a>
-      </div>
-    </div>
 
-    <div class="divider--medium">
-      <img src="img/divider-vertical.svg" alt="Vertical Divider Graphic">
-    </div>
-
-    <div data-project="vgl" class="project">
-      <div class="project__header">
-        <div class="header__tag header__tag--left">Full-time</div>
-        <div class="header__logo">
-          <img src="img/symbol-vgl.svg" alt="VGL E-sports Symbol">
+        <div class="divider--medium">
+          <img src="img/divider-vertical.svg" alt="Vertical Divider Graphic">
         </div>
-        <div class="header__tag header__tag--right">Remote</div>
-      </div>
-      <div class="project__info">
-        <h3 class="project__name">VGL Esports</h3>
-        <span class="project__date">Aug 2017 - Aug 2020</span>
-        <p class="project__body">A startup company organizing online leagues and tournaments for FIFA, NBA2K, and
-          Formula 1, with weekly livestreams casting their matches.</p>
-      </div>
-      <div class="project__roles">
-        <h4 class="project__subheading">My Roles</h4>
-        <ul class="tag__list">
-          <li class="tag tag__role">UI / UX</li>
-          <li class="tag tag__role">Front-end</li>
-          <li class="tag tag__role">Animation</li>
-          <li class="tag tag__role">Branding</li>
-          <li class="tag tag__role">Advertisement</li>
-        </ul>
-        <p class="project__body">
-          Tasked to design and develop our landing page; polish and maintain our website; build our brand; create logos,
-          icons, social posts, and livestream overlays; write, edit, and proof-read documents.
-        </p>
-      </div>
-      <div class="project__skills">
-        <h4 class="project__subheading">Technologies Used</h4>
-        <ul class="tag__list">
-          <li data-tag="html" class="tag tag__skill">HTML</li>
-          <li data-tag="css" class="tag tag__skill">CSS</li>
-          <li data-tag="scss" class="tag tag__skill">SCSS</li>
-          <li data-tag="js" class="tag tag__skill">JavaScript</li>
-          <li data-tag="joomla" class="tag tag__skill">Joomla</li>
-          <li data-tag="gsap" class="tag tag__skill">GreenSock</li>
-        </ul>
-      </div>
-      <div class="project__skills">
-        <h4 class="project__subheading">Software Used</h4>
-        <ul class="tag__list">
-          <li data-tag="ps" class="tag tag__skill">Photoshop</li>
-          <li data-tag="ai" class="tag tag__skill">Illustrator</li>
-          <li data-tag="xd" class="tag tag__skill">Adobe Xd</li>
-          <li data-tag="vscode" class="tag tag__skill">VS Code</li>
-          <li data-tag="figma" class="tag tag__skill">Figma</li>
-        </ul>
-      </div>
-      <div class="project__links">
-        <a href="#" class="button button--transparent">View Details</a>
-        <a href="https://vgl-esports-intro.netlify.app/" class="button button--external button--yellow"
-          target="_blank">Demo
-          <img src="img/icons/icon-external.svg" alt="External Link Icon"></a>
-      </div>
-    </div>
 
-    <div class="divider--medium">
-      <img src="img/divider-vertical.svg" alt="Vertical Divider Graphic">
-    </div>
+        <div data-project="vgl" class="project">
+          <div class="project__header">
+            <div class="header__tag header__tag--left">Full-time</div>
+            <div class="header__logo">
+              <img src="img/symbol-vgl.svg" alt="VGL E-sports Symbol">
+            </div>
+            <div class="header__tag header__tag--right">Remote</div>
+          </div>
+          <div class="project__info">
+            <h3 class="project__name">VGL Esports</h3>
+            <span class="project__date">Aug 2017 - Aug 2020</span>
+            <p class="project__body">A startup company organizing online leagues and tournaments for FIFA, NBA2K, and
+              Formula 1, with weekly livestreams casting their matches.</p>
+          </div>
+          <div class="project__roles">
+            <h4 class="project__subheading">My Roles</h4>
+            <ul class="tag__list">
+              <li class="tag tag__role">UI / UX</li>
+              <li class="tag tag__role">Front-end</li>
+              <li class="tag tag__role">Animation</li>
+              <li class="tag tag__role">Branding</li>
+              <li class="tag tag__role">Advertisement</li>
+            </ul>
+            <p class="project__body">
+              Tasked to design and develop our landing page; polish and maintain our website; build our brand; create
+              logos,
+              icons, social posts, and livestream overlays; write, edit, and proof-read documents.
+            </p>
+          </div>
+          <div class="project__skills">
+            <h4 class="project__subheading">Technologies Used</h4>
+            <ul class="tag__list">
+              <li data-tag="html" class="tag tag__skill">HTML</li>
+              <li data-tag="css" class="tag tag__skill">CSS</li>
+              <li data-tag="scss" class="tag tag__skill">SCSS</li>
+              <li data-tag="js" class="tag tag__skill">JavaScript</li>
+              <li data-tag="joomla" class="tag tag__skill">Joomla</li>
+              <li data-tag="gsap" class="tag tag__skill">GreenSock</li>
+            </ul>
+          </div>
+          <div class="project__skills">
+            <h4 class="project__subheading">Software Used</h4>
+            <ul class="tag__list">
+              <li data-tag="ps" class="tag tag__skill">Photoshop</li>
+              <li data-tag="ai" class="tag tag__skill">Illustrator</li>
+              <li data-tag="xd" class="tag tag__skill">Adobe Xd</li>
+              <li data-tag="vscode" class="tag tag__skill">VS Code</li>
+              <li data-tag="figma" class="tag tag__skill">Figma</li>
+            </ul>
+          </div>
+          <div class="project__links">
+            <a href="#" class="button button--transparent">View Details</a>
+            <a href="https://vgl-esports-intro.netlify.app/" class="button button--external button--yellow"
+              target="_blank">Demo
+              <img src="img/icons/icon-external.svg" alt="External Link Icon"></a>
+          </div>
+        </div>
 
-  </section>
+      </section>
+    </section>
 
-  <!-- Contact -->
-
-  <section class="flex flex-col ai-c">
-    <h2 class="section__heading">Contact</h2>
-    <div class="contact">
-      <div class="flex flex-col gap-05">
-        <h4 class="contact__name">Want to know more?</h4>
-        <p class="contact__body">I would love to meet you and have a chat!</p>
-        <p class="contact__body">You are more than welcome to email me or message me on any of my socials.
-        </p>
-      </div>
-      <a href="mailto:nicholaspanayotakos@gmail.com" class="button button--blue button--external">Send me an email<img
-          src="img/icons/icon-external-white.svg" alt=""></a>
-    </div>
-  </section>
+  </main>
 
   <!-- Footer -->
 

@@ -7,11 +7,12 @@
   justify-content: space-between;
   position: sticky;
   top: 0;
-  height: rem(63);
+  max-width: rem(1200);
+  height: rem(120);
+  padding: rem(46) rem(32);
   z-index: 99999;
-  background-color: hsla(211, 87%, 21%, 0.95);
-  padding: rem(15) rem(30);
-  box-shadow: 0 -2px 12px rgb(0 0 0 / 20%);
+  background-color: transparent;
+  margin: 0 auto;
 
   @include breakpoint-down(xsm) {
     padding: rem(15) rem(15);

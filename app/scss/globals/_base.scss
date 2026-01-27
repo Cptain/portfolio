@@ -1,0 +1,41 @@
+@use "../utils/functions" as *;
+@use "../utils/mixins" as *;
+@use "../utils/breakpoints" as *;
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeSpeed;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-primary);
+  background-color: var(--blue-1100);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.main {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: rem(120);
+}
+
+.sidebar {
+  position: sticky;
+  padding-top: rem(110);
+  top: rem(110);
+  height: 100vh;
+}

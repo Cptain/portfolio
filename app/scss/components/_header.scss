@@ -11,17 +11,12 @@
 
 .hero {
   position: relative;
-  height: rem(575);
+  height: rem(300);
 
   &--homepage {
-    background-image: linear-gradient(
-      145deg,
-      var(--blue-900) 45%,
-      var(--blue-800) 75%
-    );
-    background-color: var(--blue-900);
     padding: 0 rem(30);
   }
+  
 
   &--vervendo {
     background-image: url(../../../img/bg-vervendo.png);
@@ -49,11 +44,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
-
-  &__text-container {
-    padding-top: rem(120);
-    text-shadow: 0 2px 2px rgb(0 0 0 / 30%);
   }
 
   &__heading-container {

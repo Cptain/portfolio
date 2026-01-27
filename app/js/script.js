@@ -44,8 +44,8 @@ const makeStars = count => {
 
 let stars = makeStars(10000);
 let myGradient = c.createLinearGradient(0, 2000, 0, -600);
-myGradient.addColorStop(0, '#002547');
-myGradient.addColorStop(1, '#124982');
+myGradient.addColorStop(0, '#000b14');
+myGradient.addColorStop(1, '#002547');
 
 const clear = () => {
   c.fillStyle = myGradient;
