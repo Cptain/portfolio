@@ -19,91 +19,6 @@
 }
 
 /**-------------------**
-| ABOUT CARD STYLING
-**--------------------**/
-
-.about {
-  position: relative;
-  z-index: 99;
-  max-width: 52ch;
-  margin: rem(-60) rem(30) 0;
-  background: transparent;
-  border-radius: rem(10);
-
-  @include breakpoint-down(xsm) {
-    margin: rem(-60) rem(30) 0;
-  }
-
-  &__heading {
-    font-size: rem(18);
-    color: var(--blue-100);
-    margin-bottom: rem(-5);
-  }
-
-  &__subheading {
-    font-size: rem(9);
-    color: var(--blue-500);
-    text-transform: uppercase;
-    letter-spacing: rem(1);
-  }
-
-  &__body {
-    font-size: rem(16);
-    font-weight: 300;
-    color: var(--blue-200);
-    text-wrap: pretty;
-    line-height: 1.5;
-  }
-
-
-  &__list-title {
-    letter-spacing: rem(0.2);
-    font-weight: 600;
-    font-size: rem(14);
-    color: var(--blue-100);
-  }
-
-  &__list {
-    display: flex;
-    gap: rem(16);
-    margin-top: 0;
-  }
-
-  &__list-item {
-    display: flex;
-    align-items: center;
-    gap: rem(8);
-    background-color: color-mix(in srgb, var(--blue-100) 5%, transparent);
-    color: var(--yellow-300);
-    padding: rem(2) rem(16) rem(2) rem(8);
-    border-radius: rem(7);
-    font-size: rem(13);
-    letter-spacing: 0.25px;
-    list-style-type: none;
-    text-align: left;
-    line-height: 1.2;
-    margin-left: rem(-7);
-    transition: background-color 200ms ease-out;
-
-    &:hover {
-      background-color: color-mix(in srgb, var(--blue-100) 8%, transparent);
-    }
-
-    @include breakpoint-down(xxsm) {
-      font-size: rem(12);
-    }
-  }
-
-  &__list-item img {
-    height: rem(64);
-
-    @include breakpoint-down(xxsm) {
-      height: rem(32);
-    }
-  }
-}
-
-/**-------------------**
 | HOMEPAGE PROJECT CARD STYLING
 **--------------------**/
 
@@ -121,9 +36,8 @@
   gap: rem(40);
   max-width: 52ch;
   padding: rem(60) rem(30) rem(30);
-  margin: rem(60) rem(30) 0;
   color: var(--blue-100);
-  border-radius: rem(15);
+  border-radius: rem(32);
   border: 1px solid var(--blue-900);
   background-color: var(--blue-1000);
   box-shadow: 0px 0px 56px -3px rgba(0,55,105,.33);
@@ -132,15 +46,16 @@
     align-items: center;
     display: flex;
     position: absolute;
-    gap: rem(8);
+    gap: rem(16);
     top: rem(-45);
     left: 50%;
     width: fit-content;
     height: 45px;
-    padding: 0 rem(16);
+    padding: 0 rem(24);
     transform: translateX(-50%);
-    background-color: var(--yellow-500);
-    border-radius: rem(10) rem(10) 0 0;
+    background-color: var(--blue-900);
+    border-top: 1px solid var(--blue-800);
+    border-radius: rem(24) rem(24) 0 0;
   }
 
   .header__logo {
@@ -149,12 +64,12 @@
     min-height: 80px;
     min-width: 80px;
     background-color: var(--blue-900);
-    border: 5px solid var(--yellow-500);
+    border: 1px solid var(--blue-300);
     border-radius: 100%;
   }
 
   .header__tag {
-    color: var(--blue-900);
+    color: var(--blue-100);
     font-size: rem(14);
     font-weight: 400;
     letter-spacing: rem(0.3);
@@ -254,38 +169,7 @@
 /* the first project needs spacing to not hide the heading */
 
 [data-project="vervendo"] {
-  margin-top: rem(90);
-}
-
-.contact {
-  padding: rem(16);
-  background-image: linear-gradient(
-    180deg,
-    var(--yellow-400) 0%,
-    var(--yellow-300) 100%
-  );
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: rem(40);
-  max-width: 52ch;
-  padding: rem(30);
-  margin: rem(60) rem(30) 0;
-  color: var(--blue-900);
-  border-radius: rem(15);
-  box-shadow: 0px 12px 24px rgba(0, 19, 36, 0.25);
-
-  &__name {
-    font-weight: 600;
-    font-size: rem(24);
-    text-align: center;
-  }
-
-  &__body {
-    line-height: 1.4;
-    text-align: left;
-  }
+  margin-top: rem(48);
 }
 
 /**-------------------**

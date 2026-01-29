@@ -1,0 +1,8 @@
+@use "../utils/functions" as *;
+@use "../utils/mixins" as *;
+@use "../utils/breakpoints" as *;
+
+.content {
+  position: relative;
+  top: rem(48);
+}

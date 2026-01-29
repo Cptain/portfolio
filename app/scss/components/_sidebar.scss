@@ -1,0 +1,191 @@
+@use "../utils/functions" as *;
+@use "../utils/mixins" as *;
+@use "../utils/breakpoints" as *;
+
+/**-------------------**
+| SIDEBAR
+**--------------------**/
+
+.sidebar {
+  position: sticky;
+  top: rem(72);
+  height: 100vh;
+
+  &--vervendo {
+    background-image: url(../../../img/bg-vervendo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+
+  &__overlay {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(360deg,
+        rgba(255, 255, 255, 0.8) 55%,
+        rgba(211, 225, 255, 0.8) 70%,
+        rgba(246, 250, 255, 0.064) 100%);
+  }
+
+  &__logo {
+    position: relative;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__heading-container {
+    margin: rem(6) 0;
+  }
+
+  &__heading {
+    margin: 0;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: rem(48);
+    line-height: 0.95;
+    clip-path: inset(0 0 0 0);
+    display: inline-flex;
+  }
+
+  .clip-container {
+    clip-path: inset(0 0 0 0);
+  }
+
+  &__body {
+    color: var(--blue-300);
+    display: inline-block;
+  }
+
+  &__image-container {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    bottom: 0;
+    transform-origin: right top;
+    transform: scale(1.5) translateY(rem(-90));
+    transition: transform 200ms ease-in;
+
+    @include breakpoint-down(sm) {
+      transform: scale(1.3) translateY(rem(-30));
+    }
+
+    @include breakpoint-down(xsm) {
+      transform: scale(0.8) translateY(0);
+    }
+  }
+
+  &__image {
+    width: 100%;
+  }
+}
+
+/**-------------------**
+| ABOUT
+**--------------------**/
+
+.about {
+  position: relative;
+  max-width: 52ch;
+  border-radius: rem(10);
+
+  @include breakpoint-down(xsm) {
+    margin: rem(-60) rem(30) 0;
+  }
+
+  &__heading {
+    font-size: rem(24);
+    color: var(--blue-100);
+    margin-bottom: rem(-5);
+  }
+
+  &__subheading {
+    font-size: rem(9);
+    color: var(--blue-500);
+    text-transform: uppercase;
+    letter-spacing: rem(1);
+  }
+
+  &__body {
+    font-size: rem(16);
+    font-weight: 300;
+    color: var(--blue-200);
+    text-wrap: pretty;
+    line-height: 1.5;
+
+    &--emphasis {
+      font-weight: 600;
+    }
+  }
+
+
+  &__list-title {
+    letter-spacing: rem(0.2);
+    font-weight: 600;
+    font-size: rem(14);
+    color: var(--blue-100);
+  }
+
+  &__list {
+    display: flex;
+    gap: rem(16);
+    margin-top: 0;
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: center;
+    gap: rem(8);
+    background-color: color-mix(in srgb, var(--blue-100) 5%, transparent);
+    color: var(--yellow-300);
+    padding: rem(2) rem(16) rem(2) rem(8);
+    border-radius: rem(7);
+    font-size: rem(13);
+    letter-spacing: 0.25px;
+    list-style-type: none;
+    text-align: left;
+    line-height: 1.2;
+    margin-left: rem(-7);
+    transition: background-color 200ms ease-out;
+
+    &:hover {
+      background-color: color-mix(in srgb, var(--blue-100) 8%, transparent);
+    }
+
+    @include breakpoint-down(xxsm) {
+      font-size: rem(12);
+    }
+  }
+
+  &__list-item img {
+    height: rem(64);
+
+    @include breakpoint-down(xxsm) {
+      height: rem(32);
+    }
+  }
+}
+
+/**-------------------**
+| CONTACT
+**--------------------**/
+
+.contact {
+  &__logo {
+    width: fit-content;
+  }
+  
+  &__credit {
+    font-size: 0.7rem;
+    color: var(--blue-200);
+    font-weight: 300;
+    letter-spacing: rem(.5);
+  }
+
+  .--yellow-text {
+    color: var(--yellow-500);
+  }
+}

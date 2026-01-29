@@ -28,51 +28,60 @@
 
   <!-- Navigation Bar -->
 
-  <nav class="navbar">
+  <!-- <nav class="navbar">
     <a class="flex flex-inline" href="index.html">
       <img class="navbar__logo" src="img/logo-captain.svg" alt="Captain Design Logo">
-      <img class="navbar__logo--mobile" src="img/symbol-captain.svg" alt="Captain Design Symbol">
+      <img class="navbar__logo navbar__logo--mobile" src="img/symbol-captain.svg" alt="Captain Design Symbol">
     </a>
-    <!-- <a class="button button--yellow" target="_blank" href="mailto:nicholaspanayotakos@gmail.com">Email Me
-      <img class="button--external" src="img/icons/icon-send-email.svg" alt="Icon for Sending an Email">
-    </a> -->
-  </nav>
+    <a class="button button--transparent button--external button--external-yellow button--small" target="_blank"
+      href="mailto:nicholaspanayotakos@gmail.com">Contact
+      Me
+    </a>
+  </nav> -->
+
+  <!-- Main Content -->
 
   <main class="main">
 
-    <section class="sidebar">
-      <!-- Hero -->
+    <!-- Sidebar -->
 
-      <header class="hero hero--homepage">
-        <div class="hero__text-container">
-          <div class="clip-container">
-            <p class="hero__body stagger">Hello!</p>
-            <p class="hero__body stagger">I am Nicholas Panayotakos</p>
-          </div>
-          <div class="hero__heading-container">
-            <div class="clip-container">
-              <h1 class="hero__heading stagger">Designer &</h1>
-            </div>
-            <div class="clip-container">
-              <h1 class="hero__heading stagger">Developer</h1>
-            </div>
-          </div>
-          <p class="hero__body stagger">with a passion for the web.</p>
+    <section class="sidebar sidebar--homepage flex flex-col gap-4">
+
+      <div class="sidebar__text-container">
+        <div class="clip-container">
+          <p class="sidebar__body stagger">Hello!</p>
+          <p class="sidebar__body stagger">My name is Nicholas Panayotakos.</p>
         </div>
-      </header>
+        <div class="sidebar__heading-container">
+          <div class="clip-container">
+            <h1 class="sidebar__heading stagger">Designer &</h1>
+          </div>
+          <div class="clip-container">
+            <h1 class="sidebar__heading stagger">Developer</h1>
+          </div>
+        </div>
+        <p class="sidebar__body stagger">with a passion for the web.</p>
+      </div>
 
       <!-- About -->
+      <div class="about flex flex-col gap-1">
+        <h2 class="about__heading">About Me</h2>
+        <p class="about__body">
+          When I first discovered the internet I immediately felt the urge to learn how the web works. I fell in love
+          with HTML, CSS, and everything that had an impact on how we viewed the web.
+        </p>
+        <p class="about__body">
+          I spent a decade, between 2007 and 2017, practicing design and web development on personal projects before
+          taking the leap into formal education at George Brown College in Toronto, Canada.
+        </p>
+        <p class="about__body">
+          Today, I am graphic design graduate with over 8 years of experience as a professional UI/UX designer and web
+          developer working for both as an employee and a freelancer.
+        </p>
+        <p class="about__body about__body--emphasis">
+          I am currently in search of a full-time position as a UI/UX Designer in the Netherlands.
+        </p>
 
-      <div class="about flex flex-col gap-15">
-        <div class="flex flex-col gap-05">
-          <h4 class="about__heading">About Me</h4>
-          <span class="about__subheading">A Creative Night Owl</span>
-        </div>
-        <div class="flex flex-col gap-1">
-          <p class="about__body">
-            Specializing in creating clean, easy-to-use, engaging user interfaces.
-          </p>
-        </div>
         <ul class="about__list">
           <li class="about__list-item"><img src="img/icons/icon-web-design.svg" alt="Web Design Icon">Web<br>Designer
           </li>
@@ -81,14 +90,103 @@
           <li class="about__list-item"><img src="img/icons/icon-ui-ux.svg" alt="UI/UX Icon">UI/UX<br>Designer</li>
         </ul>
       </div>
+
+      <section class="contact flex flex-col gap-1">
+        <div class="contact__social flex ai-c gap-2">
+          <a href="https://github.com/Cptain" target="_blank">
+            <img src="img/icons/icon-github.svg" alt="Github Icon"></a>
+          <a href="https://www.linkedin.com/in/captaindesign/" target="_blank">
+            <img src="img/icons/icon-linked.svg" alt="LinkedIn Icon"></a>
+          <a href="https://twitter.com/imcaptain" target="_blank">
+            <img src="img/icons/icon-twit.svg" alt="Twitter Icon"></a>
+          <a href="https://www.instagram.com/captain__design/" target="_blank">
+            <img src="img/icons/icon-insta.svg" alt="Instagram Icon"></a>
+        </div>
+
+        <a class="contact__logo" href="index.html">
+          <img class="navbar__logo" src="img/logo-captain.svg" alt="Captain Design Logo">
+          <img class="navbar__logo navbar__logo--mobile" src="img/symbol-captain.svg" alt="Captain Design Symbol">
+        </a>
+        </div>
+      </section>
+
     </section>
 
-    <section class="content">
-      <!-- Experience -->
+    <!-- Projects -->
 
-      <h2 class="section__heading">Experience</h2>
+    <section class="content">
 
       <section class="flex flex-col ai-c">
+
+        <div data-project="ds" class="project">
+          <div class="project__header">
+            <div class="header__tag header__tag--left">Full-time</div>
+            <div class="header__logo">
+              <img src="img/symbol-ds.svg" alt="Digital Shovel Symbol">
+            </div>
+            <div class="header__tag header__tag--right">Hybrid</div>
+          </div>
+          <div class="project__info">
+            <h3 class="project__name">Digital Shovel</h3>
+            <span class="project__date">Jan 2022 - Jan 2026</span>
+            <p class="project__body">Digital Shovel helps businesses scale crypto mining operations with turn-key mobile
+              units. With low energy cost, and high security, they help businesses with managed and unmanaged miner
+              hosting.</p>
+          </div>
+          <div class="project__roles">
+            <h4 class="project__subheading">My Roles</h4>
+            <ul class="tag__list">
+              <li class="tag tag__role">Front-end</li>
+              <li class="tag tag__role">UI / UX</li>
+              <li class="tag tag__role">Branding</li>
+              <li class="tag tag__role">Animation</li>
+              <li class="tag tag__role">Advertisement</li>
+            </ul>
+            <p class="project__body">
+              Responsible for building UI components, graphics, animations, presentations, and advertising campaigns.
+            </p>
+          </div>
+          <div class="project__skills">
+            <h4 class="project__subheading">Technologies Used</h4>
+            <ul class="tag__list">
+              <li data-tag="html" class="tag tag__skill">HTML</li>
+              <li data-tag="css" class="tag tag__skill">CSS</li>
+              <li data-tag="scss" class="tag tag__skill">SCSS</li>
+              <li data-tag="ts" class="tag tag__skill">TypeScript</li>
+              <li data-tag="ng" class="tag tag__skill">Angular</li>
+              <li data-tag="gsap" class="tag tag__skill">GreenSock</li>
+            </ul>
+          </div>
+          <div class="project__skills">
+            <h4 class="project__subheading">Software Used</h4>
+            <ul class="tag__list">
+              <li data-tag="ps" class="tag tag__skill">Photoshop</li>
+              <li data-tag="ai" class="tag tag__skill">Illustrator</li>
+              <li data-tag="ae" class="tag tag__skill">After Effects</li>
+              <li data-tag="pr" class="tag tag__skill">Premiere Pro</li>
+              <li data-tag="vscode" class="tag tag__skill">VS Code</li>
+              <li data-tag="figma" class="tag tag__skill">Figma</li>
+            </ul>
+          </div>
+          <div class="flex flex-col gap-1">
+            <div class="project__links">
+              <a href="vervendo.html" class="button button--transparent">View Details</a>
+              <a href="https://www.vervendo.com"
+                class="button button--external button--external-yellow button--transparent" target="_blank">Live
+                Website</a>
+            </div>
+            <div class="project__links">
+              <a href="https://vvdo-fe-dev.vervendo.com/"
+                class="button button--external button--external-blue button--yellow" target="_blank">Latest Version of
+                Website
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="divider--medium">
+          <img src="img/divider-vertical.svg" alt="Vertical Divider Graphic">
+        </div>
 
         <div data-project="vervendo" class="project">
           <div class="project__header">
@@ -100,7 +198,7 @@
           </div>
           <div class="project__info">
             <h3 class="project__name">Vervendo</h3>
-            <span class="project__date">Aug 2020 - Currently</span>
+            <span class="project__date">Aug 2020 - Jan 2022</span>
             <p class="project__body">A startup company building an innovative online booking platform to personalize and
               enhance travelling experiences.</p>
           </div>
@@ -327,24 +425,6 @@
     </section>
 
   </main>
-
-  <!-- Footer -->
-
-  <footer class="footer">
-    <div class="footer__social flex ai-c jc-c gap-2">
-      <a href="https://github.com/Cptain" target="_blank">
-        <img src="img/icons/icon-github.svg" alt="Github Icon"></a>
-      <a href="https://www.linkedin.com/in/captaindesign/" target="_blank">
-        <img src="img/icons/icon-linked.svg" alt="LinkedIn Icon"></a>
-      <a href="https://twitter.com/imcaptain" target="_blank">
-        <img src="img/icons/icon-twit.svg" alt="Twitter Icon"></a>
-      <a href="https://www.instagram.com/captain__design/" target="_blank">
-        <img src="img/icons/icon-insta.svg" alt="Instagram Icon"></a>
-    </div>
-    <p class="footer__credit"><span class="--yellow-text">{</span> Designed and Developed by Nicholas Panayotakos <span
-        class="--yellow-text">}</span></p>
-    </div>
-  </footer>
 
   <!-- GreenSock CDNs -->
 

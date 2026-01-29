@@ -6,23 +6,21 @@
   display: flex;
   justify-content: space-between;
   position: sticky;
-  top: 0;
-  max-width: rem(1200);
-  height: rem(120);
-  padding: rem(46) rem(32);
+  top: rem(16);
   z-index: 99999;
-  background-color: transparent;
-  margin: 0 auto;
+  padding: rem(16) rem(16);
+  border-radius: 100vh;
+  border: rem(1) solid color-mix(in srgb, var(--blue-100) 5%, transparent);
+  background-color: color-mix(in srgb, var(--blue-100) 5%, transparent);
+  backdrop-filter: blur(rem(16));
 
   @include breakpoint-down(xsm) {
     padding: rem(15) rem(15);
   }
 
-  &__logo-container {
-    display: inline-flex;
-  }
-
   &__logo {
+    max-width: 200px;
+
     @include breakpoint-down(sm) {
       max-width: 150px;
     }

@@ -10,13 +10,19 @@ html {
   text-rendering: optimizeSpeed;
 }
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: inherit;
 }
 
 body {
-  margin: 0;
-  padding: 0;
+  display: flex;
+  flex-direction: column;
+  max-width: 1280px;
+  margin: rem(16) auto 0;
+  padding: 0 rem(32);
+  gap: rem(120);
   font-family: var(--font-primary);
   background-color: var(--blue-1100);
 }
@@ -24,18 +30,4 @@ body {
 img {
   max-width: 100%;
   height: auto;
-}
-
-.main {
-  display: flex;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: rem(120);
-}
-
-.sidebar {
-  position: sticky;
-  padding-top: rem(110);
-  top: rem(110);
-  height: 100vh;
 }

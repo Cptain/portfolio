@@ -1,0 +1,18 @@
+@use "../utils/functions" as *;
+@use "../utils/mixins" as *;
+@use "../utils/breakpoints" as *;
+
+
+#canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 1080px;
+  width: 100%;
+  z-index: -1;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+}
