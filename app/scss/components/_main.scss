@@ -14,5 +14,12 @@
 
 .main {
   display: flex;
+  gap: 4rem;
   justify-content: space-between;
+
+  @include breakpoint-down(lg) {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
 }

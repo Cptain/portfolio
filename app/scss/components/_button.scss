@@ -4,30 +4,30 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: rem(7);
-  padding: rem(16) rem(32);
+  gap: 0.4375rem;
+  padding: 1rem 2rem;
   width: fit-content;
-  border-radius: rem(12);
-  font-size: rem(14);
+  border-radius: 0.75rem;
+  font-size: 0.875rem;
   font-weight: 600;
-  letter-spacing: rem(0.1);
+  letter-spacing: 0.00625rem;
   transition: all 100ms ease-out;
 
-  @include breakpoint-down(xsm) {
+  @include breakpoint-down(sm) {
     font-size: 0.8rem;
-    padding: rem(7) rem(7);
-    letter-spacing: rem(0.3);
+    padding: 0.75rem 0.75rem;
+    letter-spacing: 0.01875rem;
   }
 
   &--small {
-    padding: rem(8) rem(24);
+    padding: 0.5rem 1.5rem;
   }
 
   &--external {
     background-repeat: no-repeat;
-    background-position: right rem(16) center;
-    background-size: rem(12);
-    padding-right: rem(16 + 24);
+    background-position: right 1rem center;
+    background-size: 0.75rem;
+    padding-right: 2.5rem;
   }
 
   &--external-blue {

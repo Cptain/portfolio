@@ -2,7 +2,278 @@
 @use "../utils/mixins" as *;
 @use "../utils/breakpoints" as *;
 
+/**-------------------**
+| CONTENT SECTION
+**--------------------**/
+
 .content {
   position: relative;
-  top: rem(48);
+  height: 100%;
+  margin: 2rem 0 1rem;
+}
+
+/**-------------------**
+| PROJECTS
+**--------------------**/
+
+.project__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 52ch;
+  margin-top: 3rem;
+  padding: 2rem 2rem 2rem;
+  color: var(--blue-100);
+  border-radius: 2rem;
+  border: 1px solid var(--blue-900);
+  background-color: var(--blue-1000);
+  box-shadow: 0px 0px 56px -3px rgba(0, 55, 105, .33);
+
+  &__header {
+    align-items: center;
+    display: flex;
+    position: absolute;
+    gap: 1rem;
+    top: -2.8125rem;
+    left: 50%;
+    width: fit-content;
+    height: 45px;
+    padding: 0 1.5rem;
+    transform: translateX(-50%);
+    background-color: var(--blue-900);
+    border-top: 1px solid var(--blue-800);
+    border-radius: 1.25rem 1.25rem 0 0;
+
+    @include breakpoint-down(sm) {
+      padding: 0.75rem 1rem;
+      gap: 0.5rem;
+    }
+  }
+
+  .header__logo {
+    display: grid;
+    place-items: center;
+    min-height: 5rem;
+    min-width: 5rem;
+    background-color: var(--blue-900);
+    border: 1px solid var(--blue-300);
+    border-radius: 100%;
+
+    @include breakpoint-down(sm) {
+      min-height: 4rem;
+      min-width: 4rem;
+    }
+
+    img {
+      @include breakpoint-down(sm) {
+        height: 2rem;
+        width: 2rem;
+      }
+    }
+  }
+
+  .header__tag {
+    color: var(--blue-100);
+    font-size: 0.875rem;
+    font-weight: 400;
+    letter-spacing: 0.01875rem;
+    white-space: nowrap;
+
+    @include breakpoint-down(sm) {
+      font-size: 0.75rem;
+    }
+  }
+
+  &__name {
+    display: inline-flex;
+    margin-right: 0.3125rem;
+    margin-bottom: 0.9375rem;
+    font-size: 1.5rem;
+  }
+
+  &__date {
+    display: inline-flex;
+    position: relative;
+    bottom: 3px;
+    font-size: clamp(0.75rem, 2.5vw, 0.875rem);
+    border: 1px solid;
+    color: var(--yellow-400);
+    padding: 0.1875rem 0.625rem;
+    margin-bottom: 0.5rem;
+    border-radius: 100vh;
+  }
+
+  &__body {
+    color: var(--blue-200);
+    font-size: clamp(0.8125rem, 2.5vw, 1rem);
+    font-weight: 300;
+    letter-spacing: 0.01875rem;
+    text-wrap: pretty;
+    line-height: 1.4;
+
+    @include breakpoint-down(sm) {
+      line-height: 1.6;
+    }
+  }
+
+  &__roles {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  &__skills {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .tag__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3125rem;
+  }
+
+  .tag {
+    border-radius: 100vh;
+    font-size: 0.6875rem;
+    font-weight: 300;
+    letter-spacing: 0.0375rem;
+    color: var(--blue-300);
+    cursor: default;
+  }
+
+  .tag__role {
+    background-color: var(--blue-800);
+    padding: 0.1875rem 0.75rem;
+
+    &:hover {
+      background-color: var(--blue-700);
+    }
+  }
+
+  .tag__skill {
+    background-color: transparent;
+    padding: 0.375rem 0.75rem 0.375rem 2rem;
+    border: 1px solid var(--blue-700);
+
+    &:hover {
+      background-color: var(--blue-900);
+    }
+  }
+
+  &__links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+
+    @include breakpoint-down(sm) {
+      flex-direction: column;
+    }
+  }
+
+  &__links .button {
+    width: 100%;
+  }
+}
+
+/**-------------------**
+| SINGLE COMPANY PAGE
+**--------------------**/
+
+.roles {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.5rem;
+  max-width: 52ch;
+  padding: 1.875rem;
+  margin: 3.75rem 1.875rem 0;
+  border-radius: 0.9375rem;
+  background-color: var(--blue-800);
+  box-shadow: 0px 12px 24px rgba(0, 19, 36, 0.25);
+
+  &__body {
+    font-size: clamp(0.75rem, 2.5vw, 1rem);
+    font-weight: 300;
+    line-height: 1.3;
+  }
+
+  &__primary {
+    background-color: #fff;
+    color: var(--blue-800);
+    margin: -1.875rem -1.875rem 0;
+    padding: 1.875rem;
+    border-radius: 0.625rem;
+  }
+
+  &__primary &__body {
+    color: var(--blue-600);
+    font-weight: 300;
+  }
+
+  &__secondary {
+    color: var(--blue-100);
+  }
+
+  &__secondary &__body {
+    color: var(--blue-300);
+  }
+}
+
+.card {
+  position: relative;
+  max-width: 52ch;
+  padding: 1.875rem;
+  margin: 3.75rem 1.875rem 0;
+  border-radius: 0.9375rem;
+  color: var(--blue-700);
+  background-color: var(--blue-100);
+  box-shadow: 0px 12px 24px rgba(0, 19, 36, 0.25);
+
+  &__font-svg {
+    width: 5rem;
+  }
+
+  &__body {
+    font-weight: 300;
+    font-size: clamp(0.75rem, 2.5vw, 1rem);
+    line-height: 1.3;
+  }
+}
+
+.grid {
+  display: inline-grid;
+
+  &__color-usage {
+    grid-template-columns: 5fr 3fr 1fr 0.7fr 0.3fr;
+  }
+
+  &__color-value {
+    grid-template-columns: 1fr 4fr 4fr;
+  }
+
+  &__line {
+    width: 0.3125rem;
+  }
+
+  &__hex {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+  }
 }

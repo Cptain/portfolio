@@ -6,16 +6,16 @@
   display: flex;
   justify-content: space-between;
   position: sticky;
-  top: rem(16);
+  top: 1rem;
   z-index: 99999;
-  padding: rem(16) rem(16);
+  padding: 1rem 1rem;
   border-radius: 100vh;
-  border: rem(1) solid color-mix(in srgb, var(--blue-100) 5%, transparent);
+  border: 0.0625rem solid color-mix(in srgb, var(--blue-100) 5%, transparent);
   background-color: color-mix(in srgb, var(--blue-100) 5%, transparent);
-  backdrop-filter: blur(rem(16));
+  backdrop-filter: blur(1rem);
 
   @include breakpoint-down(xsm) {
-    padding: rem(15) rem(15);
+    padding: 0.9375rem 0.9375rem;
   }
 
   &__logo {

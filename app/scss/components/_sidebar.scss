@@ -8,8 +8,21 @@
 
 .sidebar {
   position: sticky;
-  top: rem(72);
-  height: 100vh;
+  top: 4.5rem;
+  gap: 4.5rem;
+  height: 100%;
+
+  @include breakpoint-down(lg) {
+    position: relative;
+    top: 1rem;
+    gap: 3rem;
+  }
+
+  &__text-container {
+    @include breakpoint-down(lg) {
+      text-align: center;
+    }
+  }
 
   &--vervendo {
     background-image: url(../../../img/bg-vervendo.png);
@@ -38,17 +51,25 @@
   }
 
   &__heading-container {
-    margin: rem(6) 0;
+    margin: 0.375rem 0;
   }
 
   &__heading {
     margin: 0;
     color: #fff;
     text-transform: uppercase;
-    font-size: rem(48);
+    font-size: 3rem;
     line-height: 0.95;
     clip-path: inset(0 0 0 0);
     display: inline-flex;
+
+    @include breakpoint-down(lg) {
+      text-align: center;
+    }
+
+    @include breakpoint-down(sm) {
+      font-size: 2.5rem;
+    }
   }
 
   .clip-container {
@@ -56,8 +77,12 @@
   }
 
   &__body {
-    color: var(--blue-300);
+    color: var(--yellow-300);
     display: inline-block;
+
+    @include breakpoint-down(sm) {
+      font-size: 0.875rem;
+    }
   }
 
   &__image-container {
@@ -66,11 +91,11 @@
     right: 0;
     bottom: 0;
     transform-origin: right top;
-    transform: scale(1.5) translateY(rem(-90));
+    transform: scale(1.5) translateY(-5.625rem);
     transition: transform 200ms ease-in;
 
     @include breakpoint-down(sm) {
-      transform: scale(1.3) translateY(rem(-30));
+      transform: scale(1.3) translateY(-1.875rem);
     }
 
     @include breakpoint-down(xsm) {
@@ -89,28 +114,28 @@
 
 .about {
   position: relative;
-  max-width: 52ch;
-  border-radius: rem(10);
-
-  @include breakpoint-down(xsm) {
-    margin: rem(-60) rem(30) 0;
-  }
+  max-width: 53ch;
+  border-radius: 0.625rem;
 
   &__heading {
-    font-size: rem(24);
+    font-size: 1.5rem;
     color: var(--blue-100);
-    margin-bottom: rem(-5);
+    margin-bottom: -0.3125rem;
+
+    @include breakpoint-down(lg) {
+      text-align: center;
+    }
   }
 
   &__subheading {
-    font-size: rem(9);
+    font-size: 0.5625rem;
     color: var(--blue-500);
     text-transform: uppercase;
-    letter-spacing: rem(1);
+    letter-spacing: 0.0625rem;
   }
 
   &__body {
-    font-size: rem(16);
+    font-size: 1rem;
     font-weight: 300;
     color: var(--blue-200);
     text-wrap: pretty;
@@ -123,48 +148,62 @@
 
 
   &__list-title {
-    letter-spacing: rem(0.2);
+    letter-spacing: 0.0125rem;
     font-weight: 600;
-    font-size: rem(14);
+    font-size: 0.875rem;
     color: var(--blue-100);
   }
 
   &__list {
     display: flex;
-    gap: rem(16);
+    gap: 1rem;
     margin-top: 0;
+
+    @include breakpoint-down(lg) {
+      justify-content: space-between;
+    }
   }
 
   &__list-item {
     display: flex;
     align-items: center;
-    gap: rem(8);
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
     background-color: color-mix(in srgb, var(--blue-100) 5%, transparent);
     color: var(--yellow-300);
-    padding: rem(2) rem(16) rem(2) rem(8);
-    border-radius: rem(7);
-    font-size: rem(13);
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.4375rem;
+    font-size: 0.8125rem;
     letter-spacing: 0.25px;
     list-style-type: none;
     text-align: left;
     line-height: 1.2;
-    margin-left: rem(-7);
     transition: background-color 200ms ease-out;
 
     &:hover {
       background-color: color-mix(in srgb, var(--blue-100) 8%, transparent);
     }
 
-    @include breakpoint-down(xxsm) {
-      font-size: rem(12);
+    @include breakpoint-down(lg) {
+      justify-content: center;
+      padding: 1rem 0.5rem;
+      font-size: 0.875rem;
+    }
+
+    @include breakpoint-down(sm) {
+      flex-direction: column;
+      font-size: 0.75rem;
+      justify-content: center;
+      text-align: center;
     }
   }
 
   &__list-item img {
-    height: rem(64);
+    height: clamp(2rem, 4vw, 4rem);
 
-    @include breakpoint-down(xxsm) {
-      height: rem(32);
+    @include breakpoint-down(lg) {
+      height: 3rem;
     }
   }
 }
@@ -174,15 +213,20 @@
 **--------------------**/
 
 .contact {
+  @include breakpoint-down(lg) {
+    justify-content: center;
+    align-items: center;
+  }
+
   &__logo {
     width: fit-content;
   }
-  
+
   &__credit {
     font-size: 0.7rem;
     color: var(--blue-200);
     font-weight: 300;
-    letter-spacing: rem(.5);
+    letter-spacing: 0.03125rem;
   }
 
   .--yellow-text {
