@@ -21,278 +21,297 @@
 
 <body>
 
-  <!-- Hero -->
+  <!-- 
+  A big thank you to Slawomir Chodnicki for his guide in understanding how to build this mesmerizing starry background.
+  https://betterprogramming.pub/fun-with-html-canvas-lets-create-a-star-field-a46b0fed5002
+  -->
+  <canvas id="canvas"></canvas>
 
-  <header class="hero hero--vervendo">
-    <div class="hero__overlay"></div>
-    <img class="hero__logo" src="img/logo-vervendo-vertical-blue.svg" alt="Vervendo Logo">
-  </header>
+  <main class="main">
 
-  <!-- About -->
+    <section class="sidebar flex flex-col">
 
-  <div class="flex jc-c">
-    <div class="about flex flex-col gap-1">
-      <div class="flex flex-col gap-03">
-        <h4 class="about__heading">About Vervendo</h4>
-        <span class="about__subheading">Online Booking Platform</span>
-      </div>
-      <p class="about__body">
-        A startup company building an innovative online booking platform to personalize and enhance travelling
-        experiences.
-      </p>
-      <p class="about__body">
-        Vervendo relieves travellers from doing all the legwork of searching and comparing prices and accommodations to
-        they match their ideal needs.
-      </p>
-    </div>
-  </div>
+      <!-- Hero -->
 
-  <div class="divider divider--medium">
-    <img src="img/divider-vertical.svg" alt="Vertical Divider Graphic">
-  </div>
+      <header class="hero hero--vervendo">
+        <img class="hero__logo" src="img/logo-vervendo-vertical-blue.svg" alt="Vervendo Logo">
+      </header>
 
-  <!-- My Roles -->
+      <!-- About -->
 
-  <h2 class="section__heading">My Roles</h2>
-
-  <div class="flex flex-col ai-c">
-    <section class="roles">
-      <div class="roles__primary flex flex-col gap-2">
-        <div class="flex flex-col gap-05">
-          <div class="flex gap-05">
-            <img src="img/icons/icon-ui.svg" alt="Icon for UI/UX">
-            <h3 class="roles__heading roles__heading--primary">UI/UX</h3>
-          </div>
-          <div class="flex flex-col gap-05">
-            <p class="roles__body">Responsible for designing an intuitive and smooth UI/UX for all devices.</p>
-            <p class="roles__body">Designed an independent experience for the mobile version of the website, a new
-              desktop
-              version, added responsiveness for tablet and mobile.</p>
-          </div>
+      <div class="about">
+        <div class="flex flex-col gap-03">
+          <h4 class="about__heading">About Vervendo</h4>
+          <span class="about__subheading">Online Booking Platform</span>
         </div>
-        <div class="flex flex-col gap-05">
-          <div class="flex gap-05">
-            <img src="img/icons/icon-brackets.svg" alt="Icon for Coding">
-            <h3 class="roles__heading roles__heading--primary">Front-end</h3>
-          </div>
-          <div class="flex gap-05">
-            <p class="roles__body">Wrote maintainable and modern code to build UI components, animations and display
-              back-end data dynamically.</p>
-          </div>
-        </div>
+        <p class="about__body">
+          A startup company building an innovative online booking platform to personalize and enhance travelling
+          experiences.
+        </p>
+        <p class="about__body">
+          Vervendo relieves travellers from doing all the legwork of searching and comparing prices and accommodations
+          to
+          they match their ideal needs.
+        </p>
       </div>
-      <div class="roles__secondary flex flex-col gap-2">
-        <div class="flex flex-col gap-05">
-          <div class="flex gap-05">
-            <img src="img/icons/icon-animation.svg" alt="Icon for Animation">
-            <h3 class="roles__heading roles__heading--primary">Animation</h3>
+
+      <!-- Contact -->
+
+      <section class="contact">
+        <div class="contact__social">
+          <a href="https://github.com/Cptain" target="_blank">
+            <img src="img/icons/icon-github.svg" alt="Github Icon"></a>
+          <a href="https://www.linkedin.com/in/captaindesign/" target="_blank">
+            <img src="img/icons/icon-linked.svg" alt="LinkedIn Icon"></a>
+          <a href="https://twitter.com/imcaptain" target="_blank">
+            <img src="img/icons/icon-twit.svg" alt="Twitter Icon"></a>
+          <a href="https://www.instagram.com/captain__design/" target="_blank">
+            <img src="img/icons/icon-insta.svg" alt="Instagram Icon"></a>
+        </div>
+
+        <a class="contact__logo" href="index.html">
+          <img class="navbar__logo" src="img/logo-captain.svg" alt="Captain Design Logo">
+          <img class="navbar__logo navbar__logo--mobile" src="img/symbol-captain.svg" alt="Captain Design Symbol">
+        </a>
+      </section>
+    </section>
+
+    <section class="content">
+
+      <!-- My Roles -->
+
+      <div class="flex flex-col gap-3 ai-c">
+        <h2 class="section__heading">My Roles</h2>
+        <section class="roles">
+          <div class="roles__primary flex flex-col gap-2">
+            <div class="flex flex-col gap-05">
+              <div class="flex gap-05">
+                <img src="img/icons/icon-ui.svg" alt="Icon for UI/UX">
+                <h3 class="roles__heading roles__heading--primary">UI/UX</h3>
+              </div>
+              <div class="flex flex-col gap-05">
+                <p class="roles__body">Responsible for designing an intuitive and smooth UI/UX for all devices. Designed
+                  an independent experience for the mobile version of the website, a new desktop version, added
+                  responsiveness for tablet and mobile.</p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-05">
+              <div class="flex gap-05">
+                <img src="img/icons/icon-brackets.svg" alt="Icon for Coding">
+                <h3 class="roles__heading roles__heading--primary">Front-end</h3>
+              </div>
+              <div class="flex gap-05">
+                <p class="roles__body">Wrote maintainable and modern code to build UI components, animations and display
+                  back-end data dynamically.</p>
+              </div>
+            </div>
           </div>
-          <div class="flex gap-05">
-            <p class="roles__body">Designed and animated an illustration showing the process that follows after sending
+          <div class="roles__secondary flex flex-col gap-2">
+            <div class="flex flex-col gap-05">
+              <div class="flex gap-05">
+                <img src="img/icons/icon-animation.svg" alt="Icon for Animation">
+                <h3 class="roles__heading roles__heading--primary">Animation</h3>
+              </div>
+              <div class="flex gap-05">
+                <p class="roles__body">Designed and animated an illustration showing the process that follows after
+                  sending
+                  a
+                  request for offers successfully.</p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-05">
+              <div class="flex gap-05">
+                <img src="img/icons/icon-graphics.svg" alt="Icon for Graphics">
+                <h3 class="roles__heading roles__heading--primary">Graphics</h3>
+              </div>
+              <div class="flex gap-05">
+                <p class="roles__body">Designed illustrations and icons for the website, advertisement campaigns,
+                  presentations, and other documents.</p>
+              </div>
+            </div>
+            <div class="divider divider--small">
+              <div class="divider__roles"></div>
+            </div>
+            <div class="flex flex-col gap-05">
+              <div class="flex gap-05">
+                <img src="img/icons/icon-brand.svg" alt="Icon for Branding">
+                <h3 class="roles__heading roles__heading--primary">Branding</h3>
+              </div>
+              <div class="flex flex-col gap-05">
+                <p class="roles__body">The logo and a primary color already established when I joined Vervendo. My role
+                  was to research and decide on additional colors; create logo variations and a tagline; develop a type
+                  system; write content for the website and ads.</p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-05">
+              <div class="flex gap-05">
+                <img src="img/icons/icon-ad.svg" alt="Icon for Ad Campaigns">
+                <h3 class="roles__heading roles__heading--primary">Ad Campaigns</h3>
+              </div>
+              <div class="flex gap-05">
+                <p class="roles__body">Created illustrations and animations, edited sound effects and music, wrote a
+                  voiceover
+                  script, and decided on a direction and target audience for social media campaigns.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="divider divider--medium">
+        <img src="img/divider-vertical.svg" alt="Vertical Divider Graphic">
+      </div>
+
+      <!-- Color Palette -->
+
+      <h2 class="section__heading">Color Palette</h2>
+      <div class="palette flex jc-c">
+        <div class="palette__color palette--big palette--vervendo-white"></div>
+        <div class="palette__color palette--big palette--vervendo-blue"></div>
+        <div class="palette__color palette--big palette--vervendo-pink"></div>
+        <div class="palette__color palette--big palette--vervendo-yellow"></div>
+        <div class="palette__color palette--big palette--vervendo-gold"></div>
+      </div>
+
+      <div class="flex flex-col ai-c gap-2">
+        <div class="card flex flex-col gap-2 jc-c">
+          <div class="flex flex-col gap-1">
+            <p class="card__body">When I started at Vervendo the primary blue color was already part of the brand.</p>
+            <p class="card__body">We wanted to enrich the palette to match the atmosphere and energy of vacations by
+              making
               a
-              request for offers successfully.</p>
+              transition towards a split complimentary combination.</p>
+            <p class="card__body">There was an addition of a vibrant pink and yellow to our palette.</p>
           </div>
-        </div>
-        <div class="flex flex-col gap-05">
-          <div class="flex gap-05">
-            <img src="img/icons/icon-graphics.svg" alt="Icon for Graphics">
-            <h3 class="roles__heading roles__heading--primary">Graphics</h3>
-          </div>
-          <div class="flex gap-05">
-            <p class="roles__body">Designed illustrations and icons for the website, advertisement campaigns,
-              presentations, and other documents.</p>
-          </div>
-        </div>
-        <div class="divider divider--small">
-          <div class="divider__roles"></div>
-        </div>
-        <div class="flex flex-col gap-05">
-          <div class="flex gap-05">
-            <img src="img/icons/icon-brand.svg" alt="Icon for Branding">
-            <h3 class="roles__heading roles__heading--primary">Branding</h3>
+          <div class="flex jc-sa ai-c gap-01">
+            <div class="palette__color palette--small palette--vervendo-white"></div>
+            <div class="palette__color palette--small palette--vervendo-blue"></div>
+            <div class="palette__color palette--small palette--vervendo-pink"></div>
+            <div class="palette__color palette--small palette--vervendo-yellow"></div>
+            <div class="palette__color palette--small palette--vervendo-gold"></div>
           </div>
           <div class="flex flex-col gap-05">
-            <p class="roles__body">The logo and a primary color already established when I joined Vervendo.</p>
-            <p class="roles__body">My role was to research and decide on additional colors; create logo variations and a
-              tagline; develop a type system; write content for the website and ads.</p>
+            <h4 class="card__heading">Color Distribution</h4>
+            <div class="grid grid__color-usage">
+              <div class="palette__line palette--vervendo-white"></div>
+              <div class="palette__line palette--vervendo-blue"></div>
+              <div class="palette__line palette--vervendo-pink"></div>
+              <div class="palette__line palette--vervendo-yellow"></div>
+              <div class="palette__line palette--vervendo-gold"></div>
+            </div>
           </div>
         </div>
-        <div class="flex flex-col gap-05">
-          <div class="flex gap-05">
-            <img src="img/icons/icon-ad.svg" alt="Icon for Ad Campaigns">
-            <h3 class="roles__heading roles__heading--primary">Ad Campaigns</h3>
+        <div class="flex flex-col ai-c">
+          <div class="color-value flex flex-col gap-1 ai-c">
+            <div class="grid grid__color-value">
+              <div class="color-value__line palette--vervendo-white"></div>
+              <div class="color-value__hex grid grid__hex gap-01">
+                <span>HEX</span><span>FFFFFF</span>
+                <span>RGB</span><span>255 255 255</span>
+                <span>HSL</span><span>0 0 100</span>
+              </div>
+              <div class="flex flex-col gap-02">
+                <h6 class="color-value__heading">Primary Color</h6>
+                <p class="color-value__body">Used for all purposes throughout the entire brand.</p>
+              </div>
+            </div>
+            <div class="grid grid__color-value">
+              <div class="color-value__line palette--vervendo-blue"></div>
+              <div class="color-value__hex grid grid__hex gap-01">
+                <span>HEX</span><span>2C6DA9</span>
+                <span>RGB</span><span>49 109 169</span>
+                <span>HSL</span><span>209 59 42</span>
+              </div>
+              <div class="flex flex-col gap-02">
+                <h6 class="color-value__heading">Primary Color</h6>
+                <p class="color-value__body">Used for all purposes throughout the entire brand.</p>
+              </div>
+            </div>
+            <div class="grid grid__color-value">
+              <div class="color-value__line palette--vervendo-pink"></div>
+              <div class="color-value__hex grid grid__hex gap-01">
+                <span>HEX</span><span>FF577F</span>
+                <span>RGB</span><span>255 87 127</span>
+                <span>HSL</span><span>346 100 67</span>
+              </div>
+              <div class="flex flex-col gap-02">
+                <h6 class="color-value__heading">Secondary Color</h6>
+                <p class="color-value__body">Used for buttons, unique offers, host notes, and notifications.</p>
+              </div>
+            </div>
+            <div class="grid grid__color-value">
+              <div class="color-value__line palette--vervendo-yellow"></div>
+              <div class="color-value__hex grid grid__hex gap-01">
+                <span>HEX</span><span>FFCA41</span>
+                <span>RGB</span><span>255 202 65</span>
+                <span>HSL</span><span>43 100 63</span>
+              </div>
+              <div class="flex flex-col gap-02">
+                <h6 class="color-value__heading">Tertiary Color</h6>
+                <p class="color-value__body">Used for added emphasis such as heading underlines.</p>
+              </div>
+            </div>
+            <div class="grid grid__color-value">
+              <div class="color-value__line palette--vervendo-gold"></div>
+              <div class="color-value__hex grid grid__hex gap-01">
+                <span>HEX</span><span>C98F1D</span>
+                <span>RGB</span><span>201 143 29</span>
+                <span>HSL</span><span>40 75 45</span>
+              </div>
+              <div class="flex flex-col gap-02">
+                <h6 class="color-value__heading">Tertiary Color</h6>
+                <p class="color-value__body">Used for added emphasis such as heading underlines.</p>
+              </div>
+            </div>
           </div>
-          <div class="flex gap-05">
-            <p class="roles__body">Created illustrations and animations, edited sound effects and music, wrote a
-              voiceover
-              script, and decided on a direction and target audience for social media campaigns.</p>
+        </div>
+
+        <!-- Mockup for Mobile Offers -->
+
+        <div class="mockup flex flex-col">
+          <img class="mockup__mobile-offers" src="/img/mockup-offers.svg" alt="Mobile Mockup for Exclusive Offers">
+        </div>
+        <div class="divider divider--medium">
+          <img src="img/divider-vertical.svg" alt="Vertical Divider Graphic">
+        </div>
+
+        <!-- Typography -->
+
+        <h2 class="section__heading">Typography</h2>
+        <div class="flex flex-col ai-c">
+          <div class="card flex flex-col gap-15 jc-c">
+            <div class="flex flex-col gap-03">
+              <h4 class="card__heading">Primary Font</h4>
+              <img class="card__font-svg" src="img/font-manrope.svg" alt="Displaying Font Manrope">
+            </div>
+            <div class="flex flex-col gap-1">
+              <p class="card__body">As part of the brand refresh, we changed our font from Roboto to Manrope.</p>
+              <p class="card__body">Manrope provided the flexibility of both latin and greek characters, which was a
+                helpful asset for a greek company.</p>
+              <p class="card__body">As a wider and cleaner font, it served our goal of creating a smooth and engaging
+                environment for our users.</p>
+            </div>
+            <div class="flex flex-col gap-05">
+              <h4 class="card__heading">Secondary Font</h4>
+              <img class="card__font-svg" src="img/font-caveat.svg" alt="Displaying Font Caveat">
+            </div>
+            <div class="flex flex-col gap-1">
+              <p class="card__body">To add some warmth, quirkiness, and excitement to our type, we included a
+                complimentary font with a handwritten/cursive style, named Caveat.</p>
+            </div>
           </div>
+        </div>
+        <div class="divider divider--medium">
+          <img src="img/divider-vertical.svg" alt="Vertical Divider Graphic">
         </div>
       </div>
     </section>
-  </div>
+  </main>
 
-  <div class="divider divider--medium">
-    <img src="img/divider-vertical.svg" alt="Vertical Divider Graphic">
-  </div>
+  <!-- GreenSock CDNs -->
 
-  <!-- Color Palette -->
-
-  <h2 class="section__heading">Color Palette</h2>
-
-  <div class="palette flex jc-c">
-    <div class="palette__color palette--big palette--vervendo-white"></div>
-    <div class="palette__color palette--big palette--vervendo-blue"></div>
-    <div class="palette__color palette--big palette--vervendo-pink"></div>
-    <div class="palette__color palette--big palette--vervendo-yellow"></div>
-    <div class="palette__color palette--big palette--vervendo-gold"></div>
-  </div>
-
-  <div class="flex flex-col ai-c gap-2">
-    <div class="card flex flex-col gap-2 jc-c">
-      <div class="flex flex-col gap-1">
-        <p class="card__body">When I started at Vervendo the primary blue color was already part of the brand.</p>
-        <p class="card__body">We wanted to enrich the palette to match the atmosphere and energy of vacations by making
-          a
-          transition towards a split complimentary combination.</p>
-        <p class="card__body">There was an addition of a vibrant pink and yellow to our palette.</p>
-      </div>
-      <div class="flex jc-sa ai-c gap-01">
-        <div class="palette__color palette--small palette--vervendo-white"></div>
-        <div class="palette__color palette--small palette--vervendo-blue"></div>
-        <div class="palette__color palette--small palette--vervendo-pink"></div>
-        <div class="palette__color palette--small palette--vervendo-yellow"></div>
-        <div class="palette__color palette--small palette--vervendo-gold"></div>
-      </div>
-      <div class="flex flex-col gap-05">
-        <h4 class="card__heading">Color Distribution</h4>
-        <div class="grid grid__color-usage">
-          <div class="palette__line palette--vervendo-white"></div>
-          <div class="palette__line palette--vervendo-blue"></div>
-          <div class="palette__line palette--vervendo-pink"></div>
-          <div class="palette__line palette--vervendo-yellow"></div>
-          <div class="palette__line palette--vervendo-gold"></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="flex flex-col ai-c">
-      <div class="color-value flex flex-col gap-1 ai-c">
-        <div class="grid grid__color-value">
-          <div class="color-value__line palette--vervendo-white"></div>
-          <div class="color-value__hex grid grid__hex gap-01">
-            <span>HEX</span><span>FFFFFF</span>
-            <span>RGB</span><span>255 255 255</span>
-            <span>HSL</span><span>0 0 100</span>
-          </div>
-          <div class="flex flex-col gap-02">
-            <h6 class="color-value__heading">Primary Color</h6>
-            <p class="color-value__body">Used for all purposes throughout the entire brand.</p>
-          </div>
-        </div>
-        <div class="grid grid__color-value">
-          <div class="color-value__line palette--vervendo-blue"></div>
-          <div class="color-value__hex grid grid__hex gap-01">
-            <span>HEX</span><span>2C6DA9</span>
-            <span>RGB</span><span>49 109 169</span>
-            <span>HSL</span><span>209 59 42</span>
-          </div>
-          <div class="flex flex-col gap-02">
-            <h6 class="color-value__heading">Primary Color</h6>
-            <p class="color-value__body">Used for all purposes throughout the entire brand.</p>
-          </div>
-        </div>
-        <div class="grid grid__color-value">
-          <div class="color-value__line palette--vervendo-pink"></div>
-          <div class="color-value__hex grid grid__hex gap-01">
-            <span>HEX</span><span>FF577F</span>
-            <span>RGB</span><span>255 87 127</span>
-            <span>HSL</span><span>346 100 67</span>
-          </div>
-          <div class="flex flex-col gap-02">
-            <h6 class="color-value__heading">Secondary Color</h6>
-            <p class="color-value__body">Used for buttons, unique offers, host notes, and notifications.</p>
-          </div>
-        </div>
-        <div class="grid grid__color-value">
-          <div class="color-value__line palette--vervendo-yellow"></div>
-          <div class="color-value__hex grid grid__hex gap-01">
-            <span>HEX</span><span>FFCA41</span>
-            <span>RGB</span><span>255 202 65</span>
-            <span>HSL</span><span>43 100 63</span>
-          </div>
-          <div class="flex flex-col gap-02">
-            <h6 class="color-value__heading">Tertiary Color</h6>
-            <p class="color-value__body">Used for added emphasis such as heading underlines.</p>
-          </div>
-        </div>
-        <div class="grid grid__color-value">
-          <div class="color-value__line palette--vervendo-gold"></div>
-          <div class="color-value__hex grid grid__hex gap-01">
-            <span>HEX</span><span>C98F1D</span>
-            <span>RGB</span><span>201 143 29</span>
-            <span>HSL</span><span>40 75 45</span>
-          </div>
-          <div class="flex flex-col gap-02">
-            <h6 class="color-value__heading">Tertiary Color</h6>
-            <p class="color-value__body">Used for added emphasis such as heading underlines.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Mockup for Mobile Offers -->
-
-    <div class="mockup flex flex-col">
-      <img class="mockup__mobile-offers" src="/img/mockup-offers.svg" alt="Mobile Mockup for Exclusive Offers">
-    </div>
-
-    <div class="divider divider--medium">
-      <img src="img/divider-vertical.svg" alt="Vertical Divider Graphic">
-    </div>
-
-    <!-- Typography -->
-
-    <h2 class="section__heading">Typography</h2>
-
-    <div class="flex flex-col ai-c">
-      <div class="card flex flex-col gap-15 jc-c">
-        <div class="flex flex-col gap-03">
-          <h4 class="card__heading">Primary Font</h4>
-          <img class="card__font-svg" src="img/font-manrope.svg" alt="Displaying Font Manrope">
-        </div>
-        <div class="flex flex-col gap-1">
-          <p class="card__body">As part of the brand refresh, we changed our font from Roboto to Manrope.</p>
-          <p class="card__body">Manrope provided the flexibility of both latin and greek characters, which was a helpful asset for a greek company.</p>
-          <p class="card__body">As a wider and cleaner font, it served our goal of creating a smooth and engaging environment for our users.</p>
-        </div>
-        <div class="flex flex-col gap-05">
-          <h4 class="card__heading">Secondary Font</h4>
-          <img class="card__font-svg" src="img/font-caveat.svg" alt="Displaying Font Caveat">
-        </div>
-        <div class="flex flex-col gap-1">
-          <p class="card__body">To add some warmth, quirkiness, and excitement to our type, we included a complimentary font with a handwritten/cursive style, named Caveat.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="divider divider--medium">
-      <img src="img/divider-vertical.svg" alt="Vertical Divider Graphic">
-    </div>
-
-    <!-- How Vervendo Works -->
-
-    <h2 class="section__heading">Use Cases</h2>
-
-    <h4 class="section__subheading">Testing Mobile User Flows</h4>
-    <p class="section__body">
-      During the summer of 2021, our bounce rates were increasing and travelers slowly stopped sending requests. Our userbase consists almost entirely of mobile users, consequently, we took a mobile-first approach for the redesign.
-    </p>
-
-    <!-- GreenSock CDNs -->
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
 </body>
 
 </html>
