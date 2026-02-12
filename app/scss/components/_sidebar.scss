@@ -41,6 +41,15 @@
     text-align: center;
   }
 
+  &__logo {
+    max-width: 240px;
+    height: auto;
+
+    @include breakpoint-down(lg) {
+      margin: 0 auto;
+    }
+  }
+
   &__title {
     margin: 0;
     color: #fff;
@@ -93,10 +102,14 @@
   }
 
   &__subheading {
-    font-size: 0.5625rem;
+    font-size: 0.6rem;
     color: var(--blue-500);
     text-transform: uppercase;
-    letter-spacing: 0.0625rem;
+    letter-spacing: 1.5px;
+
+    @include breakpoint-down(lg) {
+      text-align: center;
+    }
   }
 
   &__body {

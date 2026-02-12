@@ -10,9 +10,13 @@
 
   <title>Portfolio of Nicholas Panayotakos | Captain Design</title>
 
-
   <link rel="stylesheet" href="dist/style.min.css">
   <link rel="stylesheet" href="https://use.typekit.net/exg0zlw.css">
+
+  <!-- Caveat Link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
 
   <script defer src="dist/script.js"></script>
   <script defer src="dist/"></script>
@@ -31,10 +35,11 @@
 
     <section class="sidebar flex flex-col">
 
-      <!-- Hero -->
+      <!-- Header -->
 
-      <header class="hero hero--vervendo">
-        <img class="hero__logo" src="img/logo-vervendo-vertical-blue.svg" alt="Vervendo Logo">
+      <header class="header">
+        <img class="header__logo" src="img/project/vervendo/logo_vervendo_combination_tagline_vertical_light-blue.svg"
+          alt="Vervendo Logo">
       </header>
 
       <!-- About -->
@@ -49,24 +54,27 @@
           experiences.
         </p>
         <p class="about__body">
+          Using a simple, smartly designed user-friendly reservation platform where travelers can access and interact
+          with hoteliers to personalized custom-made deals based on the traveler's needs. It's focused on the Chania
+          (Crete, Greece) market with plans for expanding to all of Crete.
+        </p>
+        <p class="about__body">
           Vervendo relieves travellers from doing all the legwork of searching and comparing prices and accommodations
-          to
-          they match their ideal needs.
+          to they match their ideal needs.
         </p>
       </div>
 
       <!-- Contact -->
 
       <section class="contact">
-        <div class="contact__social">
+        <div class="contact__social flex ai-c gap-2">
+          <a href="mailto:nicholaspanayotakos@gmail.com" target="_blank">
+            <img src="img/icons/icon-email.svg" alt="Send Email Icon"></a>
           <a href="https://github.com/Cptain" target="_blank">
             <img src="img/icons/icon-github.svg" alt="Github Icon"></a>
           <a href="https://www.linkedin.com/in/captaindesign/" target="_blank">
             <img src="img/icons/icon-linked.svg" alt="LinkedIn Icon"></a>
           <a href="https://twitter.com/imcaptain" target="_blank">
-            <img src="img/icons/icon-twit.svg" alt="Twitter Icon"></a>
-          <a href="https://www.instagram.com/captain__design/" target="_blank">
-            <img src="img/icons/icon-insta.svg" alt="Instagram Icon"></a>
         </div>
 
         <a class="contact__logo" href="index.html">
@@ -174,7 +182,10 @@
       </div>
 
       <div class="flex flex-col ai-c gap-2">
-        <div class="card flex flex-col gap-2 jc-c">
+
+        <!-- My Roles -->
+
+        <div class="card">
           <div class="flex flex-col gap-1">
             <p class="card__body">When I started at Vervendo the primary blue color was already part of the brand.</p>
             <p class="card__body">We wanted to enrich the palette to match the atmosphere and energy of vacations by
@@ -201,72 +212,73 @@
             </div>
           </div>
         </div>
-        <div class="flex flex-col ai-c">
-          <div class="color-value flex flex-col gap-1 ai-c">
-            <div class="grid grid__color-value">
-              <div class="color-value__line palette--vervendo-white"></div>
-              <div class="color-value__hex grid grid__hex gap-01">
-                <span>HEX</span><span>FFFFFF</span>
-                <span>RGB</span><span>255 255 255</span>
-                <span>HSL</span><span>0 0 100</span>
-              </div>
-              <div class="flex flex-col gap-02">
-                <h6 class="color-value__heading">Primary Color</h6>
-                <p class="color-value__body">Used for all purposes throughout the entire brand.</p>
-              </div>
+
+        <!-- Colour Palette -->
+
+        <div class="color-value flex flex-col gap-1 ai-c">
+          <div class="grid grid__color-value">
+            <div class="color-value__line palette--vervendo-white"></div>
+            <div class="color-value__hex grid grid__color-codes gap-01">
+              <span>HEX</span><span>FFFFFF</span>
+              <span>RGB</span><span>255 255 255</span>
+              <span>HSL</span><span>0 0 100</span>
             </div>
-            <div class="grid grid__color-value">
-              <div class="color-value__line palette--vervendo-blue"></div>
-              <div class="color-value__hex grid grid__hex gap-01">
-                <span>HEX</span><span>2C6DA9</span>
-                <span>RGB</span><span>49 109 169</span>
-                <span>HSL</span><span>209 59 42</span>
-              </div>
-              <div class="flex flex-col gap-02">
-                <h6 class="color-value__heading">Primary Color</h6>
-                <p class="color-value__body">Used for all purposes throughout the entire brand.</p>
-              </div>
+            <div class="flex flex-col gap-02">
+              <h6 class="color-value__heading">Primary Color</h6>
+              <p class="color-value__body">Used for all purposes throughout the entire brand.</p>
             </div>
-            <div class="grid grid__color-value">
-              <div class="color-value__line palette--vervendo-pink"></div>
-              <div class="color-value__hex grid grid__hex gap-01">
-                <span>HEX</span><span>FF577F</span>
-                <span>RGB</span><span>255 87 127</span>
-                <span>HSL</span><span>346 100 67</span>
-              </div>
-              <div class="flex flex-col gap-02">
-                <h6 class="color-value__heading">Secondary Color</h6>
-                <p class="color-value__body">Used for buttons, unique offers, host notes, and notifications.</p>
-              </div>
+          </div>
+          <div class="grid grid__color-value">
+            <div class="color-value__line palette--vervendo-blue"></div>
+            <div class="color-value__hex grid grid__color-codes gap-01">
+              <span>HEX</span><span>2C6DA9</span>
+              <span>RGB</span><span>49 109 169</span>
+              <span>HSL</span><span>209 59 42</span>
             </div>
-            <div class="grid grid__color-value">
-              <div class="color-value__line palette--vervendo-yellow"></div>
-              <div class="color-value__hex grid grid__hex gap-01">
-                <span>HEX</span><span>FFCA41</span>
-                <span>RGB</span><span>255 202 65</span>
-                <span>HSL</span><span>43 100 63</span>
-              </div>
-              <div class="flex flex-col gap-02">
-                <h6 class="color-value__heading">Tertiary Color</h6>
-                <p class="color-value__body">Used for added emphasis such as heading underlines.</p>
-              </div>
+            <div class="flex flex-col gap-02">
+              <h6 class="color-value__heading">Primary Color</h6>
+              <p class="color-value__body">Used for all purposes throughout the entire brand.</p>
             </div>
-            <div class="grid grid__color-value">
-              <div class="color-value__line palette--vervendo-gold"></div>
-              <div class="color-value__hex grid grid__hex gap-01">
-                <span>HEX</span><span>C98F1D</span>
-                <span>RGB</span><span>201 143 29</span>
-                <span>HSL</span><span>40 75 45</span>
-              </div>
-              <div class="flex flex-col gap-02">
-                <h6 class="color-value__heading">Tertiary Color</h6>
-                <p class="color-value__body">Used for added emphasis such as heading underlines.</p>
-              </div>
+          </div>
+          <div class="grid grid__color-value">
+            <div class="color-value__line palette--vervendo-pink"></div>
+            <div class="color-value__hex grid grid__color-codes gap-01">
+              <span>HEX</span><span>FF577F</span>
+              <span>RGB</span><span>255 87 127</span>
+              <span>HSL</span><span>346 100 67</span>
+            </div>
+            <div class="flex flex-col gap-02">
+              <h6 class="color-value__heading">Secondary Color</h6>
+              <p class="color-value__body">Used for buttons, unique offers, host notes, and notifications.</p>
+            </div>
+          </div>
+          <div class="grid grid__color-value">
+            <div class="color-value__line palette--vervendo-yellow"></div>
+            <div class="color-value__hex grid grid__color-codes gap-01">
+              <span>HEX</span><span>FFCA41</span>
+              <span>RGB</span><span>255 202 65</span>
+              <span>HSL</span><span>43 100 63</span>
+            </div>
+            <div class="flex flex-col gap-02">
+              <h6 class="color-value__heading">Tertiary Color</h6>
+              <p class="color-value__body">Used for added emphasis such as heading underlines.</p>
+            </div>
+          </div>
+          <div class="grid grid__color-value">
+            <div class="color-value__line palette--vervendo-gold"></div>
+            <div class="color-value__hex grid grid__color-codes gap-01">
+              <span>HEX</span><span>C98F1D</span>
+              <span>RGB</span><span>201 143 29</span>
+              <span>HSL</span><span>40 75 45</span>
+            </div>
+            <div class="flex flex-col gap-02">
+              <h6 class="color-value__heading">Tertiary Color</h6>
+              <p class="color-value__body">Used for added emphasis such as heading underlines.</p>
             </div>
           </div>
         </div>
 
-        <!-- Mockup for Mobile Offers -->
+        <!-- Mockup -->
 
         <div class="mockup flex flex-col">
           <img class="mockup__mobile-offers" src="/img/mockup-offers.svg" alt="Mobile Mockup for Exclusive Offers">
@@ -300,10 +312,113 @@
                 complimentary font with a handwritten/cursive style, named Caveat.</p>
             </div>
           </div>
+
+          <div class="fonts">
+            <div class="fonts__item">
+              <span class="fonts__heading fonts__heading--manrope fonts__chars--manrope-light">Manrope Light</span>
+              <ul class="tag__list">
+                <li class="tag tag__role">Captions</li>
+                <li class="tag tag__role">Footnotes</li>
+              </ul>
+              <p class="flex flex-col">
+                <span
+                  class="fonts__chars fonts__chars--manrope fonts__chars--manrope-light">ABCDEFGHIJKLMNOPQRSTUVWXYZ</span>
+                <span
+                  class="fonts__chars fonts__chars--manrope fonts__chars--manrope-light">abcdefghijklmnopqrstuvwxyz</span>
+                <span class="fonts__chars fonts__chars--manrope fonts__chars--manrope-light">1234567890</span>
+              </p>
+            </div>
+            <div class="fonts__item">
+              <span class="fonts__heading fonts__heading--manrope fonts__chars--manrope-regular">Manrope Regular</span>
+              <ul class="tag__list">
+                <li class="tag tag__role">Captions</li>
+                <li class="tag tag__role">Footnotes</li>
+              </ul>
+              <p class="flex flex-col">
+                <span
+                  class="fonts__chars fonts__chars--manrope fonts__chars--manrope-regular">ABCDEFGHIJKLMNOPQRSTUVWXYZ</span>
+                <span
+                  class="fonts__chars fonts__chars--manrope fonts__chars--manrope-regular">abcdefghijklmnopqrstuvwxyz</span>
+                <span class="fonts__chars fonts__chars--manrope fonts__chars--manrope-regular">1234567890</span>
+              </p>
+            </div>
+            <div class="fonts__item">
+              <span class="fonts__heading fonts__heading--manrope fonts__chars--manrope-semibold">Manrope
+                Semibold</span>
+              <ul class="tag__list">
+                <li class="tag tag__role">Captions</li>
+                <li class="tag tag__role">Footnotes</li>
+              </ul>
+              <p class="flex flex-col">
+                <span
+                  class="fonts__chars fonts__chars--manrope fonts__chars--manrope-semibold">ABCDEFGHIJKLMNOPQRSTUVWXYZ</span>
+                <span
+                  class="fonts__chars fonts__chars--manrope fonts__chars--manrope-semibold">abcdefghijklmnopqrstuvwxyz</span>
+                <span class="fonts__chars fonts__chars--manrope fonts__chars--manrope-semibold">1234567890</span>
+              </p>
+            </div>
+            <div class="fonts__divider"></div>
+            <div class="fonts__item">
+              <span class="fonts__heading fonts__heading--caveat fonts__chars--caveat-regular">Caveat Regular</span>
+              <ul class="tag__list">
+                <li class="tag tag__role">Captions</li>
+                <li class="tag tag__role">Footnotes</li>
+              </ul>
+              <p class="flex flex-col">
+                <span
+                  class="fonts__chars fonts__chars--caveat fonts__chars--caveat-regular">ABCDEFGHIJKLMNOPQRSTUVWXYZ</span>
+                <span
+                  class="fonts__chars fonts__chars--caveat fonts__chars--caveat-regular">abcdefghijklmnopqrstuvwxyz</span>
+                <span class="fonts__chars fonts__chars--caveat fonts__chars--caveat-regular">1234567890</span>
+              </p>
+            </div>
+            <div class="fonts__item">
+              <span class="fonts__heading fonts__heading--caveat fonts__chars--caveat-bold">Caveat Bold</span>
+              <ul class="tag__list">
+                <li class="tag tag__role">Captions</li>
+                <li class="tag tag__role">Footnotes</li>
+              </ul>
+              <p class="flex flex-col">
+                <span
+                  class="fonts__chars fonts__chars--caveat fonts__chars--caveat-bold">ABCDEFGHIJKLMNOPQRSTUVWXYZ</span>
+                <span
+                  class="fonts__chars fonts__chars--caveat fonts__chars--caveat-bold">abcdefghijklmnopqrstuvwxyz</span>
+                <span class="fonts__chars fonts__chars--caveat fonts__chars--caveat-bold">1234567890</span>
+              </p>
+            </div>
+          </div>
         </div>
         <div class="divider divider--medium">
           <img src="img/divider-vertical.svg" alt="Vertical Divider Graphic">
         </div>
+
+        <!-- How it Works -->
+        <h2 class="section__heading">How Vervendo Works</h2>
+        <div class="flex flex-col ai-c gap-2">
+          <p class="hiw__body">
+            Through a quick form the traveller can personalize their vacations. Their request is filtered and sent to
+            all matching hosts.
+          </p>
+          <img src="img/project/vervendo/mockup-send-request.svg"
+            alt="Illustration showing the process of sending a request for offers">
+          <p class="hiw__body">
+            Hosts respond to travelers' requests by creating unique offers that include price discounts, services,
+            experiences, and a note with any additional details.
+          </p>
+          <img src="img/project/vervendo/mockup-send-request.svg"
+            alt="Illustration showing the process of sending a request for offers">
+          <p class="hiw__body">
+            The travellers get notified with every unique offer received and can compare them easily through their
+            dashboard before deciding which one to choose.
+          </p>
+        </div>
+
+        <!-- Navigation -->
+        <div class="project__links">
+          <a href="index.html" class="button button--transparent">Return to Homepage</a>
+          <a href="#" class="button button--yellow button--external button--external-blue">View Demo</a>
+        </div>
+
       </div>
     </section>
   </main>
