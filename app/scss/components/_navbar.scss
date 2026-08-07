@@ -22,11 +22,12 @@
     width: 300px;
 
     @include breakpoint-down(sm) {
-      max-width: 70px;
+      max-width: 250px;
     }
 
     @include breakpoint-down(xxsm) {
       display: none;
+      max-width: 70px;
     }
   }
 
