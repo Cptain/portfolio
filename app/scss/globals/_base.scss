@@ -34,6 +34,7 @@ body {
 
   @include breakpoint-down(sm) {
     padding: 0 2rem 3rem;
+    gap: 0;
   }
 }
 
