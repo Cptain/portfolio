@@ -19,10 +19,12 @@
   }
 
   &__logo {
-    width: 300px;
+    [data-page="home"] & {
+      width: 300px;
 
-    @include breakpoint-down(sm) {
-      max-width: 250px;
+      @include breakpoint-down(sm) {
+        max-width: 250px;
+      }
     }
 
     @include breakpoint-down(xxsm) {
