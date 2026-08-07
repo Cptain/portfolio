@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon.png">
+
+  <title>Portfolio of Nicholas Panayotakos | Digital Shovel</title>
+
+  <link rel="stylesheet" href="dist/style.min.css">
+
+  <!-- Inter Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+
+  <script defer src="dist/script.js"></script>
+  <script defer src="dist/"></script>
+
+</head>
+
+<body>
+
+  <!-- 
+  A big thank you to Slawomir Chodnicki for his guide in understanding how to build this mesmerizing starry background.
+  https://betterprogramming.pub/fun-with-html-canvas-lets-create-a-star-field-a46b0fed5002
+  -->
+  <canvas id="canvas"></canvas>
+
+  <aside class="sidebar">
+
+    <!-- Header -->
+
+    <header class="header">
+      <img class="header__logo" src="img/project/digital-shovel/logo.svg" alt="Digital Shovel Logo">
+    </header>
+
+    <!-- About -->
+
+    <div class="about">
+      <div class="flex flex-col gap-03">
+        <h4 class="about__heading">About Digital Shovel</h4>
+        <span class="about__subheading">Crypto Mining Infrastructure</span>
+      </div>
+      <p class="about__body">
+        Digital Shovel is a North American provider of revolutionary crypto mining containers
+        designed for rapid deployment and maximum efficiency.
+      </p>
+      <p class="about__body">
+        Their modular container solutions enable businesses and individuals to set up
+        professional-grade mining operations anywhere in the world.
+      </p>
+      <p class="about__body">
+        With a focus on innovation and performance, Digital Shovel bridges the gap between
+        blockchain technology and practical mining infrastructure.
+      </p>
+    </div>
+
+    <!-- Contact -->
+
+    <section class="contact">
+      <div class="contact__social flex ai-c gap-2">
+        <a href="mailto:nicholaspanayotakos@gmail.com" target="_blank">
+          <img src="img/icons/icon-email.svg" alt="Send Email Icon"></a>
+        <a href="https://github.com/Cptain" target="_blank">
+          <img src="img/icons/icon-github.svg" alt="Github Icon"></a>
+        <a href="https://www.linkedin.com/in/captaindesign/" target="_blank">
+          <img src="img/icons/icon-linked.svg" alt="LinkedIn Icon"></a>
+      </div>
+
+      <a class="contact__logo" href="index.html">
+        <img class="navbar__logo" src="img/logo-captain.svg" alt="Captain Design Logo">
+        <img class="navbar__logo navbar__logo--mobile" src="img/symbol-captain.svg" alt="Captain Design Symbol">
+      </a>
+    </section>
+  </aside>
+
+  <main class="content">
+
+    <!-- My Roles -->
+    <section class="container">
+      <h2 class="section__heading">My Roles</h2>
+      <div class="roles">
+        <div class="roles__primary">
+          <div class="roles__container">
+            <div class="roles__heading">
+              <img src="img/icons/icon-ui.svg" alt="Icon for UI/UX">
+              <h3 class="roles__heading roles__heading--primary">UI/UX</h3>
+            </div>
+            <div class="roles__body">
+              <p>I was responsible for the UI/UX design of Digital Shovel's website, including
+                designing subtle animations for icons and backgrounds to bring more life to the
+                interface. I designed isometric illustrations for each product, using callouts to
+                highlight key features, and created interactive animations that "explode" products
+                to reveal their internal parts. I also designed a set of humorous, custom emojis
+                for the company's internal Slack.</p>
+            </div>
+          </div>
+          <div class="roles__container">
+            <div class="roles__heading">
+              <img src="img/icons/icon-brackets.svg" alt="Icon for Front-end">
+              <h3 class="roles__heading roles__heading--primary">Front-end</h3>
+            </div>
+            <div class="roles__body">
+              <p>I wrote the code for the company's static website using HTML, CSS, JavaScript,
+                and GSAP, and designed and developed an internal web application that allowed
+                technologists to test PCBs, automatically validating pass/fail results against
+                defined requirements. I also built responsive email templates in MJML for company
+                newsletters, events, and product updates. Additionally, I added a contact form to
+                the website, connected through Formspree, which became the first channel through
+                which the company began receiving customer interest from the web.</p>
+            </div>
+          </div>
+        </div>
+        <div class="roles__secondary">
+          <div class="roles__container">
+            <div class="roles__heading">
+              <img src="img/icons/icon-animation.svg" alt="Icon for Animation">
+              <h3 class="roles__heading roles__heading--primary">Animation</h3>
+            </div>
+            <div class="roles__body">
+              <p>I created pseudo-3D product visualizations using pure CSS to display our products
+                without relying on 3D rendering or video. Using After Effects, I designed and
+                animated product demonstration videos for events, tradeshows, and conferences,
+                covering scenarios such as product assembly, loading and delivery, airflow
+                recirculation, concrete pouring, crane lifting, and busway assembly and delivery.
+                I also designed and animated marketing promos for our products.</p>
+            </div>
+          </div>
+          <div class="divider divider__horizontal"></div>
+          <div class="roles__container">
+            <div class="roles__heading">
+              <img src="img/icons/icon-brand.svg" alt="Icon for Branding">
+              <h3 class="roles__heading roles__heading--primary">Branding</h3>
+            </div>
+            <div class="roles__body">
+              <p>I built a full design system, including components, icons, and logos, to support
+                Digital Shovel and its sister brands. I designed the Digital Shovel brand identity,
+                including a 5-year anniversary logo and the AWS Test Bench product logo, along with
+                brand identities for three sister brands: Good Pocket Studios, BluAX, and The
+                Sailing Beard. I designed product packaging for BluAX (solo miner), branded office
+                labels, and each employee's company email signature.</p>
+            </div>
+          </div>
+          <div class="roles__container">
+            <div class="roles__heading">
+              <img src="img/icons/icon-ad.svg" alt="Icon for Marketing">
+              <h3 class="roles__heading roles__heading--primary">Marketing</h3>
+            </div>
+            <div class="roles__body">
+              <p>I designed animated and static online ads, 360° video overlays, banners, cards,
+                flags, flyers, headers for brand collaborations, signs, slideshows, and tablecloths
+                for events and campaigns. I designed product manuals and branded food and drink
+                menus for company events, along with tradeshow booth mockups, and handled product
+                photography as needed. I also designed and managed content for all of the company's
+                social media posts, and put together a business deck used to request funding for a
+                large company project.</p>
+            </div>
+          </div>
+          <div class="roles__container">
+            <div class="roles__heading">
+              <img src="img/icons/icon-graphics.svg" alt="Icon for Merchandise">
+              <h3 class="roles__heading roles__heading--primary">Merchandise</h3>
+            </div>
+            <div class="roles__body">
+              <p>I designed branded merchandise, including hats, hoodies, lanyards, mugs, pens,
+                shaker bottles, socks, tote bags, t-shirts, cannabis grinders, and event
+                wristbands, and managed procurement and manufacturing through China.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider divider__vertical">
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+    </div>
+
+    <!-- Colour Palette -->
+    <section class="container">
+      <h2 class="section__heading">Colour Palette</h2>
+      <div class="palette__swatches">
+        <div class="palette__swatches-item palette__swatches-item--big palette--digital-shovel-blue"></div>
+        <div class="palette__swatches-item palette__swatches-item--big palette--digital-shovel-white palette__swatches-item--stroke"></div>
+        <div class="palette__swatches-item palette__swatches-item--big palette--digital-shovel-blue-gray"></div>
+      </div>
+      <div class="palette__summary">
+        <div class="palette__summary-description">
+          <p class="palette__description">The goal was to create a bold, trustworthy identity that communicates
+            technological expertise and reliability — the core values of a mining infrastructure company.</p>
+          <p class="palette__description">Digital Blue takes centre stage as the primary brand colour,
+            conveying confidence and innovation. The blue-gray accent adds vibrancy and energy while the
+            white ensures legibility and balance across all surfaces.</p>
+        </div>
+        <div class="palette__summary-swatches">
+          <div class="palette__swatches-item palette__swatches-item--small palette--digital-shovel-blue"></div>
+          <span>+</span>
+          <div class="palette__swatches-item palette__swatches-item--small palette--digital-shovel-white palette__swatches-item--stroke"></div>
+          <span>+</span>
+          <div class="palette__swatches-item palette__swatches-item--small palette--digital-shovel-blue-gray"></div>
+        </div>
+        <div class="palette__summary-distribution">
+          <h4 class="palette__distribution-heading">Color Distribution</h4>
+          <div class="palette__distribution-bars palette__distribution-bars--digital-shovel">
+            <div class="palette--digital-shovel-blue"></div>
+            <div class="palette--digital-shovel-white"></div>
+            <div class="palette--digital-shovel-blue-gray"></div>
+          </div>
+        </div>
+      </div>
+      <div class="palette__values">
+        <div class="palette__values-grid">
+          <div class="palette__values-line palette--digital-shovel-blue"></div>
+          <div class="palette__values-codes">
+            <span>HEX</span><span>1E75DF</span>
+            <span>RGB</span><span>30 117 223</span>
+            <span>HSL</span><span>214 74 50</span>
+          </div>
+          <div class="flex flex-col gap-02">
+            <h6 class="palette__values-heading">Digital Blue</h6>
+            <p class="palette__values-body">Used for all purposes throughout the entire brand.</p>
+          </div>
+        </div>
+        <div class="palette__values-grid">
+          <div class="palette__values-line palette--digital-shovel-white"></div>
+          <div class="palette__values-codes">
+            <span>HEX</span><span>FFFFFF</span>
+            <span>RGB</span><span>255 255 255</span>
+            <span>HSL</span><span>0 0 100</span>
+          </div>
+          <div class="flex flex-col gap-02">
+            <h6 class="palette__values-heading">White</h6>
+            <p class="palette__values-body">Used for text, backgrounds, and contrast surfaces.</p>
+          </div>
+        </div>
+        <div class="palette__values-grid">
+          <div class="palette__values-line palette--digital-shovel-blue-gray"></div>
+          <div class="palette__values-codes">
+            <span>HEX</span><span>627D98</span>
+            <span>RGB</span><span>98 125 152</span>
+            <span>HSL</span><span>210 22 49</span>
+          </div>
+          <div class="flex flex-col gap-02">
+            <h6 class="palette__values-heading">Blue Gray</h6>
+            <p class="palette__values-body">Used for calls-to-action, highlights, and notifications.</p>
+          </div>
+        </div>
+      </div>
+      <div class="palette__site-mockup">
+        <img class="mockup__mobile-offers" src="img/project/digital-shovel/mockup.svg" alt="Digital Shovel Website Mockup">
+      </div>
+    </section>
+
+    <div class="divider divider__vertical">
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+    </div>
+
+    <!-- Typography -->
+    <section class="container">
+      <h2 class="section__heading">Typography</h2>
+      <div class="type">
+        <div class="type__container">
+          <h4 class="type__heading">Primary Font</h4>
+          <div class="type__container--name">
+            <h5 class="type__name type__name--inter">Inter</h5>
+            <span class="type__chars">ABCDEFGHIJKLMNOPQRSTUVWXYZ</span>
+            <span class="type__chars">abcdefghijklmnopqrstuvwxyz</span>
+            <span class="type__chars">1234567890</span>
+          </div>
+          <ul class="type__list">
+            <li class="type__list-item">Body Copy</li>
+            <li class="type__list-item">Buttons</li>
+            <li class="type__list-item">Nav Labels</li>
+            <li class="type__list-item">Captions</li>
+            <li class="type__list-item">Data & Stats</li>
+          </ul>
+          <div class="type__container--body">
+            <p class="type__body">Inter was chosen for its clean, highly legible forms that perform
+              excellently at both large and small sizes — critical for a data-heavy platform
+              displaying mining statistics and investment figures.</p>
+            <p class="type__body">Its wide range of weights allows for precise typographic hierarchy
+              without needing an additional typeface for body content.</p>
+            <p class="type__body">The variable font format ensures optimal rendering across all screen
+              sizes and resolutions.</p>
+          </div>
+        </div>
+        <div class="divider divider__horizontal divider__horizontal--light-blue"></div>
+        <div class="type__container">
+          <h4 class="type__heading">Display Font</h4>
+          <div class="type__container--name">
+            <h5 class="type__name type__name--pp-right-grotesque">PP Right Grotesque</h5>
+            <span class="type__chars">ABCDEFGHIJKLMNOPQRSTUVWXYZ</span>
+            <span class="type__chars">1234567890</span>
+          </div>
+          <ul class="type__list">
+            <li class="type__list-item">Hero Headings</li>
+            <li class="type__list-item">Section Titles</li>
+            <li class="type__list-item">Banners</li>
+          </ul>
+          <div class="type__container--body">
+            <p class="type__body">PP Right Grotesque in its Black weight was selected for all display
+              headings. Its bold, assertive character perfectly captures the strength and scale of
+              industrial mining infrastructure.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider divider__vertical">
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+    </div>
+
+    <!-- Logo -->
+    <section class="container">
+      <h2 class="section__heading">Logo</h2>
+      <div class="logo__showcase">
+        <img class="logo__primary" src="img/project/digital-shovel/digital-shovel_logo.svg" alt="Digital Shovel Logo">
+        <div class="logo__variants">
+          <div class="logo__variant-card logo__variant-card--light">
+            <img src="img/project/digital-shovel/digital-shovel_logo_black.svg" alt="Digital Shovel Black Logo">
+          </div>
+          <div class="logo__variant-card logo__variant-card--dark">
+            <img src="img/project/digital-shovel/digital-shovel_logo_white.svg" alt="Digital Shovel White Logo">
+          </div>
+        </div>
+        <div class="how-it-works__step">
+          <img class="how-it-works__logo" src="img/project/digital-shovel/digital-shovel_logo_white.svg" alt="Digital Shovel White Logo">
+          <p class="content__body">The shovel mark references the act of mining, while the shield form communicates security and trust in the infrastructure.</p>
+        </div>
+        <div class="how-it-works__step">
+          <p class="content__body">The wordmark pairs with the icon to form a versatile system that scales across all sizes and brand applications.</p>
+          <img class="how-it-works__logo" src="img/project/digital-shovel/digital-shovel_logo_black.svg" alt="Digital Shovel Black Logo">
+        </div>
+      </div>
+    </section>
+
+    <div class="divider divider__vertical">
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+    </div>
+
+    <!-- Icons -->
+    <section class="container">
+      <h2 class="section__heading">Icons</h2>
+      <p class="content__body">A set of icons designed for the Digital Shovel platform, representing key features and services of the mining container infrastructure.</p>
+      <div class="icons__grid">
+        <img src="img/project/digital-shovel/icons/container.svg" alt="Container">
+        <img src="img/project/digital-shovel/icons/mining.svg" alt="Mining">
+        <img src="img/project/digital-shovel/icons/blockchain.svg" alt="Blockchain">
+        <img src="img/project/digital-shovel/icons/power.svg" alt="Power">
+        <img src="img/project/digital-shovel/icons/cooling.svg" alt="Cooling">
+        <img src="img/project/digital-shovel/icons/security.svg" alt="Security">
+        <img src="img/project/digital-shovel/icons/monitoring.svg" alt="Monitoring">
+        <img src="img/project/digital-shovel/icons/deployment.svg" alt="Deployment">
+        <img src="img/project/digital-shovel/icons/scalability.svg" alt="Scalability">
+        <img src="img/project/digital-shovel/icons/support.svg" alt="Support">
+      </div>
+    </section>
+
+    <div class="divider divider__vertical">
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+    </div>
+
+    <!-- Patterns -->
+    <section class="container">
+      <h2 class="section__heading">Patterns</h2>
+      <p class="content__body">Geometric pattern designs created to reinforce the industrial and technological character of the Digital Shovel brand.</p>
+      <div class="mockup flex flex-col ai-c gap-1">
+        <img class="mockup__mobile-offers" src="img/project/digital-shovel/patterns/pattern-grid.png" alt="Grid Pattern">
+        <img class="mockup__mobile-offers" src="img/project/digital-shovel/patterns/pattern-circuit.png" alt="Circuit Pattern">
+      </div>
+      <p class="content__body">From structured grid systems that reflect precision engineering, to circuit-inspired motifs representing blockchain technology.</p>
+      <div class="mockup flex flex-col ai-c gap-1">
+        <img class="mockup__mobile-offers" src="img/project/digital-shovel/patterns/pattern-dark.png" alt="Dark Pattern">
+        <img class="mockup__mobile-offers" src="img/project/digital-shovel/patterns/pattern-accent.png" alt="Accent Pattern">
+      </div>
+    </section>
+
+    <div class="divider divider__vertical">
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+    </div>
+
+    <!-- Navigation -->
+    <p class="thanks">There's always desktop!</p>
+    <div class="project__links">
+      <a href="index.html" class="button button--transparent">Return to Homepage</a>
+      <a href="#" class="button button--yellow">View Prototype</a>
+    </div>
+
+    <!-- Footer -->
+    <div class="project__footer">
+      <div class="project__footer-social">
+        <a href="mailto:nicholaspanayotakos@gmail.com" target="_blank">
+          <img src="img/icons/icon-email.svg" alt="Send Email Icon"></a>
+        <a href="https://github.com/Cptain" target="_blank">
+          <img src="img/icons/icon-github.svg" alt="Github Icon"></a>
+        <a href="https://www.linkedin.com/in/captaindesign/" target="_blank">
+          <img src="img/icons/icon-linked.svg" alt="LinkedIn Icon"></a>
+        <a href="https://twitter.com/imcaptain" target="_blank">
+          <img src="img/icons/icon-twit.svg" alt="Twitter Icon"></a>
+      </div>
+      <p class="project__footer-credit">{ Designed and Developed by Nicholas Panayotakos }</p>
+    </div>
+  </main>
+
+  <!-- GreenSock CDNs -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+</body>
+
+</html>

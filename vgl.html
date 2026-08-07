@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon.png">
+
+  <title>Portfolio of Nicholas Panayotakos | Captain Design</title>
+
+  <link rel="stylesheet" href="dist/style.min.css">
+
+  <!-- Montserrat Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <script defer src="dist/script.js"></script>
+  <script defer src="dist/"></script>
+
+</head>
+
+<body>
+
+  <!-- 
+  A big thank you to Slawomir Chodnicki for his guide in understanding how to build this mesmerizing starry background.
+  https://betterprogramming.pub/fun-with-html-canvas-lets-create-a-star-field-a46b0fed5002
+  -->
+  <canvas id="canvas"></canvas>
+
+  <aside class="sidebar">
+
+    <!-- Header -->
+
+    <header class="header">
+      <img class="header__logo" src="img/project/vgl/vgl-logo_dark-blue 1.svg" alt="VGL eSports Logo">
+    </header>
+
+    <!-- About -->
+
+    <div class="about">
+      <div class="flex flex-col gap-03">
+        <h4 class="about__heading">About VGL eSports</h4>
+        <span class="about__subheading">Tournament & League Gaming Platform</span>
+      </div>
+      <p class="about__body">
+        VGL eSports (Virtual Gaming Leagues) is a platform dedicated to organizing and managing esports tournaments,
+        leagues, and events.
+      </p>
+      <p class="about__body">
+        They focus on creating a comprehensive ecosystem for gamers, teams, and partners, while also helping players
+        improve their skills through our eSports Academy.
+      </p>
+      <p class="about__body">
+        They participated in the Digital Expo, back in 2019, in Athens, Greece. The event managed to bring together
+        over 20,000 fans of esports and technology.
+      </p>
+    </div>
+
+    <!-- Contact -->
+
+    <section class="contact">
+      <div class="contact__social flex ai-c gap-2">
+        <a href="mailto:nicholaspanayotakos@gmail.com" target="_blank">
+          <img src="img/icons/icon-email.svg" alt="Send Email Icon"></a>
+        <a href="https://github.com/Cptain" target="_blank">
+          <img src="img/icons/icon-github.svg" alt="Github Icon"></a>
+        <a href="https://www.linkedin.com/in/captaindesign/" target="_blank">
+          <img src="img/icons/icon-linked.svg" alt="LinkedIn Icon"></a>
+      </div>
+
+      <a class="contact__logo" href="index.html">
+        <img class="navbar__logo" src="img/logo-captain.svg" alt="Captain Design Logo">
+        <img class="navbar__logo navbar__logo--mobile" src="img/symbol-captain.svg" alt="Captain Design Symbol">
+      </a>
+    </section>
+  </aside>
+
+  <main class="content">
+
+    <!-- My Roles -->
+    <section class="container">
+      <h2 class="section__heading">My Roles</h2>
+      <div class="roles">
+        <div class="roles__primary">
+          <div class="roles__container">
+            <div class="roles__heading">
+              <img src="img/icons/icon-ui.svg" alt="Icon for UI/UX">
+              <h3 class="roles__heading roles__heading--primary">UI/UX</h3>
+            </div>
+            <div class="roles__body">
+              <p>Designed a static landing page displaying the leagues we conduct and who we are.
+              </p>
+              <p>Customized the main website template to enhance UX and fit the brand's identity.
+              </p>
+            </div>
+          </div>
+          <div class="roles__container">
+            <div class="roles__heading">
+              <img src="img/icons/icon-brackets.svg" alt="Icon for Coding">
+              <h3 class="roles__heading roles__heading--primary">Front-end</h3>
+            </div>
+            <div class="roles__body">
+              <p>Developed the static landing page, maintained and wrote code for the main website
+                built on Joomla.</p>
+            </div>
+          </div>
+        </div>
+        <div class="roles__secondary">
+          <div class="roles__container">
+            <div class="roles__heading">
+              <img src="img/icons/icon-animation.svg" alt="Icon for Animation">
+              <h3 class="roles__heading roles__heading--primary">Animation</h3>
+            </div>
+            <div class="roles__body">
+              <p>Designed and animated web elements for our landing page using GSAP.</p>
+            </div>
+          </div>
+          <div class="roles__container">
+            <div class="roles__heading">
+              <img src="img/icons/icon-graphics.svg" alt="Icon for Graphics">
+              <h3 class="roles__heading roles__heading--primary">Graphics</h3>
+            </div>
+            <div class="roles__body">
+              <p>Created visuals that represented stats, rankings, match and league results, that
+                were used for social media posts and to highlight the winners.</p>
+            </div>
+          </div>
+          <div class="divider divider__horizontal"></div>
+          <div class="roles__container">
+            <div class="roles__heading">
+              <img src="img/icons/icon-brand.svg" alt="Icon for Branding">
+              <h3 class="roles__heading roles__heading--primary">Branding</h3>
+            </div>
+            <div class="roles__body">
+              <p>Designed the logo, color theme, and type system, as well as logos for leagues and
+                tournaments.</p>
+            </div>
+          </div>
+          <div class="roles__container">
+            <div class="roles__heading">
+              <img src="img/icons/icon-ad.svg" alt="Icon for Ad Campaigns">
+              <h3 class="roles__heading roles__heading--primary">Ad Campaigns</h3>
+            </div>
+            <div class="roles__body">
+              <p>Prepared all graphics for all social media posts, working often under extremely
+                tight deadlines and schedules.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider divider__vertical">
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+    </div>
+
+    <!-- Colour Palette -->
+    <section class="container">
+      <h2 class="section__heading">Colour Palette</h2>
+      <div class="palette__swatches">
+        <div class="palette__swatches-item palette__swatches-item--big palette--vgl-white"></div>
+        <div class="palette__swatches-item palette__swatches-item--big palette--vgl-yellow"></div>
+        <div class="palette__swatches-item palette__swatches-item--big palette--vgl-dark-gray"></div>
+        <div class="palette__swatches-item palette__swatches-item--big palette--vgl-orange"></div>
+      </div>
+      <div class="palette__summary">
+        <div class="palette__summary-description">
+          <p class="palette__description">The goal was to add a third color to the palette to enhance the energetic
+            atmosphere
+            that fits esports and our competitive environment.</p>
+          <p class="palette__description">With energy as my focus, I decided to build the theme around the colors of the
+            sun.
+            The yellow was paired with a new reddish orange, while also utilizing radial gradients to further add to
+            the concept.</p>
+        </div>
+        <div class="palette__summary-swatches">
+          <div class="palette__swatches-item palette__swatches-item--small palette--vgl-white"></div>
+          <span>+</span>
+          <div class="palette__swatches-item palette__swatches-item--small palette--vgl-yellow"></div>
+          <span>+</span>
+          <div class="palette__swatches-item palette__swatches-item--small palette--vgl-dark-gray"></div>
+          <span>+</span>
+          <div class="palette__swatches-item palette__swatches-item--small palette--vgl-orange"></div>
+        </div>
+        <div class="palette__summary-distribution">
+          <h4 class="palette__distribution-heading">Color Distribution</h4>
+          <div class="palette__distribution-bars palette__distribution-bars--vgl">
+            <div class="palette--vgl-white"></div>
+            <div class="palette--vgl-yellow"></div>
+            <div class="palette--vgl-dark-gray"></div>
+            <div class="palette--vgl-orange"></div>
+          </div>
+        </div>
+      </div>
+      <div class="palette__values">
+        <div class="palette__values-grid palette__values-grid--vgl">
+          <div class="palette__values-line palette--vgl-white"></div>
+          <div class="palette__values-codes">
+            <span>HEX</span><span>FFFFFF</span>
+            <span>RGB</span><span>255 255 255</span>
+            <span>HSL</span><span>0 0 100</span>
+          </div>
+          <div class="flex flex-col gap-02">
+            <h6 class="palette__values-heading">Primary Colour</h6>
+            <p class="palette__values-body">Used for all purposes throughout the entire brand.</p>
+          </div>
+        </div>
+        <div class="palette__values-grid palette__values-grid--vgl">
+          <div class="palette__values-line palette--vgl-yellow"></div>
+          <div class="palette__values-codes">
+            <span>HEX</span><span>FAD32B</span>
+            <span>RGB</span><span>250 211 43</span>
+            <span>HSL</span><span>48 95 57</span>
+          </div>
+          <div class="flex flex-col gap-02">
+            <h6 class="palette__values-heading">Primary Colour</h6>
+            <p class="palette__values-body">Used for text, buttons, graphics, and backgrounds.</p>
+          </div>
+        </div>
+        <div class="palette__values-grid palette__values-grid--vgl">
+          <div class="palette__values-line palette--vgl-dark-gray"></div>
+          <div class="palette__values-codes">
+            <span>HEX</span><span>2A2A2A</span>
+            <span>RGB</span><span>42 42 42</span>
+            <span>HSL</span><span>0 0 16</span>
+          </div>
+          <div class="flex flex-col gap-02">
+            <h6 class="palette__values-heading">Secondary Colour</h6>
+            <p class="palette__values-body">Used for buttons, backgrounds, and graphics.</p>
+          </div>
+        </div>
+        <div class="palette__values-grid palette__values-grid--vgl">
+          <div class="palette__values-line palette--vgl-orange"></div>
+          <div class="palette__values-codes">
+            <span>HEX</span><span>F15A24</span>
+            <span>RGB</span><span>241 90 36</span>
+            <span>HSL</span><span>16 84 54</span>
+          </div>
+          <div class="flex flex-col gap-02">
+            <h6 class="palette__values-heading">Tertiary Colour</h6>
+            <p class="palette__values-body">Used for backgrounds, dividers, and graphics.</p>
+          </div>
+        </div>
+      </div>
+      <div class="palette__site-mockup">
+        <img class="mockup__mobile-offers" src="img/project/vgl/vgl_mobile-mockup.svg"
+          alt="Mobile Mockup for VGL eSports Website">
+      </div>
+      </div>
+    </section>
+
+    <div class="divider divider__vertical">
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+    </div>
+
+    <!-- Typography -->
+    <section class="container">
+      <h2 class="section__heading">Typography</h2>
+      <div class="type">
+        <div class="type__container">
+          <h4 class="type__heading">Primary Font</h4>
+          <div class="type__container--name">
+            <h5 class="type__name type__name--montserrat">Montserrat</h5>
+            <span class="type__chars">ABCDEFGHIJKLMNOPQRSTUVWXYZ</span>
+            <span class="type__chars">abcdefghijklmnopqrstuvwxyz</span>
+            <span class="type__chars">1234567890</span>
+          </div>
+          <ul class="type__list">
+            <li class="type__list-item">Body Copy</li>
+            <li class="type__list-item">Buttons</li>
+            <li class="type__list-item">Table Headings</li>
+            <li class="type__list-item">Table Subheadings</li>
+            <li class="type__list-item">Table Body</li>
+          </ul>
+          <div class="type__container--body">
+            <p class="type__body">Working with games of the sports genre, required displaying data visually almost
+              constantly. Consequently, typography was the main challenge. The task was to find a family that offered
+              an extensive selection of weights to ensure flexibility.</p>
+            <p class="type__body">The answer was 'Montserrat', offering a myriad of different weights to work. </p>
+            <p class="type__body">Wide and smooth characters paired well with the tall and condensed secondary font,
+              as well as with our vibrant colours.</p>
+          </div>
+        </div>
+        <div class="divider divider__horizontal divider__horizontal--light-blue"></div>
+        <div class="type__container">
+          <h4 class="type__heading">Secondary Font</h4>
+          <div class="type__container--name">
+            <h5 class="type__name type__name--gobold">Gobold Thin</h5>
+            <span class="type__chars">ABCDEFGHIJKLMNOPQRSTUVWXYZ</span>
+            <span class="type__chars">1234567890</span>
+          </div>
+          <ul class="type__list">
+            <li class="type__list-item">Numericals</li>
+            <li class="type__list-item">Headings</li>
+          </ul>
+          <div class="type__container--body">
+            <p class="type__body">For headings on the website and our articles, we used 'Gobold'. A font with bold and
+              tall characteristics aligned both with our theme and our competitive esports environment.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider divider__vertical">
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+    </div>
+
+    <!-- Type Use-Cases -->
+    <section class="container">
+      <h2 class="section__heading">Type Use-Cases</h2>
+      <div class="mockup flex flex-col ai-c gap-1">
+        <p class="content__body">Schedule Table</p>
+        <img class="mockup__mobile-offers" src="img/project/vgl/vgl_schedule.png"
+          alt="Schedule Table Mockup for VGL eSports Website">
+      </div>
+      <div class="mockup flex flex-col ai-c gap-1">
+        <p class="content__body">Rankings Table</p>
+        <img class="mockup__mobile-offers" src="img/project/vgl/vgl_rankings.png"
+          alt="Rankings Table Mockup for VGL eSports Website">
+      </div>
+      <div class="mockup flex flex-col ai-c gap-1">
+        <p class="content__body">Top Player of the Season</p>
+        <img class="mockup__mobile-offers" src="img/project/vgl/vgl_top-player.png"
+          alt="Top Player of the Season Mockup for VGL eSports Website">
+      </div>
+    </section>
+
+    <!-- Navigation -->
+    <div class="project__links">
+      <a href="index.html" class="button button--transparent">Back to Homepage</a>
+      <a href="#" class="button button--yellow button--external button--external-blue">View Demo</a>
+    </div>
+  </main>
+
+  <!-- GreenSock CDNs -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+</body>
+
+</html>

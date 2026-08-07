@@ -14,7 +14,7 @@
   transition: all 100ms ease-out;
 
   @include breakpoint-down(sm) {
-    font-size: 0.8rem;
+    font-size: 0.875rem;
     padding: 0.75rem 0.75rem;
     letter-spacing: 0.01875rem;
   }

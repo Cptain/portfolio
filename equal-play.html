@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon.png">
+
+  <title>Portfolio of Nicholas Panayotakos | Captain Design</title>
+
+  <link rel="stylesheet" href="dist/style.min.css">
+
+  <!-- Montserrat Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <script defer src="dist/script.js"></script>
+  <script defer src="dist/"></script>
+
+</head>
+
+<body>
+
+  <!-- 
+  A big thank you to Slawomir Chodnicki for his guide in understanding how to build this mesmerizing starry background.
+  https://betterprogramming.pub/fun-with-html-canvas-lets-create-a-star-field-a46b0fed5002
+  -->
+  <canvas id="canvas"></canvas>
+
+  <aside class="sidebar">
+
+    <!-- Header -->
+
+    <header class="header">
+      <img class="header__logo" src="img/project/equal-play/equal-play_logo_purple.svg" alt="Equal Play Logo">
+    </header>
+
+    <!-- About -->
+
+    <div class="about">
+      <div class="flex flex-col gap-03">
+        <h4 class="about__heading">About Equal Play</h4>
+        <span class="about__subheading">Gaming Development Research</span>
+      </div>
+      <p class="about__body">
+        Equal Play's goal is to promote inclusivity and diversity in video games by raising
+        awareness of the current state of the industry and help impact the disproportion between male, female, and
+        non-binary game designers.
+      </p>
+      <p class="about__body">
+        To promote female and non-binary-led game designers and studios, games
+        with female or non-binary protagonists.
+      </p>
+      <p class="about__body">
+        And, finally, to help bridge the gap between game designers and their audience.
+      </p>
+    </div>
+
+    <!-- Contact -->
+
+    <section class="contact">
+      <div class="contact__social flex ai-c gap-2">
+        <a href="mailto:nicholaspanayotakos@gmail.com" target="_blank">
+          <img src="img/icons/icon-email.svg" alt="Send Email Icon"></a>
+        <a href="https://github.com/Cptain" target="_blank">
+          <img src="img/icons/icon-github.svg" alt="Github Icon"></a>
+        <a href="https://www.linkedin.com/in/captaindesign/" target="_blank">
+          <img src="img/icons/icon-linked.svg" alt="LinkedIn Icon"></a>
+      </div>
+
+      <a class="contact__logo" href="index.html">
+        <img class="navbar__logo" src="img/logo-captain.svg" alt="Captain Design Logo">
+        <img class="navbar__logo navbar__logo--mobile" src="img/symbol-captain.svg" alt="Captain Design Symbol">
+      </a>
+    </section>
+  </aside>
+
+  <main class="content">
+
+    <!-- My Roles -->
+    <section class="container">
+      <h2 class="section__heading">My Roles</h2>
+      <div class="roles">
+        <div class="roles__primary">
+          <div class="roles__container">
+            <div class="roles__heading">
+              <img src="img/icons/icon-ui.svg" alt="Icon for UI/UX">
+              <h3 class="roles__heading roles__heading--primary">UI/UX</h3>
+            </div>
+            <div class="roles__body">
+              <p>We split the homepage into the five categories that
+                our platform offers: discoverability, timelines,
+                suggestions, interviews, and miscellaneous.
+              </p>
+              <p>The discover library follows layouts from popular
+                streaming platforms like Twitch and Netflix to
+                retain user familiarity.
+              </p>
+            </div>
+          </div>
+          <div class="roles__container">
+            <div class="roles__heading">
+              <img src="img/icons/icon-brackets.svg" alt="Icon for Coding">
+              <h3 class="roles__heading roles__heading--primary">Front-end</h3>
+            </div>
+            <div class="roles__body">
+              <p>Developed the static landing page for landing page using HTML, CSS, and JavaScript.</p>
+            </div>
+          </div>
+        </div>
+        <div class="roles__secondary">
+          <div class="roles__container">
+            <div class="roles__heading">
+              <img src="img/icons/icon-graphics.svg" alt="Icon for Graphics">
+              <h3 class="roles__heading roles__heading--primary">Graphics</h3>
+            </div>
+            <div class="roles__body">
+              <p>Designed two sets of icons, ten icons each, in two colour themes for gaming genres and roles in the
+                industry.</p>
+              <p>Enriched the backgrounds with texture by designing four patterns.</p>
+            </div>
+          </div>
+          <div class="divider divider__horizontal"></div>
+          <div class="roles__container">
+            <div class="roles__heading">
+              <img src="img/icons/icon-brand.svg" alt="Icon for Branding">
+              <h3 class="roles__heading roles__heading--primary">Branding</h3>
+            </div>
+            <div class="roles__body">
+              <p>Responsible for developing the color palette, designing the logo, patterns, and icons, as well as
+                pairing fonts that project the concept of gaming.</p>
+            </div>
+          </div>
+          <div class="roles__container">
+            <div class="roles__heading">
+              <img src="img/icons/icon-ad.svg" alt="Icon for Ad Campaigns">
+              <h3 class="roles__heading roles__heading--primary">Ad Campaign</h3>
+            </div>
+            <div class="roles__body">
+              <p>Created a motion graphic teaser as part of the marketing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider divider__vertical">
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+    </div>
+
+    <!-- Colour Palette -->
+    <section class="container">
+      <h2 class="section__heading">Colour Palette</h2>
+      <div class="palette__swatches">
+        <div class="palette__swatches-item palette__swatches-item--big palette--equal-play-dark-purple"></div>
+        <div class="palette__swatches-item palette__swatches-item--big palette--equal-play-light-purple"></div>
+        <div class="palette__swatches-item palette__swatches-item--big palette--equal-play-dark-red"></div>
+        <div class="palette__swatches-item palette__swatches-item--big palette--equal-play-light-red"></div>
+        <div class="palette__swatches-item palette__swatches-item--big palette--equal-play-yellow"></div>
+        <div class="palette__swatches-item palette__swatches-item--big palette--equal-play-gray palette__swatches-item--stroke"></div>
+      </div>
+      <div class="palette__summary">
+        <div class="palette__summary-description">
+          <p class="palette__description">The goal was to add a third color to the palette to enhance the energetic
+            atmosphere
+            that fits esports and our competitive environment.</p>
+          <p class="palette__description">With energy as my focus, I decided to build the theme around the colors of the
+            sun.
+            The yellow was paired with a new reddish orange, while also utilizing radial gradients to further add to
+            the concept.</p>
+        </div>
+        <div class="palette__summary-swatches">
+          <div class="palette__swatches-item palette__swatches-item--small palette--equal-play-dark-purple"></div>
+          <span>+</span>
+          <div class="palette__swatches-item palette__swatches-item--small palette--equal-play-light-purple"></div>
+          <span>+</span>
+          <div class="palette__swatches-item palette__swatches-item--small palette--equal-play-dark-red"></div>
+          <span>+</span>
+          <div class="palette__swatches-item palette__swatches-item--small palette--equal-play-light-red"></div>
+          <span>+</span>
+          <div class="palette__swatches-item palette__swatches-item--small palette--equal-play-yellow"></div>
+          <span>+</span>
+          <div class="palette__swatches-item palette__swatches-item--small palette--equal-play-gray palette__swatches-item--stroke"></div>
+        </div>
+        <div class="palette__summary-distribution">
+          <h4 class="palette__distribution-heading">Color Distribution</h4>
+          <div class="palette__distribution-bars palette__distribution-bars--equal-play">
+            <div class="palette--equal-play-dark-purple"></div>
+            <div class="palette--equal-play-light-purple"></div>
+            <div class="palette--equal-play-dark-red"></div>
+            <div class="palette--equal-play-light-red"></div>
+            <div class="palette--equal-play-yellow"></div>
+            <div class="palette--equal-play-gray"></div>
+          </div>
+        </div>
+      </div>
+      <div class="palette__values">
+        <div class="palette__values-grid">
+          <div class="palette__values-line palette--equal-play-dark-purple"></div>
+          <div class="palette__values-codes">
+            <span>HEX</span><span>5D0798</span>
+            <span>RGB</span><span>93 7 152</span>
+            <span>HSL</span><span>276 91 31</span>
+          </div>
+          <div class="flex flex-col gap-02">
+            <h6 class="palette__values-heading">Primary Colour</h6>
+            <p class="palette__values-body">Used for all purposes throughout the entire brand.</p>
+          </div>
+        </div>
+        <div class="palette__values-grid">
+          <div class="palette__values-line palette--equal-play-light-purple"></div>
+          <div class="palette__values-codes">
+            <span>HEX</span><span>A641E9</span>
+            <span>RGB</span><span>166 65 233</span>
+            <span>HSL</span><span>276 91 31</span>
+          </div>
+          <div class="flex flex-col gap-02">
+            <h6 class="palette__values-heading">Primary Colour</h6>
+            <p class="palette__values-body">Used for text, buttons, graphics, and backgrounds.</p>
+          </div>
+        </div>
+        <div class="palette__values-grid">
+          <div class="palette__values-line palette--equal-play-dark-red"></div>
+          <div class="palette__values-codes">
+            <span>HEX</span><span>C34949</span>
+            <span>RGB</span><span>195 73 73</span>
+            <span>HSL</span><span>0 49 53</span>
+          </div>
+          <div class="flex flex-col gap-02">
+            <h6 class="palette__values-heading">Secondary Colour</h6>
+            <p class="palette__values-body">Used for buttons, backgrounds, and graphics.</p>
+          </div>
+        </div>
+        <div class="palette__values-grid">
+          <div class="palette__values-line palette--equal-play-light-red"></div>
+          <div class="palette__values-codes">
+            <span>HEX</span><span>FF5949</span>
+            <span>RGB</span><span>255 89 73</span>
+            <span>HSL</span><span>4 100 64</span>
+          </div>
+          <div class="flex flex-col gap-02">
+            <h6 class="palette__values-heading">Tertiary Colour</h6>
+            <p class="palette__values-body">Used for backgrounds, dividers, and graphics.</p>
+          </div>
+        </div>
+        <div class="palette__values-grid">
+          <div class="palette__values-line palette--equal-play-yellow"></div>
+          <div class="palette__values-codes">
+            <span>HEX</span><span>FFCA41</span>
+            <span>RGB</span><span>255 202 65</span>
+            <span>HSL</span><span>48 95 57</span>
+          </div>
+          <div class="flex flex-col gap-02">
+            <h6 class="palette__values-heading">Tertiary Colour</h6>
+            <p class="palette__values-body">Used for backgrounds, dividers, and graphics.</p>
+          </div>
+        </div>
+        <div class="palette__values-grid">
+          <div class="palette__values-line palette--equal-play-gray"></div>
+          <div class="palette__values-codes">
+            <span>HEX</span><span>D5DBF1</span>
+            <span>RGB</span><span>213 219 241</span>
+            <span>HSL</span><span>225 53 90</span>
+          </div>
+          <div class="flex flex-col gap-02">
+            <h6 class="palette__values-heading">Tertiary Colour</h6>
+            <p class="palette__values-body">Used for backgrounds, dividers, and graphics.</p>
+          </div>
+        </div>
+      </div>
+      <div class="palette__site-mockup">
+        <img class="mockup__mobile-offers" src="img/project/equal-play/mockup.png" alt="Equal Play Mobile Website Mockup">
+      </div>
+      </div>
+    </section>
+
+    <div class="divider divider__vertical">
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+    </div>
+
+    <!-- Typography -->
+    <section class="container">
+      <h2 class="section__heading">Typography</h2>
+      <div class="type">
+        <div class="type__container">
+          <h4 class="type__heading">Primary Font</h4>
+          <div class="type__container--name">
+            <h5 class="type__name type__name--montserrat">Montserrat</h5>
+            <span class="type__chars">ABCDEFGHIJKLMNOPQRSTUVWXYZ</span>
+            <span class="type__chars">abcdefghijklmnopqrstuvwxyz</span>
+            <span class="type__chars">1234567890</span>
+          </div>
+          <ul class="type__list">
+            <li class="type__list-item">Body Copy</li>
+            <li class="type__list-item">Buttons</li>
+            <li class="type__list-item">Table Headings</li>
+            <li class="type__list-item">Table Subheadings</li>
+            <li class="type__list-item">Table Body</li>
+          </ul>
+          <div class="type__container--body">
+            <p class="type__body">Working with games of the sports genre, required displaying data visually almost
+              constantly. Consequently, typography was the main challenge. The task was to find a family that offered
+              an extensive selection of weights to ensure flexibility.</p>
+            <p class="type__body">The answer was 'Montserrat', offering a myriad of different weights to work. </p>
+            <p class="type__body">Wide and smooth characters paired well with the tall and condensed secondary font,
+              as well as with our vibrant colours.</p>
+          </div>
+        </div>
+        <div class="divider divider__horizontal divider__horizontal--light-blue"></div>
+        <div class="type__container">
+          <h4 class="type__heading">Secondary Font</h4>
+          <div class="type__container--name">
+            <h5 class="type__name type__name--gobold">Gobold Thin</h5>
+            <span class="type__chars">ABCDEFGHIJKLMNOPQRSTUVWXYZ</span>
+            <span class="type__chars">1234567890</span>
+          </div>
+          <ul class="type__list">
+            <li class="type__list-item">Numericals</li>
+            <li class="type__list-item">Headings</li>
+          </ul>
+          <div class="type__container--body">
+            <p class="type__body">For headings on the website and our articles, we used 'Gobold'. A font with bold and
+              tall characteristics aligned both with our theme and our competitive esports environment.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider divider__vertical">
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+    </div>
+
+    <!-- Logo -->
+    <section class="container">
+      <h2 class="section__heading">Logo</h2>
+      <div class="logo__showcase">
+        <img class="logo__primary" src="img/project/equal-play/equal-play_logo_purple.svg" alt="Equal Play Purple Logo">
+        <div class="logo__variants">
+          <div class="logo__variant-card logo__variant-card--light">
+            <img src="img/project/equal-play/equal-play_logo_black.svg" alt="Equal Play Black Logo">
+          </div>
+          <div class="logo__variant-card logo__variant-card--dark">
+            <img src="img/project/equal-play/equal-play_logo_white.svg" alt="Equal Play White Logo">
+          </div>
+        </div>
+        <div class="how-it-works__step">
+          <img class="how-it-works__logo" src="img/project/equal-play/equal-play_logo_white.svg" alt="Equal Play White Logo">
+          <p class="content__body">The script font, 'Cortado', perfectly captures the energy our brand drives for.</p>
+        </div>
+        <div class="how-it-works__step">
+          <p class="content__body">The letters exceed outside the confines of the equal sign, reflecting current female and non-binary gamers.</p>
+          <img class="how-it-works__logo" src="img/project/equal-play/equal-play_logo_black.svg" alt="Equal Play Black Logo">
+        </div>
+      </div>
+    </section>
+
+    <div class="divider divider__vertical">
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+    </div>
+
+    <!-- Icons -->
+    <section class="container">
+      <h2 class="section__heading">Icons</h2>
+      <p class="content__body">This set represents roles in the gaming industry, designed for the discovery page to filter through professionals.</p>
+      <div class="icons__grid">
+        <img src="img/project/equal-play/icons/purple/animator.svg" alt="Animator">
+        <img src="img/project/equal-play/icons/purple/artist.svg" alt="Artist">
+        <img src="img/project/equal-play/icons/purple/character%20designer.svg" alt="Character Designer">
+        <img src="img/project/equal-play/icons/purple/game%20designer.svg" alt="Game Designer">
+        <img src="img/project/equal-play/icons/purple/game%20developer.svg" alt="Game Developer">
+        <img src="img/project/equal-play/icons/purple/game%20studio.svg" alt="Game Studio">
+        <img src="img/project/equal-play/icons/purple/sound%20engineer.svg" alt="Sound Engineer">
+        <img src="img/project/equal-play/icons/purple/ui%20designer.svg" alt="UI Designer">
+        <img src="img/project/equal-play/icons/purple/visual%20fx.svg" alt="Visual FX">
+        <img src="img/project/equal-play/icons/purple/writer.svg" alt="Writer">
+      </div>
+      <p class="content__body">This set represents video game genres, designed for the discovery page to filter through gaming titles.</p>
+      <div class="icons__grid">
+        <img src="img/project/equal-play/icons/red/adventure.svg" alt="Adventure">
+        <img src="img/project/equal-play/icons/red/fighting.svg" alt="Fighting">
+        <img src="img/project/equal-play/icons/red/horror.svg" alt="Horror">
+        <img src="img/project/equal-play/icons/red/puzzle.svg" alt="Puzzle">
+        <img src="img/project/equal-play/icons/red/racing.svg" alt="Racing">
+        <img src="img/project/equal-play/icons/red/rpg.svg" alt="RPG">
+        <img src="img/project/equal-play/icons/red/shooter.svg" alt="Shooter">
+        <img src="img/project/equal-play/icons/red/simulation.svg" alt="Simulation">
+        <img src="img/project/equal-play/icons/red/sports.svg" alt="Sports">
+        <img src="img/project/equal-play/icons/red/tower%20defense.svg" alt="Tower Defense">
+      </div>
+    </section>
+
+    <div class="divider divider__vertical">
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+    </div>
+
+    <!-- Patterns -->
+    <section class="container">
+      <h2 class="section__heading">Patterns</h2>
+      <p class="content__body">Our pattern designs were created with a mix of both orderly and rebellious attitude.</p>
+      <div class="mockup flex flex-col ai-c gap-1">
+        <img class="mockup__mobile-offers" src="img/project/equal-play/patterns/project/Rectangle%2051.png" alt="Discover Text Pattern">
+        <img class="mockup__mobile-offers" src="img/project/equal-play/patterns/project/Rectangle%2053.png" alt="Equal Worth Change Pattern">
+      </div>
+      <p class="content__body">From graffiti covered walls that shout for change, to geometric symbols showing the vast world of gender.</p>
+      <div class="mockup flex flex-col ai-c gap-1">
+        <img class="mockup__mobile-offers" src="img/project/equal-play/patterns/project/Rectangle%2052.png" alt="Gender Symbols Pattern">
+        <img class="mockup__mobile-offers" src="img/project/equal-play/patterns/project/Rectangle%2054.png" alt="Colourful Gender Symbols Pattern">
+      </div>
+    </section>
+
+    <div class="divider divider__vertical">
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+      <div class="divider__vertical--dot"></div>
+    </div>
+
+    <!-- Navigation -->
+    <p class="thanks">There's always desktop!</p>
+    <div class="project__links">
+      <a href="index.html" class="button button--transparent">Return to Homepage</a>
+      <a href="#" class="button button--yellow">View Prototype</a>
+    </div>
+
+    <!-- Footer -->
+    <div class="project__footer">
+      <div class="project__footer-social">
+        <a href="mailto:nicholaspanayotakos@gmail.com" target="_blank">
+          <img src="img/icons/icon-email.svg" alt="Send Email Icon"></a>
+        <a href="https://github.com/Cptain" target="_blank">
+          <img src="img/icons/icon-github.svg" alt="Github Icon"></a>
+        <a href="https://www.linkedin.com/in/captaindesign/" target="_blank">
+          <img src="img/icons/icon-linked.svg" alt="LinkedIn Icon"></a>
+        <a href="https://twitter.com/imcaptain" target="_blank">
+          <img src="img/icons/icon-twit.svg" alt="Twitter Icon"></a>
+      </div>
+      <p class="project__footer-credit">{ Designed and Developed by Nicholas Panayotakos }</p>
+    </div>
+  </main>
+
+  <!-- GreenSock CDNs -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+</body>
+
+</html>

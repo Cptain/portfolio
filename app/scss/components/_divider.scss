@@ -3,13 +3,34 @@
 @use "../utils/breakpoints" as *;
 
 .divider {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  &--small {
+  &__vertical {
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: 0.75rem;
+
+    &--dot {
+      width: 3px;
+      height: 3px;
+      border-radius: 100vh;
+      background-color: var(--blue-700);
+    }
+  }
+
+  &__horizontal {
+    width: 100%;
     height: 1px;
     background-color: var(--blue-700);
+
+    &--dark-blue {
+      background-color: var(--blue-900);
+    }
+
+    &--light-blue {
+      background-color: var(--blue-200); 
+    }
   }
 }

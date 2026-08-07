@@ -17,10 +17,24 @@ html {
 }
 
 body {
-  margin: 0;
-  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  max-width: 1440px;
+  padding: 0 2rem;
+  margin: 0 auto;
+  
   font-family: var(--font-primary);
   background-color: var(--blue-1100);
+
+  @include breakpoint-down(lg) {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  @include breakpoint-down(sm) {
+    padding: 0 2rem 3rem;
+  }
 }
 
 img {

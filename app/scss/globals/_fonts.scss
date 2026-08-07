@@ -1,3 +1,20 @@
 :root {
   --font-primary: 'Proxima Nova','Geist', 'Inter', 'Trebuchet MS', sans-serif;
 }
+
+@font-face {
+  font-family: "Gobold Thin";
+  src: url("../../fonts/Gobold-Thin.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "PP Right Grotesque";
+  font-weight: 500;
+  src: url("../../fonts/PPRightGrotesk-WideMedium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PP Right Grotesque";
+  font-weight: 900;
+  src: url("../../fonts/PPRightGrotesk-WideBlack.woff") format("woff");
+}
