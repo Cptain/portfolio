@@ -23,7 +23,11 @@
   align-items: center;
   gap: 4rem;
   max-width: 52ch;
-  padding: 3.5rem 0 0;
+  padding: 3rem 0;
+
+  @include breakpoint-down(lg) {
+    min-width: 0;
+  }
 
   @include breakpoint-down(sm) {
     gap: 3rem;
@@ -521,6 +525,7 @@
   gap: 1rem;
 
   @include breakpoint-down(sm) {
+    grid-template-columns: repeat(3, 1fr);
     gap: 0.5rem;
   }
 }

@@ -17,8 +17,8 @@ let w;
 let h;
 
 const setCanvasExtents = () => {
-  w = document.body.clientWidth;
-  h = document.body.clientHeight;
+  w = document.documentElement.clientWidth;
+  h = document.documentElement.clientHeight;
   canvas.width = w;
   canvas.height = h;
 };
@@ -44,8 +44,8 @@ const makeStars = count => {
 
 let stars = makeStars(10000);
 let myGradient = c.createLinearGradient(0, 2000, 0, -600);
-myGradient.addColorStop(0, '#000b14');
-myGradient.addColorStop(1, '#002547');
+myGradient.addColorStop(0, '#000508');
+myGradient.addColorStop(1, '#001428');
 
 const clear = () => {
   c.fillStyle = myGradient;
@@ -53,7 +53,7 @@ const clear = () => {
 };
 
 const putPixel = (x, y, brightness) => {
-  const intensity = brightness * 255;
+  const intensity = brightness * 100;
   const rgb = "rgb(" + intensity + "," + intensity + "," + intensity + ")";
   c.fillStyle = rgb;
   c.fillRect(x, y, 1, 1);
