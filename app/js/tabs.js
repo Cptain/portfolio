@@ -1,15 +1,21 @@
 const tabs = document.querySelectorAll('.navbar__toggle-item[role="tab"]');
 const panels = document.querySelectorAll('[role="tabpanel"]');
-const panelsContainer = document.querySelector('.project__panels');
 let designsLoaded = false;
-let panelAnimation = null; // tracks an in-flight cross-fade so a fast second click can cancel it
+let panelToken = 0; // bumped on every switch so a fast second click abandons the in-flight one
 // tracked separately from the `hidden` attribute, since both panels are briefly
-// un-hidden at once while a cross-fade is in progress
+// un-hidden at once while a switch is in progress
 let activePanel = document.querySelector('[role="tabpanel"]:not([hidden])') || panels[0];
 
 const subnavStack = document.querySelector('.subnav-stack');
 const subnavs = document.querySelectorAll('.subnav-stack .subnav'); // [0] = Overview list, [1] = Designs list
+const toggleIndicator = document.querySelector('.navbar__toggle-indicator');
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function moveIndicatorTo(tab) {
+    if (!toggleIndicator) return;
+    toggleIndicator.style.width = tab.offsetWidth + 'px';
+    toggleIndicator.style.transform = `translateX(${tab.offsetLeft}px)`;
+}
 
 // Keep --nav-h in sync with the navbar's real rendered height, since it's
 // no longer a fixed value — it changes with font-size, zoom, wrapping, etc.
@@ -20,6 +26,17 @@ const syncNavHeight = () => {
 };
 syncNavHeight(); // set it immediately, don't wait for the first resize event
 new ResizeObserver(syncNavHeight).observe(navbar);
+
+if (toggleIndicator) {
+    // set the pill's starting position instantly, with no transition, before the first paint
+    toggleIndicator.style.transition = 'none';
+    moveIndicatorTo(document.querySelector('.navbar__toggle-item--active'));
+    toggleIndicator.offsetWidth; // force reflow so the transition-less position is registered
+    toggleIndicator.style.transition = '';
+
+    // keep the pill aligned with the active tab if sizes change (font-size breakpoints, zoom, etc.)
+    new ResizeObserver(() => moveIndicatorTo(document.querySelector('.navbar__toggle-item--active'))).observe(navbar);
+}
 
 function scrollToTop() {
     // Both panels start at the same position (right after the shared logo),
@@ -65,67 +82,68 @@ function animateSubnavWidth(isOverview) {
     });
 }
 
-function crossFadePanels(oldPanel, newPanel, enterFromLeft) {
+// double rAF so the browser actually paints the current state before the next
+// style change — a single rAF can still land before that paint, collapsing the transition
+function nextFrame(fn) {
+    requestAnimationFrame(() => requestAnimationFrame(fn));
+}
+
+function switchPanel(oldPanel, newPanel, enterFromLeft) {
     if (oldPanel === newPanel) return;
 
-    // a fast second toggle interrupts the in-flight animation — finish it immediately
-    if (panelAnimation) panelAnimation.cleanup();
+    const token = ++panelToken; // any earlier in-flight switch checks this and bails out
+    const stale = () => token !== panelToken;
 
-    if (prefersReducedMotion || !panelsContainer) {
+    if (prefersReducedMotion) {
         oldPanel.hidden = true;
         newPanel.hidden = false;
         return;
     }
 
-    const exitOffset = enterFromLeft ? '2rem' : '-2rem';
-    const enterOffset = enterFromLeft ? '-2rem' : '2rem';
+    const exitOffset = enterFromLeft ? '8rem' : '-8rem'; // where the outgoing panel slides to
+    const enterOffset = enterFromLeft ? '-8rem' : '8rem'; // where the incoming panel starts from
 
-    // pin the container to its current height so it doesn't collapse once
-    // the panels are taken out of flow (position: absolute) to overlap
-    panelsContainer.style.height = panelsContainer.getBoundingClientRect().height + 'px';
-    panelsContainer.classList.add('project__panels--animating');
+    // Step 1: slide the outgoing panel out to the side and fade it out.
+    // The incoming panel stays fully hidden (display: none) until this finishes,
+    // so the two never occupy layout space at the same time.
+    oldPanel.style.transform = `translateX(${exitOffset})`;
+    oldPanel.style.opacity = '0';
 
-    newPanel.hidden = false;
-    newPanel.style.transition = 'none';
-    newPanel.style.opacity = '0';
-    newPanel.style.transform = `translateX(${enterOffset})`;
-    newPanel.offsetWidth; // force reflow so the starting position is registered before animating
-    newPanel.style.transition = '';
+    oldPanel.addEventListener('transitionend', function onExit(e) {
+        if (e.target !== oldPanel || e.propertyName !== 'transform') return;
+        oldPanel.removeEventListener('transitionend', onExit);
+        if (stale()) return;
 
-    // wait a full extra frame so the browser actually paints the "before" state above —
-    // a single rAF can still fire before that paint happens, collapsing the transition to a jump
-    requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-            oldPanel.style.opacity = '0';
-            oldPanel.style.transform = `translateX(${exitOffset})`;
-            newPanel.style.opacity = '1';
+        oldPanel.hidden = true;
+        oldPanel.style.transform = '';
+        oldPanel.style.opacity = '';
+
+        // Step 2: bring the incoming panel in, parked off-screen and invisible
+        newPanel.hidden = false;
+        newPanel.style.transition = 'none';
+        newPanel.style.transform = `translateX(${enterOffset})`;
+        newPanel.style.opacity = '0';
+        newPanel.offsetWidth; // force reflow so the starting position is registered before animating
+        newPanel.style.transition = '';
+
+        nextFrame(() => {
+            if (stale()) return;
+
+            // Step 3: slide the incoming panel into place and fade it in
             newPanel.style.transform = 'translateX(0)';
+            newPanel.style.opacity = '1';
+
+            newPanel.addEventListener('transitionend', function onEnter(e2) {
+                if (e2.target !== newPanel || e2.propertyName !== 'transform') return;
+                newPanel.removeEventListener('transitionend', onEnter);
+                if (stale()) return;
+
+                newPanel.style.transition = '';
+                newPanel.style.transform = '';
+                newPanel.style.opacity = '';
+            });
         });
     });
-
-    const fallbackTimer = setTimeout(cleanup, 500);
-
-    function onEnd(e) {
-        if (e.target !== newPanel || e.propertyName !== 'transform') return;
-        cleanup();
-    }
-
-    function cleanup() {
-        newPanel.removeEventListener('transitionend', onEnd);
-        clearTimeout(fallbackTimer);
-        oldPanel.hidden = true;
-        [oldPanel, newPanel].forEach(p => {
-            p.style.transition = '';
-            p.style.transform = '';
-            p.style.opacity = '';
-        });
-        panelsContainer.classList.remove('project__panels--animating');
-        panelsContainer.style.height = '';
-        panelAnimation = null;
-    }
-
-    newPanel.addEventListener('transitionend', onEnd);
-    panelAnimation = { cleanup };
 }
 
 function activate(tab) {
@@ -138,12 +156,13 @@ function activate(tab) {
         t.classList.toggle('navbar__toggle-item--active', selected);
     });
 
+    moveIndicatorTo(tab);
     animateSubnavWidth(isOverview);
 
     const newPanel = document.getElementById(tab.getAttribute('aria-controls'));
     // Overview sits to the left of Designs in the toggle, so switching to
     // Designs enters from the right, and switching to Overview enters from the left
-    crossFadePanels(activePanel, newPanel, isOverview);
+    switchPanel(activePanel, newPanel, isOverview);
     activePanel = newPanel;
 
     // Lazily hydrate media the first time the Designs tab is opened

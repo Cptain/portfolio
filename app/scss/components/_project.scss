@@ -9,16 +9,17 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 6rem;
-    padding: 6rem 0 2rem;
+    padding: calc((46px + 2rem) + 4rem) 0 2rem; // First number in the parenthesis is the navbar height and added positioning from top. Second number is the spacing from top to the first element.
 
     @include breakpoint-down(sm) {
         gap: 3rem;
-        padding: 2rem 0;
+        padding: 5rem 0 2rem;
     }
 
     &__logo {
-        width: clamp(8rem, 20vw, 24rem);
+        width: clamp(14rem, 30vw, 40vw);
     }
 
     &__overview {

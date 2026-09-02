@@ -36,6 +36,16 @@ body {
     }
 }
 
+[data-page="home"] {
+    display: flex;
+    justify-content: space-between;
+    gap: 6rem;
+
+    @include breakpoint-down(lg) {
+        flex-direction: column;
+    }
+}
+
 img {
     max-width: 100%;
     height: auto;
