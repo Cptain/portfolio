@@ -1,82 +1,81 @@
 @use "../utils/" as *;
 
 .button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.4375rem;
-  padding: 1rem 2rem;
-  width: fit-content;
-  border-radius: 0.75rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  letter-spacing: 0.00625rem;
-  transition: all 100ms ease-out;
-
-  @include breakpoint-down(sm) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4375rem;
+    padding: 1rem 2rem;
+    width: fit-content;
+    border-radius: 0.75rem;
     font-size: 0.875rem;
-    padding: 0.75rem 0.75rem;
-    letter-spacing: 0.01875rem;
-  }
+    font-weight: 600;
+    letter-spacing: 0.00625rem;
+    transition: all 100ms ease-out;
 
-  &--small {
-    padding: 0.5rem 1.5rem;
-  }
-
-  &--external {
-    background-repeat: no-repeat;
-    background-position: right 1rem center;
-    background-size: 0.75rem;
-  }
-
-  &--external-blue {
-    background-image: url(../../../img/icons/icon-external.svg);
-  }
-
-  &--external-yellow {
-    background-image: url(../../../img/icons/icon-external-yellow.svg);
-  }
-
-  &--blue {
-    background-color: var(--blue-500);
-    color: var(--blue-100);
-    box-shadow: 0 4px 1px var(--blue-700);
-
-    &:hover,
-    &:active {
-      background-color: var(--blue-400);
+    @include breakpoint-down(sm) {
+        font-size: 0.875rem;
+        letter-spacing: 0.01875rem;
     }
 
-    &:active {
-      transform: translateY(4px);
-      box-shadow: none;
-    }
-  }
-
-  &--yellow {
-    background-color: var(--yellow-500);
-    color: var(--blue-900);
-    box-shadow: 0 4px 1px var(--yellow-700);
-
-    &:hover,
-    &:active {
-      background-color: var(--yellow-400);
+    &--small {
+        padding: 0.5rem 1.5rem;
     }
 
-    &:active {
-      transform: translateY(4px);
-      box-shadow: none;
+    &--external {
+        background-repeat: no-repeat;
+        background-position: right 1rem center;
+        background-size: 0.75rem;
     }
-  }
 
-  &--transparent {
-    background-color: transparent;
-    color: var(--yellow-400);
-    border: 1px solid;
-    font-weight: 400;
-
-    &:hover {
-      background-color: var(--blue-800);
+    &--external-blue {
+        background-image: url(../../../img/icons/icon-external.svg);
     }
-  }
+
+    &--external-yellow {
+        background-image: url(../../../img/icons/icon-external-yellow.svg);
+    }
+
+    &--blue {
+        background-color: var(--blue-500);
+        color: var(--blue-100);
+        box-shadow: 0 4px 1px var(--blue-700);
+
+        &:hover,
+        &:active {
+            background-color: var(--blue-400);
+        }
+
+        &:active {
+            transform: translateY(4px);
+            box-shadow: none;
+        }
+    }
+
+    &--yellow {
+        background-color: var(--yellow-500);
+        color: var(--blue-900);
+        box-shadow: 0 4px 1px var(--yellow-700);
+
+        &:hover,
+        &:active {
+            background-color: var(--yellow-400);
+        }
+
+        &:active {
+            transform: translateY(4px);
+            box-shadow: none;
+        }
+    }
+
+    &--transparent {
+        background-color: transparent;
+        color: var(--yellow-400);
+        border: 1px solid;
+        font-weight: 400;
+
+        &:hover {
+            background-color: var(--blue-800);
+        }
+    }
 }

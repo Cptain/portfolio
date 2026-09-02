@@ -4,19 +4,41 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0;
+    margin: 0;
 }
 
 a,
 a:visited,
 a:active {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 p {
-  margin: 0;
+    margin: 0;
 }
 
-.--bold {
-  font-weight: 600;
+.text {
+    &--bold {
+        font-weight: 600;
+    }
+
+    &--italic {
+        font-style: italic;
+    }
+
+    &--white {
+        color: white;
+    }
+
+    &--yellow {
+        color: var(--yellow-500);
+    }
+
+    &--blue {
+        color: var(--blue-200);
+    }
+
+    &--blue-light {
+        color: var(--blue-100);
+    }
 }

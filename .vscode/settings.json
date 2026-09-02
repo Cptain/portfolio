@@ -1,5 +1,15 @@
 {
   "cSpell.words": [
     "inclusivity"
-  ]
+  ],
+  "editor.tabSize": 4,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  
+  "jsMinifyCompiler.enabled": true,
+  "jsMinifyCompiler.minifyOnSave": true,
+  "jsMinifyCompiler.outputDirectory": "dist/js/",
+  "jsMinifyCompiler.preserveDirectoryStructure": false,
+
+  "minify4u.output.javascript": "dist/js"
 }

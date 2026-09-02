@@ -1,0 +1,111 @@
+@use "../utils" as *;
+
+.type {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    border-radius: 2rem;
+    color: var(--blue-700);
+    background-color: var(--blue-100);
+
+    &__container {
+        display: flex;
+        gap: 2rem;
+
+        @include breakpoint-down(lg) {
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        &--name {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+        }
+
+        &--body {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+    }
+
+    &__heading {
+        font-size: 1.25rem;
+        font-weight: 500;
+    }
+
+    &__name {
+        font-size: 2rem;
+        font-weight: 600;
+        color: var(--blue-400);
+        margin-left: -1px;
+
+        &--manrope {
+            font-family: 'Manrope', sans-serif;
+        }
+
+        &--caveat {
+            font-family: 'Caveat', cursive;
+        }
+
+        &--montserrat {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        &--gobold {
+            font-family: 'Gobold Thin', sans-serif;
+        }
+
+        &--inter {
+            font-family: 'Inter', sans-serif;
+        }
+
+        &--pp-right-grotesque {
+            font-family: 'PP Right Grotesque', sans-serif;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+        }
+    }
+
+    &__chars {
+        font-size: 0.875rem;
+        color: var(--blue-600);
+        letter-spacing: 1px;
+        overflow-wrap: break-word;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        height: fit-content;
+
+        &-item {
+            height: fit-content;
+            width: max-content;
+            border-radius: 100vh;
+            font-size: 0.75rem;
+            font-weight: 400;
+            letter-spacing: 0.0375rem;
+            padding: 0.1875rem 0.75rem;
+            background: var(--blue-300);
+            color: var(--blue-800);
+        }
+    }
+
+    &__body {
+        font-weight: 300;
+        font-size: clamp(0.875rem, 2.5vw, 1rem);
+        line-height: 1.3;
+    }
+
+    &__divider {
+        width: 100%;
+        height: 1px;
+        background-color: var(--blue-900);
+    }
+}

@@ -1,0 +1,160 @@
+@use "../utils/functions" as *;
+@use "../utils/mixins" as *;
+@use "../utils/breakpoints" as *;
+
+[role="tabpanel"][hidden] {
+    display: none;
+}
+
+[role="tabpanel"] {
+    content-visibility: auto;
+    scroll-margin-top: var(--nav-h);
+    padding-top: 1.5rem;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.project__panels {
+    position: relative;
+
+    // While animating, both panels overlap so they can cross-fade in place
+    // instead of jumping the content below them as one collapses out of flow.
+    &--animating {
+        overflow: hidden;
+
+        [role="tabpanel"] {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            // "auto" can skip painting until the browser deems the panel relevant,
+            // which would hide the transition entirely
+            content-visibility: visible;
+        }
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 1rem;
+    z-index: 99999;
+
+    &__back,
+    &__toggle {
+        border-radius: 100vh;
+        border: 0.0625rem solid color-mix(in srgb, var(--blue-100) 5%, transparent);
+        background-color: color-mix(in srgb, var(--blue-100) 5%, transparent);
+        backdrop-filter: blur(1rem);
+    }
+
+    &__back {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+
+        @include breakpoint-down(xsm) {
+            gap: 0.25rem;
+        }
+
+        &-text {
+            font-family: var(--font-primary);
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--blue-100);
+
+            @include breakpoint-down(xsm) {
+                font-size: 0.75rem;
+            }
+        }
+    }
+
+    &__icon {
+        @include breakpoint-down(xsm) {
+            width: 1rem;
+            height: 1rem;
+        }
+    }
+
+    &__toggle {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.5rem 1rem;
+
+        @include breakpoint-down(sm) {
+            padding: 0.5rem;
+        }
+
+        &-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            @include breakpoint-down(xsm) {
+                gap: 0.25rem;
+            }
+        }
+
+        &-item {
+            font-family: var(--font-primary);
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--blue-100);
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+
+            @include breakpoint-down(xsm) {
+                font-size: 0.75rem;
+            }
+        }
+
+        &-item--active {
+            position: relative;
+            border: 0.0625rem solid color-mix(in srgb, var(--blue-900) 5%, transparent);
+            background-color: color-mix(in srgb, var(--blue-100) 5%, transparent);
+            border-radius: 100vh;
+            padding: 0.25rem 0.75rem;
+        }
+    }
+}
+
+.subnav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    white-space: nowrap;
+
+    @include breakpoint-down(md) {
+        display: none;
+    }
+
+    &-stack {
+        overflow: hidden;
+    }
+
+    &--show {
+        display: flex;
+    }
+
+    &--hidden {
+        display: none;
+    }
+
+    &__item {
+        font-family: var(--font-primary);
+        font-size: 0.75rem;
+        font-weight: 500;
+        color: var(--blue-500);
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+
+        @include breakpoint-down(xsm) {
+            font-size: 0.75rem;
+        }
+    }
+}

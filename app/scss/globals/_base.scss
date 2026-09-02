@@ -2,43 +2,45 @@
 @use "../utils/mixins" as *;
 @use "../utils/breakpoints" as *;
 
+/* --nav-h is set at runtime by ResizeObserver — the
+    value here is just a fallback for the instant before JS runs. */
+:root {
+    --nav-h: 60px;
+}
+
 html {
-  font-size: 100%;
-  box-sizing: border-box;
-  -webkit-font-smoothing: subpixel-antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeSpeed;
+    font-size: 100%;
+    box-sizing: border-box;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeSpeed;
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable;
 }
 
 *,
 *::after,
 *::before {
-  box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 body {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  max-width: 1440px;
-  padding: 0 2rem;
-  margin: 0 auto;
-  
-  font-family: var(--font-primary);
-  background-color: var(--blue-1100);
+    max-width: 1440px;
+    padding: 0 2rem;
+    margin: 0 auto;
+    font-family: var(--font-primary);
+    background-color: var(--blue-1100);
 
-  @include breakpoint-down(lg) {
-    grid-template-columns: 1fr;
-    justify-items: center;
-  }
-
-  @include breakpoint-down(sm) {
-    padding: 0 2rem 3rem;
-    gap: 0;
-  }
+    @include breakpoint-down(sm) {
+        padding: 0 1rem;
+    }
 }
 
 img {
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+    text-wrap: pretty;
 }

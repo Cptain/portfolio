@@ -1,112 +1,148 @@
+@use "../utils" as *;
+
 .grid {
-  display: grid;
-}
+    display: grid;
 
-.grid-col {
-  &__2fr-1fr {
-    grid-template-columns: 2fr 1fr;
-  }
+    &--2-col {
+        grid-template-columns: repeat(2, 1fr);
 
-  &__3fr-1fr {
-    grid-template-columns: 3fr 1fr;
-  }
+        @include breakpoint-down(md) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &--3-col {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    &--2fr-1fr {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    &--3fr-1fr {
+        grid-template-columns: 3fr 1fr;
+    }
 }
 
 .flex {
-  display: flex;
-
-  &-col {
     display: flex;
-    flex-direction: column;
-  }
 
-  &-inline {
-    display: inline-flex;
-  }
+    @include breakpoint-down(md) {
+        flex-direction: column;
+    }
+
+    &-col {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-inline {
+        display: inline-flex;
+    }
 }
 
 .flow-wrap {
-  flex-flow: wrap;
+    flex-flow: wrap;
 }
 
 .jc {
-  &-sb {
-    justify-content: space-between;
-  }
-  &-sa {
-    justify-content: space-around;
-  }
-  &-c {
-    justify-content: center;
-  }
-  &-start {
-    justify-content: flex-start;
-  }
-  &-end {
-    justify-content: flex-end;
-  }
+    &-sb {
+        justify-content: space-between;
+    }
+
+    &-sa {
+        justify-content: space-around;
+    }
+
+    &-c {
+        justify-content: center;
+    }
+
+    &-start {
+        justify-content: flex-start;
+    }
+
+    &-end {
+        justify-content: flex-end;
+    }
 }
 
 .ai {
-  &-start {
-    align-items: flex-start;
-  }
-  &-end {
-    align-items: flex-end;
-  }
-  &-c {
-    align-items: center;
-  }
-  &-base {
-    align-items: baseline;
-  }
+    &-start {
+        align-items: flex-start;
+    }
+
+    &-end {
+        align-items: flex-end;
+    }
+
+    &-c {
+        align-items: center;
+    }
+
+    &-base {
+        align-items: baseline;
+    }
 }
 
 .gap {
-  &-01 {
-    gap: 0.1rem;
-  }
-  &-02 {
-    gap: 0.2rem;
-  }
-  &-03 {
-    gap: 0.3rem;
-  }
-  &-05 {
-    gap: 0.5rem;
-  }
-  &-06 {
-    gap: 0.6rem;
-  }
-  &-07 {
-    gap: 0.7rem;
-  }
-  &-08 {
-    gap: 0.8rem;
-  }
-  &-09 {
-    gap: 0.9rem;
-  }
-  &-1 {
-    gap: 1rem;
-  }
-  &-15 {
-    gap: 1.5rem;
-  }
-  &-2 {
-    gap: 2rem;
-  }
-  &-3 {
-    gap: 3rem;
-  }
-  &-4 {
-    gap: 4rem;
-  }
-  &-5 {
-    gap: 5rem;
-  }
+    &-01 {
+        gap: 0.1rem;
+    }
+
+    &-02 {
+        gap: 0.2rem;
+    }
+
+    &-03 {
+        gap: 0.3rem;
+    }
+
+    &-05 {
+        gap: 0.5rem;
+    }
+
+    &-06 {
+        gap: 0.6rem;
+    }
+
+    &-07 {
+        gap: 0.7rem;
+    }
+
+    &-08 {
+        gap: 0.8rem;
+    }
+
+    &-09 {
+        gap: 0.9rem;
+    }
+
+    &-1 {
+        gap: 1rem;
+    }
+
+    &-15 {
+        gap: 1.5rem;
+    }
+
+    &-2 {
+        gap: 2rem;
+    }
+
+    &-3 {
+        gap: 3rem;
+    }
+
+    &-4 {
+        gap: 4rem;
+    }
+
+    &-5 {
+        gap: 5rem;
+    }
 }
 
 .w-100 {
-  width: 100%;
+    width: 100%;
 }
