@@ -107,7 +107,6 @@
             position: relative;
             display: flex;
             align-items: center;
-            gap: 0.25rem;
             border: .0625rem solid color-mix(in srgb, var(--blue-100) 5%, transparent);
             border-radius: 100vh;
         }
@@ -134,11 +133,16 @@
             font-size: 0.875rem;
             font-weight: 500;
             padding: 0.25rem 0.75rem;
-            color: var(--blue-100);
+            color: color-mix(in srgb, var(--blue-100) 80%, transparent);
             background-color: transparent;
             border: none;
+            border-radius: 100vh;
             cursor: pointer;
             transition: color 0.3s ease;
+
+            &:hover:not(.navbar__toggle-item--active) {
+                color: var(--blue-100);
+            }
 
             @include breakpoint-down(xsm) {
                 font-size: 0.75rem;
@@ -181,7 +185,7 @@
         font-family: var(--font-primary);
         font-size: 0.75rem;
         font-weight: 500;
-        color: var(--blue-500);
+        color: color-mix(in srgb, var(--blue-300) 80%, transparent);
         background-color: transparent;
         border: none;
         cursor: pointer;

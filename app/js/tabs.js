@@ -103,6 +103,11 @@ function switchPanel(oldPanel, newPanel, enterFromLeft) {
     const exitOffset = enterFromLeft ? '8rem' : '-8rem'; // where the outgoing panel slides to
     const enterOffset = enterFromLeft ? '-8rem' : '8rem'; // where the incoming panel starts from
 
+    // Clear any leftover styles from previous animations before starting a new one
+    oldPanel.style.transition = '';
+    oldPanel.style.transform = '';
+    oldPanel.style.opacity = '';
+
     // Step 1: slide the outgoing panel out to the side and fade it out.
     // The incoming panel stays fully hidden (display: none) until this finishes,
     // so the two never occupy layout space at the same time.
@@ -112,11 +117,20 @@ function switchPanel(oldPanel, newPanel, enterFromLeft) {
     oldPanel.addEventListener('transitionend', function onExit(e) {
         if (e.target !== oldPanel || e.propertyName !== 'transform') return;
         oldPanel.removeEventListener('transitionend', onExit);
-        if (stale()) return;
-
+        
         oldPanel.hidden = true;
         oldPanel.style.transform = '';
         oldPanel.style.opacity = '';
+        oldPanel.style.transition = '';
+        
+        if (stale()) {
+            // Animation was interrupted. Ensure the current activePanel is fully visible and clean.
+            activePanel.hidden = false;
+            activePanel.style.transform = '';
+            activePanel.style.opacity = '';
+            activePanel.style.transition = '';
+            return;
+        }
 
         // Step 2: bring the incoming panel in, parked off-screen and invisible
         newPanel.hidden = false;
@@ -136,11 +150,12 @@ function switchPanel(oldPanel, newPanel, enterFromLeft) {
             newPanel.addEventListener('transitionend', function onEnter(e2) {
                 if (e2.target !== newPanel || e2.propertyName !== 'transform') return;
                 newPanel.removeEventListener('transitionend', onEnter);
-                if (stale()) return;
-
+                
                 newPanel.style.transition = '';
                 newPanel.style.transform = '';
                 newPanel.style.opacity = '';
+                
+                if (stale()) return;
             });
         });
     });
