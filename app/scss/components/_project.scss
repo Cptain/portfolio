@@ -202,16 +202,66 @@
 
     .browser {
         background-color: var(--blue-800);
-        border: 2px solid var(--blue-600);
+        border: 1px solid var(--blue-600);
         border-radius: 2rem;
         overflow: hidden;
 
         &__ui {
             display: flex;
+            flex-direction: column;
+        }
+
+        &__img-container {
+            width: 100%;
+            overflow-y: scroll;
+            max-height: 600px;
+
+            img {
+                display: block;
+            }
+        }
+
+        &__tabs {
+            height: 57px;
+            display: flex;
             gap: 0.5rem;
-            justify-content: space-between;
             align-items: center;
+            background: var(--blue-900);
+            padding: 0.5rem 0.5rem 0;
+        }
+
+        &__tab {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            height: fit-content;
             padding: 0.5rem 1rem;
+            font-family: Geist, sans-serif;
+            color: var(--blue-300);
+            background: var(--blue-900);
+            cursor: pointer;
+            border: 0;
+            border-radius: 1.5rem;
+            transition: background-color 0.1s ease, padding 0.1s ease, border-radius 0.1s ease;
+
+            &:hover {
+                background-color: var(--blue-800);
+            }
+
+            svg path {
+                fill: color-mix(in srgb, var(--blue-100) 30%, transparent);
+            }
+
+            &--active {
+                padding: 1rem 1.5rem;
+                border-radius: 1.5rem 1.5rem 0 0;
+                color: var(--blue-100);
+                background-color: var(--blue-800);
+
+                svg path {
+                    fill: var(--blue-100);
+                }
+            }
         }
 
         &__url {
@@ -226,6 +276,23 @@
             padding: 0.5rem 0.5rem 0.5rem 1rem;
             border-radius: 100vh;
             color: var(--blue-200);
+
+            &-container {
+                display: flex;
+                gap: 0.5rem;
+                height: 54px;
+                align-items: center;
+                padding: 0.5rem 0.5rem 0.5rem 1rem;
+                opacity: 1;
+                transition: padding 0.3s ease, height 0.3s ease, opacity 0.15s ease;
+                overflow: hidden;
+
+                &--collapsed {
+                    padding: 0.5rem 0.5rem 0;
+                    height: 0px;
+                    opacity: 0;
+                }
+            }
 
             &-button {
                 background-color: var(--blue-700);
@@ -255,15 +322,15 @@
         }
 
         &__button-1 {
-            background-color: green;
+            background-color: #28C940;
         }
 
         &__button-2 {
-            background-color: orange;
+            background-color: #FDBC40;
         }
 
         &__button-3 {
-            background-color: red;
+            background-color: #FF5F56;
         }
 
     }

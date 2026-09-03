@@ -34,7 +34,7 @@
     position: sticky;
     top: 2rem;
     z-index: 99999;
-    
+
     @include breakpoint-down(sm) {
         top: 1rem;
     }
@@ -108,6 +108,8 @@
             display: flex;
             align-items: center;
             gap: 0.25rem;
+            border: .0625rem solid color-mix(in srgb, var(--blue-100) 5%, transparent);
+            border-radius: 100vh;
         }
 
         &-indicator {

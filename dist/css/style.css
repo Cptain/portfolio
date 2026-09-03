@@ -21,6 +21,28 @@ html {
   box-sizing: inherit;
 }
 
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--blue-700);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--blue-600);
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--blue-900);
+  border-radius: 4px;
+}
+
 body {
   max-width: 1440px;
   padding: 0 2rem;
@@ -90,6 +112,9 @@ p {
 }
 .text--blue-light {
   color: var(--blue-100);
+}
+.text--subtle {
+  color: color-mix(in srgb, var(--blue-100) 30%, transparent);
 }
 
 .grid {
@@ -703,6 +728,8 @@ li {
   display: flex;
   align-items: center;
   gap: 0.25rem;
+  border: 0.0625rem solid color-mix(in srgb, var(--blue-100) 5%, transparent);
+  border-radius: 100vh;
 }
 .navbar__toggle-indicator {
   position: absolute;
@@ -1468,16 +1495,59 @@ li {
 }
 .ui-ux .browser {
   background-color: var(--blue-800);
-  border: 2px solid var(--blue-600);
+  border: 1px solid var(--blue-600);
   border-radius: 2rem;
   overflow: hidden;
 }
 .ui-ux .browser__ui {
   display: flex;
+  flex-direction: column;
+}
+.ui-ux .browser__img-container {
+  width: 100%;
+  overflow-y: scroll;
+  max-height: 600px;
+}
+.ui-ux .browser__img-container img {
+  display: block;
+}
+.ui-ux .browser__tabs {
+  height: 57px;
+  display: flex;
   gap: 0.5rem;
-  justify-content: space-between;
   align-items: center;
+  background: var(--blue-900);
+  padding: 0.5rem 0.5rem 0;
+}
+.ui-ux .browser__tab {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: -moz-fit-content;
+  height: fit-content;
   padding: 0.5rem 1rem;
+  font-family: Geist, sans-serif;
+  color: var(--blue-300);
+  background: var(--blue-900);
+  cursor: pointer;
+  border: 0;
+  border-radius: 1.5rem;
+  transition: background-color 0.1s ease, padding 0.1s ease, border-radius 0.1s ease;
+}
+.ui-ux .browser__tab:hover {
+  background-color: var(--blue-800);
+}
+.ui-ux .browser__tab svg path {
+  fill: color-mix(in srgb, var(--blue-100) 30%, transparent);
+}
+.ui-ux .browser__tab--active {
+  padding: 1rem 1.5rem;
+  border-radius: 1.5rem 1.5rem 0 0;
+  color: var(--blue-100);
+  background-color: var(--blue-800);
+}
+.ui-ux .browser__tab--active svg path {
+  fill: var(--blue-100);
 }
 .ui-ux .browser__url {
   display: flex;
@@ -1491,6 +1561,21 @@ li {
   padding: 0.5rem 0.5rem 0.5rem 1rem;
   border-radius: 100vh;
   color: var(--blue-200);
+}
+.ui-ux .browser__url-container {
+  display: flex;
+  gap: 0.5rem;
+  height: 54px;
+  align-items: center;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  opacity: 1;
+  transition: padding 0.3s ease, height 0.3s ease, opacity 0.15s ease;
+  overflow: hidden;
+}
+.ui-ux .browser__url-container--collapsed {
+  padding: 0.5rem 0.5rem 0;
+  height: 0px;
+  opacity: 0;
 }
 .ui-ux .browser__url-button {
   background-color: var(--blue-700);
@@ -1513,13 +1598,13 @@ li {
   border-radius: 50%;
 }
 .ui-ux .browser__button-1 {
-  background-color: green;
+  background-color: #28C940;
 }
 .ui-ux .browser__button-2 {
-  background-color: orange;
+  background-color: #FDBC40;
 }
 .ui-ux .browser__button-3 {
-  background-color: red;
+  background-color: #FF5F56;
 }
 .ui-ux .caption {
   display: grid;

@@ -41,4 +41,8 @@ p {
     &--blue-light {
         color: var(--blue-100);
     }
+
+    &--subtle {
+        color: color-mix(in srgb, var(--blue-100) 30%, transparent);
+    }
 }
